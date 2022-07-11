@@ -1,0 +1,54 @@
+header - (Brand 소개 - 사업분야 - Product 소개 - Brand News) - footer
+
+
+
+사업분야
+	-https://spcsamlip.co.kr/company/spc-samlip/business-area/
+
+
+Product 소개 
+ Product
+ 미각제빵소 - 4개
+	https://spcsamlip.co.kr/brand/meegak/
+ 삼립호빵 - 4개
+	https://spcsamlip.co.kr/brand/samlip-hopang/
+ 아시나요(아이스크림) - 2개
+	https://spcsamlip.co.kr/brand/castella-cream-cake/
+ 삼립호떡 - 4개
+	https://spcsamlip.co.kr/brand/honey-pancake/
+ 삼립잇츠(간편식) - 4개
+	https://spcsamlip.co.kr/brand/samlip-eats/
+ Chobani(요거트) - 4개
+	https://spcsamlip.co.kr/brand/chobani/
+
+
+Product 구조 참조
+	태경농산
+		-http://www.itaekyung.com/main.do
+	Sempio
+		-https://www.globalsempio.com/
+	OFood
+		-https://ofoodusa.com/
+	홍루이젠
+		-https://hongruizhen.com/
+	하림
+		-https://www.harim.com/main/#page2
+	빙그레
+		-https://www.tftmall.co.kr/
+
+기타 참조
+	대한 F&B
+		-http://dhfnb.kr/
+
+Brand News
+	SPC삼립 시티델리, 양재에 2호점 오픈
+	http://www.youngnong.co.kr/news/articleView.html?idxno=38936	
+
+	SPC삼립, 하이면 '냉칼국수' 3종 출시
+	https://sports.chosun.com/news/ntype.htm?id=202206240100177530011257&servicedate=20220624
+
+	야놀자클라우드·SPC삼립, 빅데이터 기반 '맛집 간편식' 개발
+	https://www.yna.co.kr/view/AKR20220616030800003?input=1195m
+
+	포켓몬빵 열풍 지속…SPC삼립, 2분기 '실적 신기록' 쓴다
+	https://newsis.com/view/?id=NISX20220615_0001908574&cID=13001&pID=13000

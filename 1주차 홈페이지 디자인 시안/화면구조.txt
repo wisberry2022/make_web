@@ -1,0 +1,10 @@
+mazda 자동차 카테고리
+
+카탈로그 모델
+승용차
+	->CX(메인)/MX/SEDAN/WAGON/ROADSTER
+경차
+	-> FLAIR(메인)/CAROL/SCRUM
+
+특별사양차
+	->CX(메인)
