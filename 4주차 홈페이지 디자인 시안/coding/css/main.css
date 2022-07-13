@@ -186,7 +186,7 @@ main .new_product {
 .new_product .prev_box {
   top: 163px;
   left: -172px;
-  transition: 0.4s;
+  transition: 0.8s;
 }
 
 .new_product .next_box {
@@ -195,7 +195,7 @@ main .new_product {
   padding-right: 176px;
   width: 882px;
   text-align: right;
-  transition: 0.4s;
+  transition: 0.8s;
 }
 
 .new_product .container h3 {
