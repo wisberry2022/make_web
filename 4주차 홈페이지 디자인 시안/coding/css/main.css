@@ -189,6 +189,10 @@ main .new_product {
   transition: 0.8s;
 }
 
+.new_product .prev_box i {
+  margin-right: 100px;
+}
+
 .new_product .next_box {
   bottom: 100px;
   right: 0;
