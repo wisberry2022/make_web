@@ -1,0 +1,156 @@
+body {
+  color: #333;
+}
+
+.btn {
+  display: block;
+}
+
+.container {
+  margin: 0 auto;
+}
+
+.bg_set {
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* HEADER CSS CODE */
+#header {
+  font-size: 17px;
+  font-weight: 700;
+  letter-spacing: 0.045em;
+}
+
+#header .gnb .container {
+  /* outline: 1px solid #000; */
+  padding: 10px 0;
+  display: flex;
+  width: 1200px;
+}
+
+.gnb .container h1 {
+  width: 60px;
+  height: 60px;
+}
+
+.gnb .container .main_menu {
+  display: flex;
+  margin-left: 193px;
+  text-transform: uppercase;
+}
+
+.gnb .main_menu a {
+  /* outline: 1px solid #000; */
+  display: block;
+  padding: 24px 40px;
+}
+
+.gnb .container .side_menu {
+  /* outline: 1px solid #000; */
+  margin-left: 85px;
+  padding: 16px 0;
+  display: flex;
+  gap: 25px;
+}
+
+.gnb .side_menu form {
+  /* outline: 1px solid #000; */
+  position: relative;
+  padding: 5px 0;
+}
+
+.gnb .side_menu input {
+  border-radius: 13.5px;
+  border: none;
+  padding: 5px;
+  font-size: 11px;
+  width: 120px;
+  background: #eeeeee;
+}
+
+.gnb .side_menu button {
+  position: absolute;
+  top: 18%;
+  right: 5%;
+  border: none;
+  background: transparent;
+  font-size: 15px;
+}
+
+.gnb .side_menu>i {
+  padding-top: 10px;
+}
+
+/* #header .main_slider {
+  outline: 1px solid #000;
+} */
+
+.main_slider figure {
+  /* outline: 1px solid #000; */
+  position: relative;
+  height: 595px;
+}
+
+.main_slider .bg_01 {
+  background-image: url('../assets/image/header/header_01_m.jpg');
+}
+
+.main_slider .bg_01 .slogan_box {
+  /* outline: 1px solid #000; */
+  position: absolute;
+  right: 350px;
+  bottom: 179px;
+}
+
+.main_slider .slogan_box h3 {
+  margin-bottom: 20px;
+  font-size: 27px;
+  font-weight: 700;
+  letter-spacing: 0.045em;
+}
+
+.main_slider .slogan_box strong {
+  display: block;
+  margin-bottom: 38px;
+  font-size: 21px;
+  font-weight: 400;
+  letter-spacing: -0.025em;
+}
+
+.main_slider .slogan_box .btn_box {
+  display: flex;
+  gap: 30px;
+}
+
+.main_slider .slogan_box .btn {
+  font-size: 19px;
+  font-weight: 500;
+  letter-spacing: -0.025em;
+  /* color: #ddd; */
+}
+
+.main_slider .slogan_box .left {
+  padding: 18px 50px;
+  color: #ddd;
+  background-color: #0c273a;
+}
+
+.main_slider .slogan_box .right {
+  padding: 18px 27px;
+  color: #333;
+  background-color: #ff9a3a;
+}
+
+.main_slider .bg_02 {
+  background-image: url('../assets/image/header/header_02.jpg');
+}
+
+.main_slider .bg_03 {
+  background-image: url('../assets/image/header/header_03_m.jpg');
+}
+
+
+
+/* .gnb .main_menu  */

@@ -1,6 +1,6 @@
 Electronic Arts
 
-header - ( 브랜드 소개 - 주요 게임 소개(3개 정도) - 뉴스 - EA PLAY  ) - footer
+header - ( 브랜드 소개 - 주요 게임 소개(3개 정도) - 다른 게임 소개 -  뉴스 - EA PLAY  ) - footer
 
 브랜드 소개
 
