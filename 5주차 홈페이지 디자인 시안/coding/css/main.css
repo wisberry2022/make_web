@@ -406,7 +406,7 @@ main .sims {
 }
 
 main .sims.changeBackground {
-  background-image: url('../assets/image/section/ea_play/ea_play.jpg');
+  background-image: url('../assets/image/section/game_intro/battlefield/battlefield_bg_04.jpg');
 }
 
 main .sims .inner {
@@ -622,10 +622,12 @@ main .btf .inner.hide {
 }
 
 .btf .inner .intro_img_01 {
+  /* outline: 1px solid #fff; */
   flex: 1;
   height: 808px;
   background-image: url('../assets/image/section/game_intro/battlefield/battlefield_bg.png');
-  background-position-x: -390px;
+  background-size: 1000px 100%;
+  background-position-x: -250px;
 }
 
 .btf .inner .contents {
@@ -666,7 +668,7 @@ main .btf .inner.hide {
   display: flex;
   flex-direction: row-reverse;
   gap: 30px;
-  color: #333;
+  color: #fff;
 }
 
 .btf .intro_desc .left {
@@ -689,7 +691,7 @@ main .btf .inner.hide {
   display: block;
   width: 2px;
   height: 190px;
-  background-color: #00202b;
+  background-color: #ddd;
 }
 
 .btf .top h4 {
