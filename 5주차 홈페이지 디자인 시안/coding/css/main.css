@@ -16,6 +16,11 @@ body {
   background-size: cover;
 }
 
+.sticky {
+  position: sticky;
+  top: 0;
+}
+
 /* HEADER CSS CODE */
 #header {
   font-size: 17px;
@@ -180,13 +185,15 @@ body {
   width: 20px;
   height: 20px;
   background-color: #fff;
-  transition: 0.7s;
+  transition-timing-function: ease-in-out;
 }
 
 .main_slider .slick-dots li.slick-active {
   border-radius: 11px;
   width: 94px;
   background-color: #ce9272;
+  transition: width 0.7s, background-color 0.7s;
+
 }
 
 .main_slider .slick-dots li button {
@@ -197,7 +204,7 @@ body {
 
 /* SECTION BRAND_INTRO CSS CODE */
 main .brand_intro {
-  outline: 1px solid #000;
+  /* outline: 1px solid #000; */
   position: relative;
   padding: 100px 0;
   letter-spacing: -0.025em;
@@ -226,9 +233,11 @@ main .brand_intro {
   from {
     transform: translateX(0);
   }
+
   50% {
     transform: translateX(1%);
   }
+
   to {
     transform: translateX(0);
   }
@@ -385,4 +394,422 @@ main .brand_intro {
 
 .brand_intro .btn_box .third {
   padding: 16px 0;
+}
+
+/* SECTION SIMS CSS CODE */
+main .sims {
+  padding: 100px 196px;
+  height: 100vh;
+  letter-spacing: -0.025em;
+  background-image: url('../assets/image/section/game_intro/background.jpg');
+  transition: 1s;
+}
+
+main .sims.changeBackground {
+  background-image: url('../assets/image/section/ea_play/ea_play.jpg');
+}
+
+main .sims .inner {
+  /* outline: 1px solid #000; */
+  display: flex;
+  gap: 40px;
+  opacity: 1;
+  transition: 1s;
+}
+
+main .sims .inner.hide {
+  opacity: 0;
+}
+
+.sims .inner .intro_img_01 {
+  flex: 1;
+  /* outline: 1px solid #000; */
+  height: 808px;
+  background-image: url('../assets/image/section/game_intro/sims/sims_bg.png');
+  background-position: right;
+}
+
+.sims .inner .contents {
+  flex: 1;
+  /* outline: 1px solid #000; */
+  display: flex;
+  flex-direction: column;
+}
+
+.sims .contents .game_image {
+  /* outline: 1px solid #000; */
+  margin-bottom: 40px;
+  width: 800px;
+  height: 150px;
+  background-image: url("../assets/image/section/game_intro/sims/sims_logo.png");
+  background-size: cover;
+  background-position: 193px 1px;
+}
+
+.sims .contents .intro_title {
+  margin-bottom: 109px;
+  text-align: right;
+}
+
+.sims .intro_title h4 {
+  margin-bottom: 26px;
+  font-size: 27px;
+  font-weight: 700;
+  color: #fff;
+}
+
+.sims .intro_title p {
+  font-size: 21px;
+  font-weight: 400;
+  line-height: 1.23;
+  color: #fff;
+}
+
+.sims .contents .intro_desc {
+  /* outline: 1px solid #000; */
+  display: flex;
+  gap: 30px;
+  color: #333;
+}
+
+.sims .intro_desc .left {
+  flex: 2;
+  /* outline: 1px solid #000; */
+  display: flex;
+  flex-direction: column;
+}
+
+.sims .intro_desc .top {
+  /* outline: 1px solid #000; */
+  position: relative;
+  display: flex;
+  margin-bottom: 10px;
+  flex-direction: column;
+}
+
+.sims .intro_desc .top::before {
+  content: '';
+  position: absolute;
+  left: -20px;
+  display: block;
+  width: 2px;
+  height: 190px;
+  background-color: #f98702;
+}
+
+.sims .top h4 {
+  margin: 30px 0 15px 0;
+  font-size: 23px;
+  font-weight: 500;
+}
+
+.sims .top p {
+  margin-bottom: 59px;
+  font-size: 15px;
+  font-weight: 300;
+  line-height: 1.26666;
+}
+
+.sims .top .small_btn {
+  /* outline: 1px solid #000; */
+  display: block;
+  font-weight: 100;
+}
+
+.sims .top .small_btn:nth-of-type(1) {
+  margin-bottom: 10px;
+  font-size: 13px;
+  text-align: right;
+}
+
+.sims .top .small_btn:last-child {
+  font-size: 11px;
+}
+
+.sims .intro_desc .bottom {
+  /* outline: 1px solid #000; */
+  display: flex;
+  gap: 30px;
+}
+
+.sims .bottom figure {
+  flex: 1;
+  height: 194px;
+}
+
+.sims .bottom .screen_01 {
+  background-image: url('../assets/image/section/game_intro/sims/sims_02.png');
+}
+
+.sims .bottom .screen_02 {
+  background-image: url('../assets/image/section/game_intro/sims/sims_03.png');
+}
+
+.sims .intro_desc .right {
+  /* outline: 1px solid #000; */
+  position: relative;
+  flex: 1;
+  background-image: url('../assets/image/section/game_intro/sims/sims4_01.jpg');
+  transition: 0.5s;
+}
+
+.sims .right:before {
+  /* outline: 1px solid #000; */
+  content: '';
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  transition: 0.5s;
+}
+
+.sims .right .btn_box {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 50px;
+  opacity: 0;
+  transition: 0.5s;
+}
+
+.sims .btn {
+  padding: 18px 25px;
+  font-size: 15px;
+  font-weight: 500;
+  text-align: center;
+  background-color: #f98702;
+}
+
+.sims .right:hover .btn_box {
+  opacity: 1;
+}
+
+.sims .right:hover::before {
+  /* outline: 1px solid #000; */
+  content: '';
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.sims .btn:first-child {
+  margin-bottom: 30px;
+}
+
+/* SECTION BTF CSS CODE */
+main .btf {
+  padding: 100px 196px;
+  height: 100vh;
+  opacity: 0;
+  transition: 0.6s;
+}
+
+main .btf.sticky {
+  opacity: 1;
+}
+
+main .btf .inner {
+  display: flex;
+  flex-direction: row-reverse;
+  gap: 40px;
+  opacity: 1;
+  transition: 1s;
+}
+
+main .btf .inner.hide {
+  opacity: 0;
+}
+
+.btf .inner .intro_img_01 {
+  flex: 1;
+  height: 808px;
+  background-image: url('../assets/image/section/game_intro/battlefield/battlefield_bg.png');
+  background-position-x: -390px;
+}
+
+.btf .inner .contents {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.btf .contents .game_image {
+  margin-bottom: 40px;
+  width: 800px;
+  height: 150px;
+  background-image: url("../assets/image/section/game_intro/battlefield/battlefield_logo.png");
+  background-size: contain;
+  background-position: left;
+}
+
+.btf .contents .intro_title {
+  margin-bottom: 109px;
+  text-align: left;
+}
+
+.btf .intro_title h4 {
+  margin-bottom: 26px;
+  font-size: 27px;
+  font-weight: 700;
+  color: #fff;
+}
+
+.btf .intro_title p {
+  font-size: 21px;
+  font-weight: 400;
+  line-height: 1.23;
+  color: #fff;
+}
+
+.btf .contents .intro_desc {
+  display: flex;
+  flex-direction: row-reverse;
+  gap: 30px;
+  color: #333;
+}
+
+.btf .intro_desc .left {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+}
+
+.btf .intro_desc .top {
+  position: relative;
+  display: flex;
+  margin-bottom: 10px;
+  flex-direction: column;
+}
+
+.btf .intro_desc .top::before {
+  content: '';
+  position: absolute;
+  right: -20px;
+  display: block;
+  width: 2px;
+  height: 190px;
+  background-color: #00202b;
+}
+
+.btf .top h4 {
+  margin: 30px 0 15px 0;
+  font-size: 23px;
+  font-weight: 500;
+  text-align: right;
+}
+
+.btf .top p {
+  margin-bottom: 59px;
+  font-size: 15px;
+  font-weight: 300;
+  line-height: 1.26666;
+  text-align: right;
+}
+
+.btf .top .small_btn {
+  display: block;
+  font-weight: 100;
+}
+
+.btf .top .small_btn:nth-of-type(1) {
+  margin-bottom: 10px;
+  font-size: 13px;
+}
+
+.btf .top .small_btn:last-child {
+  font-size: 11px;
+  text-align: right;
+}
+
+.btf .intro_desc .bottom {
+  display: flex;
+  gap: 30px;
+}
+
+.btf .bottom figure {
+  flex: 1;
+  height: 194px;
+}
+
+.btf .bottom .screen_01 {
+  background-image: url('../assets/image/section/game_intro/battlefield/battlefield_04.jpg');
+}
+
+.btf .bottom .screen_02 {
+  background-image: url('../assets/image/section/game_intro/battlefield/battlefield_05.jpg');
+}
+
+.btf .intro_desc .right {
+  position: relative;
+  flex: 1;
+  background-image: url('../assets/image/section/game_intro/battlefield/battlefield_01.jpg');
+  transition: 0.5s;
+}
+
+.btf .right:before {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  transition: 0.5s;
+}
+
+.btf .right .btn_box {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 50px;
+  opacity: 0;
+  transition: 0.5s;
+}
+
+.btf .btn {
+  padding: 18px 25px;
+  font-size: 15px;
+  font-weight: 500;
+  text-align: center;
+  background-color: #00202b;
+  color: #fff;
+}
+
+.btf .btn:nth-of-type(2) {
+  background-color: #fff;
+  color: #00202b;
+
+}
+
+.btf .right:hover .btn_box {
+  opacity: 1;
+}
+
+.btf .right:hover::before {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.btf .btn:first-child {
+  margin-bottom: 30px;
+}
+
+
+/* SECTION FIFA CSS CODE */
+main .fifa {
+  padding: 100px 0;
+  height: 100vh;
+  background-color: #a9a9a9;
+}
+
+
+/* SECTION EA GAMES CSS CODE */
+main .ea_games {
+  position: sticky;
+  top: 0;
+  padding: 100px 0;
+  height: 100vh;
+  background-color: #fff;
 }
