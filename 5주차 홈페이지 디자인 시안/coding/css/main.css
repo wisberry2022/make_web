@@ -817,6 +817,8 @@ main .fifa {
   margin-bottom: 450px;
   padding: 100px 126px;
   height: 100vh;
+  opacity: 0;
+  transition: 0.5s;
 }
 
 main .fifa.sticky {
