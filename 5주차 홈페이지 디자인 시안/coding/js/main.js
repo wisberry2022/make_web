@@ -6,6 +6,7 @@ $(function () {
 
   $(window).scroll(function () {
     if ($(this).scrollTop() > 450) {
+      console.log($(this).scrollTop());
       $('.brand_intro .img_box').addClass('show');
       if ($(this).scrollTop() > 1600) {
         $('main .sims .inner').addClass('hide');
