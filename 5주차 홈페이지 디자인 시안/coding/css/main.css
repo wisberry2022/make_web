@@ -3,7 +3,7 @@ body {
 }
 
 .temp_box {
-  display: none;
+  /* display: none; */
   position: fixed;
   top: 0;
   left: 0;
@@ -436,6 +436,10 @@ main .sims {
   letter-spacing: -0.025em;
   background-image: url('../assets/image/section/game_intro/background.jpg');
   transition: 1s;
+}
+
+main .sims.origin {
+  background-image: url('../assets/image/section/game_intro/background.jpg');
 }
 
 main .sims.changeBackground {
@@ -1061,6 +1065,33 @@ main .fifa .inner.hide {
 
 .fifa .btn:first-child {
   margin-bottom: 30px;
+}
+
+.fifa>.btn {
+  margin: 30px auto 0 auto;
+  border-radius: 50px;
+  border: 1px solid #ddd;
+  width: 210px;
+  background: transparent;
+  color: #ddd;
+  animation: flash 1s 3s infinite;
+  opacity: 0;
+  transition: 0.5s;
+}
+
+.fifa>.btn.go {
+  opacity: 1;
+}
+
+@keyframes flash {
+  from {
+    background-color: transparent;
+  }
+
+  to {
+    background-color: #ddd;
+    color: #333;
+  }
 }
 
 /* SECTION EA GAMES CSS CODE */
