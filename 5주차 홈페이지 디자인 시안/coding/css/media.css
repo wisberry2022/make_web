@@ -1,0 +1,153 @@
+@media screen and (max-width: 768px) {
+  .bg_set {
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .container {
+    width: auto;
+  }
+
+  /* HEADER CSS CODE */
+  #header {
+    color: #333;
+  }
+
+  #header .gnb {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 60vw;
+    height: 100vh;
+    z-index: 999;
+    background-color: #fff;
+    transition: 1s;
+  }
+
+  #header .gnb.res_show {
+    left: 0;
+  }
+
+  #header .only_ipad_tab {
+    display: flex;
+    justify-content: flex-end;
+    padding: 10px 0;
+    background-color: #000;
+    color: #fff;
+  }
+
+  .only_ipad_tab h2 {
+    margin: 0 auto 0 1%;
+    width: 5%;
+  }
+
+  .only_ipad_tab .ipad_main_menu {
+    display: flex;
+    font-size: 17px;
+  }
+
+  .only_ipad_tab .ipad_main_menu li a {
+    display: block;
+    padding: 10px 5px;
+  }
+
+  .gnb .container {
+    flex-direction: column;
+    width: auto;
+  }
+
+  .gnb .container h1 {
+    position: absolute;
+    top: 2%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 15%;
+  }
+
+  .gnb .container .main_menu {
+    position: absolute;
+    width: 90%;
+    flex-direction: column;
+    margin: 25% 0 0 5%;
+  }
+
+  .gnb .container .main_menu a {
+    border-bottom: 1px solid #000;
+    padding: 24px 40px 24px 0;
+  }
+
+  .gnb .container .side_menu {
+    display: none;
+  }
+
+  #header .main_slider {
+    width: auto;
+  }
+
+  .main_slider .bg_01 {
+    background-position: 80% 0;
+    background-size: auto;
+  }
+
+  .main_slider .bg_01 .slogan_box {
+    right: 25%;
+  }
+
+  .main_slider .slogan_box h3 {
+    margin-bottom: 15px;
+    font-size: 23px;
+  }
+
+  .main_slider .slogan_box strong {
+    margin-bottom: 30px;
+    font-size: 17px;
+  }
+
+  .main_slider .slogan_box .btn_box {
+    gap: 15px;
+  }
+
+  .main_slider .slogan_box .btn {
+    font-size: 15px;
+  }
+
+  .main_slider .slogan_box .left {
+    padding: 15px 40px;
+  }
+
+  .main_slider .slogan_box .right {
+    padding: 15px 23px;
+  }
+
+  .main_slider .bg_02 {
+    background-position: 70% 0;
+  }
+
+  .main_slider .bg_02 .slogan_box {
+    top: 50%;
+    left: 3%;
+    transform: translateY(-50%);
+  }
+
+  .main_slider .bg_03 {
+    background-position-x: 30%;
+    background-size: cover;
+  }
+
+  .main_slider .bg_03 .slogan_box {
+    top: 50%;
+    left: 3%;
+    transform: translateY(-50%);
+    color: #000;
+  }
+
+  .main_slider .slick-dots {
+    right: 3%;
+  }
+
+  /* SECTION BRAND_INTRO CSS CODE */
+
+
+
+}
