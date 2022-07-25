@@ -313,12 +313,11 @@ main .brand_intro {
 
 .brand_intro h3 strong {
   display: block;
-  margin-top: 20px;
+  margin-top: 10px;
   font-weight: 700;
 }
 
 .brand_intro .top_intro {
-  /* outline: 1px solid #000; */
   position: relative;
   margin-bottom: 100px;
 }
@@ -347,7 +346,6 @@ main .brand_intro {
 }
 
 .brand_intro .bottom_intro {
-  /* outline: 1px solid #000; */
   position: relative;
   width: 585px;
 }
@@ -398,7 +396,6 @@ main .brand_intro {
 }
 
 .brand_intro .bottom_intro .btn_box {
-  /* outline: 1px solid #000; */
   display: flex;
   gap: 30px;
 }
