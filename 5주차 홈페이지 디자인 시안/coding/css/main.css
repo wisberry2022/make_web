@@ -505,7 +505,7 @@ main .sims .inner.hide {
   /* outline: 1px solid #000; */
   display: flex;
   gap: 30px;
-  color: #333;
+  color: #fff;
 }
 
 .sims .intro_desc .left {
@@ -519,8 +519,8 @@ main .sims .inner.hide {
   /* outline: 1px solid #000; */
   position: relative;
   display: flex;
-  margin-bottom: 10px;
   flex-direction: column;
+  margin-bottom: 10px;
 }
 
 .sims .intro_desc .top::before {
@@ -589,7 +589,7 @@ main .sims .inner.hide {
   transition: 0.5s;
 }
 
-.sims .right:before {
+.sims .right::before {
   /* outline: 1px solid #000; */
   content: '';
   display: block;
@@ -896,7 +896,6 @@ main .fifa .inner.hide {
 }
 
 .fifa .contents .game_image {
-  /* outline: 1px solid #000; */
   margin-bottom: 40px;
   width: 800px;
   height: 150px;
@@ -925,7 +924,6 @@ main .fifa .inner.hide {
 }
 
 .fifa .contents .intro_desc {
-  /* outline: 1px solid #000; */
   display: flex;
   gap: 30px;
   color: #fff;
@@ -933,13 +931,11 @@ main .fifa .inner.hide {
 
 .fifa .intro_desc .left {
   flex: 2;
-  /* outline: 1px solid #000; */
   display: flex;
   flex-direction: column;
 }
 
 .fifa .intro_desc .top {
-  /* outline: 1px solid #000; */
   position: relative;
   display: flex;
   margin-bottom: 10px;

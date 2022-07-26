@@ -5,6 +5,14 @@
     background-size: cover;
   }
 
+  .sticky {
+    position: static;
+  }
+
+  .scroll_up {
+    display: none;
+  }
+
   /* HEADER CSS CODE */
   #header {
     color: #333;
@@ -143,6 +151,10 @@
   }
 
   /* SECTION BRAND_INTRO CSS CODE */
+  main .brand_intro {
+    padding: 50px 0;
+  }
+
   .brand_intro .container {
     width: auto;
   }
@@ -224,5 +236,316 @@
 
   .brand_intro .btn_box .btn {
     padding: 15px 5px;
+  }
+
+  /* SECTION SIMS CSS CODE */
+  main .sims {
+    padding: 50px 0;
+    height: 100%;
+  }
+
+  .sims .inner .intro_img_01 {
+    display: none;
+  }
+
+  /* .sims .contents>* {
+    outline: 1px solid #000;
+  } */
+
+  .sims .contents .game_image {
+    margin: 0 auto 15px auto;
+    width: 80%;
+    background-position: center top;
+  }
+
+  .sims .contents .intro_title {
+    margin-bottom: 50px;
+    text-align: center;
+  }
+
+  .sims .intro_title h4 {
+    margin-bottom: 15px;
+    font-size: 2.5vw;
+  }
+
+  .sims .intro_title p {
+    font-size: 2.1vw;
+  }
+
+  .sims .contents .intro_desc {
+    outline: 1px solid #000;
+    gap: 20px;
+    padding: 0 5%;
+    height: 300px;
+  }
+
+  .sims .intro_desc .top::before {
+    display: none;
+  }
+
+  .sims .top h4 {
+    font-size: 2.5vw;
+  }
+
+  .sims .top p {
+    font-size: 1.5vw;
+  }
+
+  .sims .top .small_btn:nth-of-type(1),
+  .sims .top .small_btn:nth-of-type(2) {
+    font-size: 1.2vw;
+  }
+
+  .sims .left .bottom {
+    outline: 1px solid #000;
+    gap: 15px;
+    height: 50%;
+  }
+
+  .sims .left .bottom figure {
+    height: 100%;
+  }
+
+  /* SECTION BTF CSS CODE */
+  main .btf {
+    padding: 50px 0;
+    height: 90%;
+    opacity: 1;
+    background: url('../assets/image/section/game_intro/battlefield/battlefield_section_Bg.jpg') no-repeat center center/cover;
+  }
+
+  .btf .inner {
+    flex-direction: row;
+  }
+
+  .btf .inner .contents {
+    gap: 20px;
+  }
+
+  .btf .inner .intro_img_01 {
+    display: none;
+  }
+
+  .btf .contents .game_image {
+    margin: 0 auto 30px auto;
+    width: 80%;
+    background-position: center top;
+  }
+
+  .btf .contents .intro_title {
+    margin-bottom: 45px;
+    text-align: center;
+  }
+
+  .btf .intro_title h4 {
+    margin-bottom: 15px;
+    font-size: 2.5vw;
+  }
+
+  .btf .intro_title p {
+    font-size: 2.1vw;
+  }
+
+  .btf .contents .intro_desc {
+    /* outline: 1px solid #fff; */
+    gap: 30px;
+    height: 300px;
+    padding: 0 5%;
+    /* transform: translateX(1%); */
+  }
+
+  .btf .intro_desc .top::before {
+    display: none;
+  }
+
+  .btf .top h4 {
+    font-size: 2.5vw;
+  }
+
+  .btf .top p {
+    margin-bottom: 39px;
+    font-size: 1.5vw;
+  }
+
+  .btf .top .small_btn:nth-of-type(1),
+  .btf .top .small_btn:nth-of-type(2) {
+    font-size: 1.2vw;
+  }
+
+  .btf .left .bottom {
+    gap: 15px;
+    height: 80%;
+  }
+
+  .btf .left .bottom figure {
+    height: 100%;
+  }
+
+  /* SECTION FIFA CSS CODE */
+  main .fifa {
+    justify-content: center;
+    margin-bottom: 0;
+    padding: 50px 0;
+    height: 100%;
+    opacity: 1;
+    background: url('../assets/image/section/game_intro/fifa/fifa_big_bg.jpg') no-repeat center center/cover;
+  }
+
+  /* main .fifa .inner * {
+    outline: 1px solid #fff;
+  } */
+
+  .fifa .inner {
+    flex-direction: row;
+    transform: translateY(3.5%);
+  }
+
+  .fifa .inner .cover_box {
+    display: none;
+  }
+
+  .fifa .inner .contents {
+    gap: 20px;
+  }
+
+  .fifa .inner .intro_img_01 {
+    display: none;
+  }
+
+  .fifa .contents .game_image {
+    margin: 0 auto 0 auto;
+    width: 80%;
+    background-position: center top;
+  }
+
+  .fifa .contents .intro_title {
+    margin-bottom: 50px;
+    text-align: center;
+  }
+
+  .fifa .intro_title h4 {
+    margin-bottom: 15px;
+    font-size: 2.5vw;
+  }
+
+  .fifa .intro_title p {
+    font-size: 2.1vw;
+  }
+
+  .fifa .contents .intro_desc {
+    outline: 1px solid #fff;
+    gap: 30px;
+    /* transform: translateX(-2%); */
+    padding: 0 3%;
+    height: 450px;
+  }
+
+  .fifa .intro_desc .top::before {
+    display: none;
+  }
+
+  .fifa .top h4 {
+    font-size: 2.5vw;
+  }
+
+  .fifa .top p {
+    margin-bottom: 30%;
+    font-size: 1.5vw;
+  }
+
+  .fifa .top .small_btn:nth-of-type(1),
+  .fifa .top .small_btn:nth-of-type(2) {
+    font-size: 1.2vw;
+  }
+
+  .fifa .bottom {
+    outline: 1px solid #fff;
+    height: 50%;
+  }
+
+  .fifa .bottom figure {
+    height: 100%;
+  }
+
+  .fifa .bottom .screen_01 {
+    background-position: center;
+  }
+
+  .fifa .intro_desc .right {
+    background-size: 100% 100%;
+  }
+
+  /* SECTION EA GAMES CSS CODE */
+  main .ea_games {
+    position: static;
+    padding: 50px 30px;
+    /* height: 88vh; */
+    height: 100%;
+  }
+
+  .ea_games .container {
+    width: auto;
+  }
+
+  .ea_games .container h3 {
+    font-size: 2.2vw;
+  }
+
+  .ea_games .container .other_games_set {
+    gap: 20px;
+  }
+
+  .ea_games .other_games_set .top_set {
+    gap: 20px;
+  }
+
+  .ea_games .top_set .game_btn,
+  .bottom_set .game_btn {
+    bottom: 0;
+    width: 90%;
+    height: 30%;
+    background-size: contain;
+    opacity: 1;
+  }
+
+  .ea_games .norm::before {
+    display: none;
+  }
+
+  .ea_games .other_games_set .bottom_set {
+    gap: 20px;
+  }
+
+  .ea_games .btn {
+    padding: 15px;
+    width: 30%;
+    font-size: 1.5vw;
+    text-align: center;
+  }
+
+  /* SECTION EA_PLAY CSS CODE */
+  .ea_play .container {
+    width: auto;
+  }
+
+  /* SECTION EA_NEWS CSS CODE */
+  main .ea_news {
+    position: static;
+  }
+
+  .ea_news .container {
+    outline: 1px solid #000;
+    display: none;
+    width: auto;
+  }
+
+
+  /* FOOTER CSS CODE */
+  #footer .top_footer .container {
+    width: auto;
+  }
+
+  #footer .bottom_footer .container {
+    width: auto;
   }
 }
