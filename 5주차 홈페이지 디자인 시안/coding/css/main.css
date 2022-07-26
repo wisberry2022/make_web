@@ -510,13 +510,11 @@ main .sims .inner.hide {
 
 .sims .intro_desc .left {
   flex: 2;
-  /* outline: 1px solid #000; */
   display: flex;
   flex-direction: column;
 }
 
 .sims .intro_desc .top {
-  /* outline: 1px solid #000; */
   position: relative;
   display: flex;
   flex-direction: column;
