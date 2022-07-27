@@ -24,7 +24,7 @@
     left: -100%;
     width: 60vw;
     height: 100vh;
-    z-index: 999;
+    z-index: 1000;
     background-color: #fff;
     transition: 1s;
   }
@@ -325,6 +325,7 @@
   .sims .right .btn_box a:first-child {
     margin-bottom: 15%;
   }
+
   /* SECTION BTF CSS CODE */
   main .btf {
     padding: 50px 0;
@@ -623,8 +624,10 @@
     font-size: 2vw;
     font-weight: 700;
     color: #333;
-    background-color: #ff9a3a;;
+    background-color: #ff9a3a;
+    ;
   }
+
   /* SECTION EA_NEWS CSS CODE */
   main .ea_news {
     position: static;
@@ -632,6 +635,7 @@
   }
 
   .ea_news .container {
+    position: relative;
     width: auto;
   }
 
@@ -645,12 +649,123 @@
     padding: 0 20%;
   }
 
+  .ea_news .card_news .news_desc {
+    padding: 6%;
+  }
+
+  .ea_news .news_desc .top strong,
+  .ea_news .news_desc .top span {
+    font-size: 1.5vw;
+  }
+
+  .ea_news .news_desc h4 {
+    width: auto;
+    font-size: 2.5vw;
+  }
+
+  .ea_news .news_desc p {
+    font-size: 2vw;
+  }
+
+  .ea_news .container>i {
+    position: absolute;
+    font-size: 9vw;
+    cursor: pointer;
+    z-index: 999;
+  }
+
+  .ea_news .container>i:nth-of-type(1) {
+    top: 50%;
+    left: 6%;
+    transform: trnaslateY(-50%);
+  }
+
+  .ea_news .container>i:nth-of-type(2) {
+    top: 50%;
+    right: 6%;
+    transform: trnaslateY(-50%);
+  }
+
+
   /* FOOTER CSS CODE */
+  #footer {
+    padding: 10%;
+  }
+
+  #footer .top_footer {
+    padding-bottom: 5vw;
+  }
+
   #footer .top_footer .container {
     width: auto;
   }
 
   #footer .bottom_footer .container {
+    position: relative;
     width: auto;
   }
+
+  #footer .top_footer .container .top_footer_list {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+    font-size: 2vw;
+  }
+
+  #footer .top_footer_list a {
+    padding: 0 10px;
+  }
+
+  #footer .top_footer_list li:nth-child(-n+5)::after {
+    display: none;
+  }
+
+  #footer .ea_sns dt {
+    margin-bottom: 10%;
+    font-size: 2vw;
+  }
+
+  #footer .ea_sns dd {
+    font-size: 1.8vw;
+  }
+
+  #footer .bottom_footer .container {
+    padding-top: 5vw;
+    width: auto;
+  }
+
+  #footer .bottom_footer .bottom_footer_list {
+    justify-content: space-between;
+    margin-bottom: 1%;
+    padding: 0 2.5%;
+  }
+
+  #footer .bottom_footer .bottom_footer_list li a {
+    padding: 0;
+    font-size: 1.5vw;
+  }
+
+  #footer .under_box .left .law_list {
+    display: none;
+  }
+
+  #footer .left .service_list {
+    display: none;
+  }
+
+  #footer .left span {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transform: translateX(5%);
+    display: block;
+  }
+
+  #footer .bottom_footer .right {
+    justify-content: flex-start;
+    margin: 0 auto 0 0;
+    padding: 8% 0;
+  }
+
+
 }
