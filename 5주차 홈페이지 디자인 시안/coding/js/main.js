@@ -30,6 +30,7 @@ $(function () {
 
   var checkResize = function () {
     var viewWidth = $(window).width();
+    console.log(viewWidth);
     if (viewWidth > 768) {
       $(window).scroll(function () {
         if ($(this).scrollTop() > 450) {
@@ -94,8 +95,19 @@ $(function () {
       })
 
       $('.ea_news .news_box').slick({
-        arrows: false,
-        autoplay: true,
+        responsive: [
+          {
+            breakpoint: 768,
+            settings: {
+              slidesToShow: 1,
+              arrows: false,
+            }
+          },
+          {
+            breakpoint: 1900,
+            settings: "unslick"
+          }
+        ]
       });
 
       $('.ea_news .container>i:nth-of-type(1)').on('click', function () {
@@ -114,9 +126,9 @@ $(function () {
     autoplay: true,
   });
 
-  checkResize();
+  // checkResize();
 
-  $(window).resize(function () {
+  $(window).on('resize', function () {
     checkResize();
   })
 

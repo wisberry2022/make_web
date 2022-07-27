@@ -669,6 +669,7 @@
 
   .ea_news .container>i {
     position: absolute;
+    display: block;
     font-size: 9vw;
     cursor: pointer;
     z-index: 999;

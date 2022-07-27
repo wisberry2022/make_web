@@ -1381,6 +1381,10 @@ main .ea_news {
   background-image: url('../assets/image/section/news/ea_news_03.jpg');
 }
 
+.ea_news .container>i {
+  display: none;
+}
+
 /* FOOTER CSS CODE */
 #footer {
   padding: 100px 0;
