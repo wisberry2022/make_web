@@ -76,6 +76,10 @@ body {
   padding: 24px 40px;
 }
 
+.gnb .main_menu i {
+  display: none;
+}
+
 .gnb .container .side_menu {
   margin-left: 85px;
   padding: 16px 0;

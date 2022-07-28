@@ -28,6 +28,10 @@ $(function () {
     $('main .sims').addClass('origin');
   }
 
+  $('.gnb .main_menu i').on('click', function () {
+    $('.gnb').slide();
+  })
+
   $('#header .main_slider').slick({
     dots: true,
     arrows: false,
@@ -130,7 +134,7 @@ $(function () {
       { name: 'main .fifa>.btn', deleteSet: ['go'] },
     ]
 
-    $('html').animate({ scrollTop: 0 }, 2000);
+    $('html').animate({ scrollTop: 0 }, 1500);
 
     var executeFunction = function () { deleteClass(removeObj) };
 

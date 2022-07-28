@@ -66,6 +66,10 @@
     padding: 10px 5px;
   }
 
+  .gnb {
+    position: relative;
+  }
+
   .gnb .container {
     flex-direction: column;
     width: auto;
@@ -84,6 +88,14 @@
     width: 90%;
     flex-direction: column;
     margin: 25% 0 0 5%;
+  }
+
+  .gnb .main_menu i {
+    display: block;
+    position: absolute;
+    top: -70px;
+    right: 0;
+    cursor: pointer;
   }
 
   .gnb .container .main_menu a {
