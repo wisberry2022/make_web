@@ -34,6 +34,23 @@ $(function () {
     autoplay: true,
   });
 
+  $('.ea_news .news_box').slick({
+    responsive: [
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 1,
+          arrows: false,
+        }
+      },
+      {
+        breakpoint: 1900,
+        settings: "unslick"
+      }
+    ]
+  });
+
+  $(window).resize(function () {
     $('.ea_news .news_box').slick({
       responsive: [
         {
@@ -49,25 +66,8 @@ $(function () {
         }
       ]
     });
-  
-    $(window).resize(function() {
-      $('.ea_news .news_box').slick({
-        responsive: [
-          {
-            breakpoint: 768,
-            settings: {
-              slidesToShow: 1,
-              arrows: false,
-            }
-          },
-          {
-            breakpoint: 1900,
-            settings: "unslick"
-          }
-        ]
-      });
-    })
-  
+  })
+
 
   $('.ea_news .container>i:nth-of-type(1)').on('click', function () {
     $('.ea_news .news_box').slick('slickPrev');
@@ -79,10 +79,11 @@ $(function () {
 
   $(window).scroll(function () {
     var viewWidth = $(window).width();
-    if(viewWidth > 768){
-      if ($(this).scrollTop() > 450) {
+    if (viewWidth > 768) {
+      if (($(this).scrollTop() > 450) && ($(this).scrollTop() <= 1600)) {
         $('.brand_intro .img_box').addClass('show');
-        if ($(this).scrollTop() > 1600) {
+        $('.brand_intro .img_box').removeClass('show');
+        if (($(this).scrollTop() > 1600) && ($(this).scrollTop() <= 2800)) {
           onSticky('main .sims .inner', 'main .btf', 'main .sims', 'changeBackground', 500);
         }
         if ($(this).scrollTop() > 2800) {
@@ -92,7 +93,7 @@ $(function () {
           $('main .fifa>.btn').addClass('go');
         }
       }
-    }else {
+    } else {
       var removeObj = [
         { name: 'main .sims .inner', deleteSet: ['hide'] },
         { name: 'main .btf', deleteSet: ['sticky'] },
@@ -102,14 +103,14 @@ $(function () {
         { name: 'main .fifa .intro_img_01', deleteSet: ['after_show'] },
         { name: 'main .fifa>.btn', deleteSet: ['go'] },
       ]
-    
+
       deleteClass(removeObj);
     }
   })
 
   $(window).scroll(function () {
     var viewWidth = $(window).width();
-    if(viewWidth > 768) {
+    if (viewWidth > 768) {
       if ($(this).scrollTop() > $('main .brand_intro').offset().top) {
         $('.scroll_up').addClass('opac');
       }
@@ -146,15 +147,4 @@ $(function () {
     $('#header .gnb').toggleClass('res_show');
   })
 
-
-  $(window).scroll(function () {
-    const TEMP = document.querySelector('.temp_box');
-    TEMP.innerHTML = $(this).scrollTop();
-  });
-
-  // $(window).scroll(function () {
-  //   const TEMP = document.querySelector('.temp_box');
-  //   $(TEMP).css("color", "yellow");
-  //   TEMP.innerHTML = `${$(this).scrollTop()}  ${$(this).width()}`;
-  // });
 });
