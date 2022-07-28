@@ -71,7 +71,7 @@ body {
   text-transform: uppercase;
 }
 
-.gnb .main_menu a {
+.gnb .main_menu a {  
   display: block;
   padding: 24px 40px;
 }
@@ -80,11 +80,58 @@ body {
   display: none;
 }
 
+.gnb .main_menu>li {
+  position: relative;
+}
+
+.gnb .main_menu .sub_menu {
+  position: absolute;
+  top: 120%;
+  z-index: 999;
+  width: 100%;
+  height: 0;
+  text-align: center;
+  font-size: 15px;
+  overflow: hidden;
+  transition: 0.5s;
+}
+
+.gnb:hover .sub_menu {
+  height: 250px;
+}
+
+.gnb .sub_menu a {
+  display: block;
+  padding: 13px 0;
+  font-weight: 300;
+  color: #000;
+}
+
 .gnb .container .side_menu {
   margin-left: 85px;
   padding: 16px 0;
   display: flex;
   gap: 25px;
+}
+
+.gnb {
+  position: relative;
+}
+
+.gnb::before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 100%;
+  width: 100%;
+  height: 0;
+  background-color: rgba(255, 255, 255);
+  transition:0.5s;
+  z-index: 998;
+}
+
+.gnb:hover::before {
+  height: 250%;
 }
 
 .gnb .side_menu form {
@@ -1536,3 +1583,4 @@ main .ea_news {
   width: 76px;
   height: 76px;
 }
+

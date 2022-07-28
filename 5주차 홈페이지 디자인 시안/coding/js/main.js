@@ -28,9 +28,6 @@ $(function () {
     $('main .sims').addClass('origin');
   }
 
-  $('.gnb .main_menu i').on('click', function () {
-    $('.gnb').slide();
-  })
 
   $('#header .main_slider').slick({
     dots: true,
@@ -148,6 +145,11 @@ $(function () {
   // 반응형
   $('#header .res_btn').on('click', function () {
     $('#header .gnb').toggleClass('res_show');
+  })
+
+  $('#header .gnb .main_menu li').on('click', function() {
+    var idx = $(this).index();
+    $('.gnb .main_menu .sub_menu').eq(idx).toggleClass('mshow');
   })
 
 });
