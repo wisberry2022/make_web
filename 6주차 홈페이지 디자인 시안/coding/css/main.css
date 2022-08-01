@@ -14,22 +14,25 @@
   width: 120rem;
 }
 
-* {
+/* * {
   outline: 1px solid #000;
-}
+} */
 
 html {
   font-size: 10px;
 }
 
+/* MAIN_VISUAL CSS CODE */
 .main_visual {
+  position: relative;
   height: 100vh;
+  letter-spacing: -0.025em;
 }
 
 .main_visual .slick-dots {
   position: absolute;
-  bottom: 5%;
-  left: 4%;
+  bottom: 3.3rem;
+  left: 18rem;
   display: flex;
 }
 
@@ -41,6 +44,43 @@ html {
   width: 3rem;
   height: 3rem;
   cursor: pointer;
+}
+
+.main_visual .tiny_btn {
+  display: block;
+  position: absolute;
+  bottom: 5.2rem;
+  left: 2.5rem; 
+  z-index: 999;
+  border-radius: 50px;
+  border: 0.1rem solid #ddd;
+  padding: 8px 30px;
+  font-size: 1.2rem;
+  font-weight: 500;
+  text-align: center;
+  line-height: 1.2;
+  background-color: transparent;
+  color: #fff;
+  transition: 0.5s;
+}
+
+.main_visual .tiny_btn img {
+  position: absolute;
+  bottom: 3.5rem;
+  left: 50%;
+  transform: translatex(-50%);
+}
+
+.main_visual #bg_video_03 .tiny_btn img {
+  position: absolute;
+  bottom: 1.6rem;
+  left: 50%;
+  transform: translatex(-50%);
+}
+
+.main_visual .tiny_btn:hover {
+  background-color: #fff;
+  color: #000;
 }
 
 .main_visual .slick-dots li.slick-active {
@@ -59,6 +99,14 @@ html {
   top: 0;
   width: 100%;
   z-index: 0;
+}
+
+.bg_logo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -999;
 }
 
 #header .gnb {
