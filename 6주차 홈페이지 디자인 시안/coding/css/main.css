@@ -2,7 +2,7 @@
 
 @font-face {
   font-family: 'Taviraj', 'serif';
-  src: url('https://fonts.googleapis.com/css2?family=Taviraj:wght@100;200;300;400;500;600;700;800;900&display=swap')
+  src: url('https://fonts.googleapis.com/css2?family=Taviraj:wght@100;200;300;400;500;600;700;800;900&display=swap');
 }
 
 .taviraj {
@@ -15,14 +15,19 @@
   background-size: cover;
 }
 
+.sticky {
+  position: sticky;
+  top: 0;
+}
+
 .container {
   margin: 0 auto;
   width: 120rem;
 }
 
-/* * {
-  outline: 1px solid #000;
-} */
+* {
+  outline: 1px solid #333;
+}
 
 html {
   font-size: 10px;
@@ -430,8 +435,149 @@ html {
   background-color: #000;
 }
 
+/* EVENT SECTION CSS CODE */
+#main .event {
+  background-color: #000;
+  color: #ddd;  
+}
 
+.event .container {
+  position: relative;
+}
 
-/* .sony_product .bottom_set a:last-child p {
-  letter-spacing: -0.045em;
+.event .event_title_box {
+  margin-bottom: 3.5rem;
+  text-align: center;
+}
+
+.event .event_title_box h3 {
+  margin-bottom: 5.5rem;
+  font-size: 2.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.event .event_title_box p {
+  font-size: 1.5rem;
+  font-weight: 300;
+  line-height: 1.4;
+}
+
+.event .event_slider {
+  padding: 0 5%;
+}
+
+.event .event_slider .event_box {
+  margin: 0 1rem;
+}
+
+.event .event_slider figure {
+  margin-bottom: 2.5rem;
+  width: 100%;
+  height: 20rem;
+}
+
+.event .itm01 {
+  background-image: url('../assets/image/section/event/event_01.jpg');
+}
+
+.event .itm02 {
+  background-image: url('../assets/image/section/event/event_02.jpg');
+}
+
+.event .itm03 {
+  background-image: url('../assets/image/section/event/event_03.jpg');
+}
+
+.event .itm04 {
+  background-image: url('../assets/image/section/event/event_04.jpg');
+}
+
+.event .itm05 {
+  background-image: url('../assets/image/section/event/event_05.jpg');
+}
+
+.event .itm06 {
+  background-image: url('../assets/image/section/event/event_06.jpg');
+}
+
+.event .event_slider .event_desc {
+  width: 100%;
+  text-align: center;
+}
+
+.event .event_desc h4 {
+  margin-bottom: 1.5rem;
+  font-size: 1.7rem;
+  font-weight: 500;
+}
+
+.event .event_desc p {
+  margin-bottom: 1rem;
+  font-size: 1.3rem;
+  font-weight: 300;
+}
+
+.event .event_desc strong {
+  display: block;
+  margin-bottom: 2.5rem;
+  font-size: 1.3rem;
+  font-weight: 100;
+  letter-spacing: 0.025em;
+}
+
+.event .event_desc a {
+  display: block;
+  margin: 0 auto;
+  border-radius: 50px;
+  border: 1px solid #ddd;
+  padding: 3% 0;
+  width: 30%;
+  font-size: 1.5rem;
+  font-weight: 300;
+  transition: 0.5s;
+}
+
+.event .event_desc a:hover {
+  color: #000;
+  background-color: #fff;
+}
+
+.event i {
+  position: absolute;
+  transform: translateY(20%);
+  font-size: 4.5rem;
+  cursor: pointer;
+}
+
+.event i:nth-of-type(1) {
+  top: 50%;
+  left: -5%;
+}
+
+.event i:nth-of-type(2) {
+  top: 50%;
+  right: -5%;  
+}
+
+/* REPRESENTATION CSS CODE */
+#main .representation {
+  padding: 0;
+  height: 100vh;
+  display: flex;
+}
+
+.representation figure {
+  background-image: url('../assets/image/section/representation/represen_bg_01.jpg');
+  width: 50%;
+  height: 100vh;
+}
+
+.representation div {
+  position: relative;
+}
+
+/* #main .test {
+  position: relative;
+  top: 0;
 } */
