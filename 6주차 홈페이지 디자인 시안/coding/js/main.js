@@ -69,14 +69,14 @@ $(function () {
 
   $('.event .event_slider').slick({
     arrows: false,
-    slidesToShow: 3,  
+    slidesToShow: 3,
   });
 
-  $('.event i:nth-of-type(1)').on('click', function() {
+  $('.event i:nth-of-type(1)').on('click', function () {
     $('.event .event_slider').slick('slickPrev');
   })
 
-  $('.event i:nth-of-type(2)').on('click', function() {
+  $('.event i:nth-of-type(2)').on('click', function () {
     $('.event .event_slider').slick('slickNext');
   })
 })
