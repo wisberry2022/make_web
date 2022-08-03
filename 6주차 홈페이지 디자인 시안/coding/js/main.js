@@ -79,4 +79,9 @@ $(function () {
   $('.event i:nth-of-type(2)').on('click', function () {
     $('.event .event_slider').slick('slickNext');
   })
+
+  $('.academy .left .monthly .btn').on('click', function() {
+    var idx = $(this).parent().parent().index();
+    $('.academy .schedule .right').eq(idx).toggleClass('tab').siblings().removeClass('tab');
+  })
 })

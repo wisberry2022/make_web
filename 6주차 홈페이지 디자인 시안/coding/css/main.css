@@ -741,6 +741,7 @@ html {
   margin-bottom: 1rem;
   font-size: 1.5rem;
   font-weight: 400;
+  text-transform: capitalize;
 }
 
 .wh-1000xm5 .event_desc_box span,
@@ -986,8 +987,221 @@ html {
 }
 
 
-#main .test {
-  /* position: relative; */
-  height: 100vh;
-  background-color: #fff;
+/* SECTION SCHEDULE CSS CODE */
+#main .academy {
+  padding-top: 0;
+  color: #333;
+  letter-spacing: -0.025em;
+}
+
+.academy .container h3 {
+  margin-bottom: 3rem;
+  font-size: 2.7rem;
+  font-weight: 700;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.academy .container p {
+  margin-bottom: 5rem;
+  text-align: center;
+  line-height: 1.3;
+  font-size: 1.7rem;
+  font-weight: 400;
+}
+
+.academy .schedule {
+  display: flex;
+  gap: 5rem;
+  height: 65rem;
+}
+
+.academy .schedule .left {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+}
+
+.academy .schedule .left .monthly:nth-of-type(1) {
+  border-top: 0.3rem solid #000;
+}
+
+.academy .schedule .left .monthly:nth-of-type(3) {
+  border-bottom: 0.3rem solid #000;
+}
+
+.academy .schedule .left .monthly {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-bottom: 0.1rem solid #000;
+}
+
+.academy .schedule .left .monthly strong {
+  display: block;
+  margin-bottom: 0.6rem;
+  font-size: 1.3rem;
+  font-weight: 400;
+}
+
+.academy .left .monthly .middle {
+  display: flex;
+}
+
+.academy .monthly .middle h4 {
+  position: relative;
+  font-size: 2.1rem;
+  font-weight: 700;
+}
+
+.academy .monthly .middle h4::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: -150%;
+  width: 25rem;
+  height: 0.1rem;
+  background-color: #f00;
+}
+
+.academy .monthly:nth-of-type(3) .middle h4::after {
+  right: -136%;
+}
+
+.academy .middle a {
+  position: absolute;
+  top: 45%;
+  right: -1%;
+  border-radius: 100%;
+  width: 4rem;
+  height: 4rem;
+  background-color: #ddd;
+}
+
+.academy .middle a i {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 1.7rem;
+}
+
+.academy .schedule .left>* {
+  flex: 1;
+}
+
+
+.academy .schedule .right {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-top: 2%;
+  width: 50%;
+  height: 60rem;
+}
+
+.academy .right>* {
+  flex: 1;
+}
+
+.academy .right .slot {
+  display: flex;
+  /* flex-direction: row-reverse; */
+  gap: 1.5rem;
+}
+
+.academy .right .slot figure {
+  width: 40%;
+}
+
+.academy .aug .lecture_01 {
+  background-image: url('../assets/image/section/academy/august_01.jpg');
+}
+
+.academy .aug .lecture_02 {
+  background-image: url('../assets/image/section/academy/august_02.jpg');
+}
+
+.academy .aug .lecture_03 {
+  background-image: url('../assets/image/section/academy/august_03.jpg');
+}
+
+.academy .aug .lecture_04 {
+  background-image: url('../assets/image/section/academy/august_04.jpg');
+}
+
+.academy .sep .lecture_01 {
+  background-image: url('../assets/image/section/academy/sep_01.jpg');
+}
+
+.academy .sep .lecture_02 {
+  background-image: url('../assets/image/section/academy/sep_02.jpg');
+}
+
+.academy .sep .lecture_03 {
+  background-image: url('../assets/image/section/academy/sep_03.jpg');
+}
+
+.academy .sep .lecture_04 {
+  background-image: url('../assets/image/section/academy/sep_04.jpg');
+}
+
+.academy .oct .lecture_01 {
+  background-image: url('../assets/image/section/academy/oct_01.jpg');
+}
+
+.academy .oct .lecture_02 {
+  background-image: url('../assets/image/section/academy/oct_02.jpg');
+}
+
+.academy .oct .lecture_03 {
+  background-image: url('../assets/image/section/academy/oct_03.jpg');
+}
+
+.academy .oct .lecture_04 {
+  background-image: url('../assets/image/section/academy/oct_04.jpg');
+}
+
+.academy .right .slot .lec_desc {
+  flex: 1;
+  padding-top: 1.5rem;
+}
+
+.academy .right .slot .lec_desc dt {
+  /* margin: 0 auto 2rem auto; */
+  margin-bottom: 2rem;
+  width: 30rem;
+  height: 2rem;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-align: center;
+}
+
+.academy .right .slot .lec_desc dd {
+  margin-bottom: 0.5rem;
+  text-align: left;
+  font-size: 1.1rem;
+  font-weight: 300;
+}
+
+.academy .right .slot .lec_desc .btn {
+  display: block;
+  margin: 0 0 0 auto;
+  border-bottom: 0.1rem solid #333;
+  padding-bottom: 0.5rem;
+  width: 20%;
+  text-align: center;
+  font-weight: 500;
+}
+
+.academy .schedule .right {
+  display: none;
+}
+
+.academy .schedule .right.tab {
+  display: flex;
 }
