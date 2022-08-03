@@ -11,6 +11,7 @@
 
 .taviraj {
   font-family: 'Taviraj', 'serif';
+  letter-spacing: 0.025em;
 }
 
 .bg_set {
@@ -265,7 +266,7 @@ html {
 }
 
 .sony_product .container .title_box {
-  margin-bottom: 18rem;
+  margin-bottom: 15rem;
 }
 
 .sony_product .title_box h3 {
@@ -566,81 +567,137 @@ html {
   right: -5%;
 }
 
-/* REPRESENTATION CSS CODE */
-#main .representation {
-  padding: 0;
-  height: 100vh;
-  display: flex;
+/* WH-1000XM5 / LINKBUDS / CAMERA CSS CODE */
+/* 주석 처리 시 위 아래 공간이 생긴다. */
+#main .wh-1000xm5,
+#main .linkbuds,
+#main .camera {
+  /* position: relative; */
+  /* padding: 0; */
+  letter-spacing: -0.025em;
 }
 
-.representation figure {
+.wh-1000xm5>.itm01 {
+  float: left;
+  width: 50%;
+  height: 100vh;
   background-image: url('../assets/image/section/representation/represen_bg_01.jpg');
+}
+
+.linkbuds>.itm02 {
+  float: left;
   width: 50%;
   height: 100vh;
+  background-image: url('../assets/image/section/representation/represen_bg_02.jpg');
 }
 
-.representation div {
-  position: relative;
-}
-
-/* WH-1000XM5 CSS CODE */
-#main .wh-1000xm5 {
-  position: relative;
-  top: -100vh;
-  padding: 0;
-}
-
-#main .wh-1000xm5 .right {
-  padding-top: 5rem;
+.camera>.itm03 {
+  float: left;
   width: 50%;
-  float: right;
+  height: 100vh;
+  background-image: url('../assets/image/section/representation/represen_bg_03.jpg');
 }
 
-.wh-1000xm5 .right .title_box {
+#main .wh-1000xm5 .right,
+#main .linkbuds .left,
+#main .camera .right {
+  float: right;
+  padding: 5rem 0;
+  width: 50%;
+  background-color: #fff;
+}
+
+#main .linkbuds .left {
+  float: left;
+}
+
+.wh-1000xm5 .right .title_box,
+.linkbuds .left .title_box,
+.camera .right .title_box {
   margin-bottom: 1.5rem;
   text-align: center;
 }
 
-.wh-1000xm5 .title_box h3 {
+.wh-1000xm5 .title_box h3,
+.linkbuds .title_box h3,
+.camera .title_box h3 {
   margin-bottom: 2.5rem;
   font-size: 2.7rem;
   font-weight: 700;
   text-transform: uppercase;
 }
 
-.wh-1000xm5 .title_box p {
+.wh-1000xm5 .title_box p,
+.linkbuds .title_box p,
+.camera .title_box p {
   margin-bottom: 1rem;
   font-size: 1.5rem;
   font-weight: 400;
 }
 
-#main .wh-1000xm5 .right>figure {
+#main .wh-1000xm5 .right>figure,
+#main .linkbuds .left>figure,
+#main .camera .right>figure {
   margin: 0 auto 5.5rem auto;
   width: 80%;
   height: 70rem;
+}
+
+#main .linkbuds .left>figure {
+  margin-bottom: 0;
 }
 
 .wh-1000xm5 .right>.itm01 {
   background-image: url('../assets/image/section/representation/represen_pd_01.png');
 }
 
-.wh-1000xm5 .right .desc_box {
+.linkbuds .left>.itm02 {
+  background-image: url('../assets/image/section/representation/represen_pd_02.png');
+}
+
+.camera .right>.itm03 {
+  background-image: url('../assets/image/section/representation/represen_pd_03.png');
+}
+
+.wh-1000xm5 .right .desc_box,
+.linkbuds .left .desc_box,
+.camera .right .desc_box {
   margin-bottom: 4rem;
 }
 
-.wh-1000xm5 .right .desc_box h4 {
+.wh-1000xm5 .right .desc_box>h4,
+.linkbuds .left .desc_box>h4,
+.camera .right .desc_box>h4 {
   margin-bottom: 3rem;
   font-size: 1.9rem;
   font-weight: 500;
   text-align: center;
 }
 
-.wh-1000xm5 .desc_box .event_desc_box {
-  margin-bottom: 2rem;
+.wh-1000xm5 .desc_box .event_desc_box,
+.linkbuds .desc_box .event_desc_box,
+.camera .desc_box .event_desc_box {
+  position: relative;
+  margin-bottom: 15rem;
   text-align: center;
 }
 
-.wh-1000xm5 .desc_box .event_desc_box figure {
+.wh-1000xm5 .desc_box .event_desc_box::after,
+.linkbuds .desc_box .event_desc_box::after,
+.camera .desc_box .event_desc_box::after {
+  content: '';
+  position: absolute;
+  bottom: -6.8rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 79.8%;
+  height: 0.1rem;
+  background-color: #f00;
+}
+
+.wh-1000xm5 .desc_box .event_desc_box figure,
+.linkbuds .desc_box .event_desc_box figure,
+.camera .desc_box .event_desc_box figure {
   position: relative;
   margin: 0 auto 2rem auto;
   width: 60%;
@@ -648,34 +705,289 @@ html {
   background-image: url('../assets/image/section/event/event_03.jpg');
 }
 
-.wh-1000xm5 .desc_box .event_desc_box figure::after {
+.linkbuds .desc_box .event_desc_box figure {
+  background-image: url('../assets/image/section/event/event_06.jpg');
+}
+
+.camera .desc_box .event_desc_box figure {
+  background-image: url('../assets/image/section/event/event_02.jpg');
+}
+
+.wh-1000xm5 .desc_box .event_desc_box figure::after,
+.linkbuds .desc_box .event_desc_box figure::after,
+.camera .desc_box .event_desc_box figure::after {
   content: '';
   position: absolute;
   top: -42%;
   left: 50%;
   transform: translatex(-50%);
-  width: 120%;
+  width: 133%;
   height: 0.1rem;
   background-color: #f00;
 }
 
-.wh-1000xm5 .event_desc_box strong {
+.linkbuds .desc_box .event_desc_box figure::after {
+  top: -45%;
+}
+
+.camera .desc_box .event_desc_box figure::after {
+  top: -60%;
+}
+
+.wh-1000xm5 .event_desc_box strong,
+.linkbuds .event_desc_box strong,
+.camera .event_desc_box strong {
   display: block;
   margin-bottom: 1rem;
   font-size: 1.5rem;
   font-weight: 400;
 }
 
-.wh-1000xm5 .event_desc_box span {
-  margin-bottom: 1rem;
+.wh-1000xm5 .event_desc_box span,
+.linkbuds .event_desc_box span,
+.camera .event_desc_box span {
+  display: block;
+  margin-bottom: 2.5rem;
   font-size: 1.3rem;
   font-weight: 300;
 }
 
-/* section.test {
-  position: sticky;
-  top: 0;
-  padding: 100px 0;
+.wh-1000xm5 .event_desc_box .btn,
+.linkbuds .event_desc_box .btn,
+.camera .event_desc_box .btn {
+  width: 15%;
+  color: #333;
+  background-color: #dcd6ce;
+}
+
+.wh-1000xm5 .prdct_summary,
+.linkbuds .prdct_summary,
+.camera .prdct_summary {
+  margin-bottom: 5rem;
+  padding: 0 10rem;
+}
+
+.wh-1000xm5 .prdct_summary h4,
+.linkbuds .prdct_summary h4,
+.camera .prdct_summary h4 {
+  margin-bottom: 5rem;
+  font-size: 2.7rem;
+  font-weight: 700;
+  text-align: left;
+}
+
+.linkbuds .prdct_summary h4 {
+  text-align: right;
+}
+
+.wh-1000xm5 .summary:nth-child(-n+3),
+.linkbuds .summary:nth-child(-n+3),
+.camera .summary:nth-child(-n+3) {
+  margin-bottom: 6rem;
+}
+
+.wh-1000xm5 .summary figure,
+.wh-1000xm5 .summary .intro_desc,
+.linkbuds .summary figure,
+.linkbuds .summary .intro_desc,
+.camera .summary figure,
+.camera .summary .intro_desc {
+  float: left;
+  width: 50%;
+  height: 20rem;
+}
+
+.wh-1000xm5 .summary_calm figure,
+.wh-1000xm5 .summary_calm .intro_desc,
+.linkbuds .summary_calm figure,
+.linkbuds .summary_calm .intro_desc,
+.camera .summary_calm figure,
+.camera .summary_calm .intro_desc {
+  float: right;
+}
+
+.wh-1000xm5 .intro_pic_01 {
+  background-image: url('../assets/image/section/representation/wh-1000xm5/exam_01.jpg');
+}
+
+.linkbuds .intro_pic_01 {
+  background-image: url('../assets/image/section/representation/wh-1000xm5/exam_01.jpg');
+}
+
+.camera .intro_pic_01 {
+  background-image: url('../assets/image/section/representation/wh-1000xm5/exam_01.jpg');
+}
+
+.wh-1000xm5 .intro_pic_02 {
+  background-image: url('../assets/image/section/representation/wh-1000xm5/exam_02.jpg');
+}
+
+.linkbuds .intro_pic_02 {
+  background-image: url('../assets/image/section/representation/wh-1000xm5/exam_02.jpg');
+}
+
+.camera .intro_pic_02 {
+  background-image: url('../assets/image/section/representation/wh-1000xm5/exam_02.jpg');
+}
+
+.wh-1000xm5 .intro_pic_03 {
+  background-image: url('../assets/image/section/representation/wh-1000xm5/exam_03.jpg');
+}
+
+.linkbuds .intro_pic_03 {
+  background-image: url('../assets/image/section/representation/wh-1000xm5/exam_03.jpg');
+}
+
+.camera .intro_pic_03 {
+  background-image: url('../assets/image/section/representation/wh-1000xm5/exam_03.jpg');
+}
+
+.wh-1000xm5 .summary_relax .intro_desc,
+.wh-1000xm5 .summary_noise .intro_desc,
+.wh-1000xm5 .summary_calm .intro_desc,
+.linkbuds .summary_relax .intro_desc,
+.linkbuds .summary_noise .intro_desc,
+.linkbuds .summary_calm .intro_desc,
+.camera .summary_relax .intro_desc,
+.camera .summary_noise .intro_desc,
+.camera .summary_calm .intro_desc {
+  position: relative;
+  padding: 11rem 0 0 5rem;
+}
+
+.wh-1000xm5 .summary_relax .intro_desc em,
+.wh-1000xm5 .summary_noise .intro_desc em,
+.wh-1000xm5 .summary_calm .intro_desc em,
+.linkbuds .summary_relax .intro_desc em,
+.linkbuds .summary_noise .intro_desc em,
+.linkbuds .summary_calm .intro_desc em,
+.camera .summary_relax .intro_desc em,
+.camera .summary_noise .intro_desc em,
+.camera .summary_calm .intro_desc em {
+  position: absolute;
+  top: 30%;
+  font-size: 1.7rem;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.wh-1000xm5 .summary_relax .intro_desc em,
+.linkbuds .summary_relax .intro_desc em,
+.camera .summary_relax .intro_desc em {
+  left: -8%;
+}
+
+.wh-1000xm5 .summary_calm .intro_desc em,
+.linkbuds .summary_calm .intro_desc em,
+.camera .summary_calm .intro_desc em {
+  left: auto;
+  right: -7%;
+}
+
+.wh-1000xm5 .summary_noise .intro_desc em,
+.linkbuds .summary_noise .intro_desc em,
+.camera .summary_noise .intro_desc em {
+  left: -7.5%;
+}
+
+.wh-1000xm5 .summary_relax .intro_desc .em_box::before,
+.wh-1000xm5 .summary_noise .intro_desc .em_box::before,
+.wh-1000xm5 .summary_calm .intro_desc .em_box::before,
+.linkbuds .summary_relax .intro_desc .em_box::before,
+.linkbuds .summary_noise .intro_desc .em_box::before,
+.linkbuds .summary_calm .intro_desc .em_box::before,
+.camera .summary_relax .intro_desc .em_box::before,
+.camera .summary_noise .intro_desc .em_box::before,
+.camera .summary_calm .intro_desc .em_box::before {
+  content: '';
+  position: absolute;
+  top: 24%;
+  width: 111%;
+  height: 20%;
+  background-color: #dcd6ce;
+}
+
+.wh-1000xm5 .summary_relax .intro_desc .em_box::before,
+.linkbuds .summary_relax .intro_desc .em_box::before,
+.camera .summary_relax .intro_desc .em_box::before {
+  left: -11.5%;
+}
+
+.wh-1000xm5 .summary_calm .intro_desc .em_box::before,
+.linkbuds .summary_calm .intro_desc .em_box::before,
+.camera .summary_calm .intro_desc .em_box::before {
+  left: auto;
+  right: -10%;
+}
+
+.wh-1000xm5 .summary_noise .intro_desc .em_box::before,
+.linkbuds .summary_noise .intro_desc .em_box::before,
+.camera .summary_noise .intro_desc .em_box::before {
+  left: -11%;
+}
+
+.wh-1000xm5 .summary_relax .intro_desc p,
+.wh-1000xm5 .summary_noise .intro_desc p,
+.wh-1000xm5 .summary_calm .intro_desc p,
+.linkbuds .summary_relax .intro_desc p,
+.linkbuds .summary_noise .intro_desc p,
+.linkbuds .summary_calm .intro_desc p,
+.camera .summary_relax .intro_desc p,
+.camera .summary_noise .intro_desc p,
+.camera .summary_calm .intro_desc p {
+  font-size: 1.5rem;
+}
+
+.linkbuds .summary_calm .intro_desc p {
+  margin-right: 4.5rem;
+  text-align: right;
+}
+
+.wh-1000xm5 .btn {
+  display: block;
+  margin: 0 auto;
+  border-radius: 1.5rem;
+  padding: 1rem;
+  width: 15%;
+  font-size: 1.3rem;
+  font-weight: 400;
+  text-align: center;
+  color: #333;
+  background-color: #dcd6ce;
+  transition: 0.5s;
+}
+
+.linkbuds .btn {
+  display: block;
+  margin: 0 auto;
+  border-radius: 1.5rem;
+  padding: 1rem;
+  width: 15%;
+  font-size: 1.3rem;
+  font-weight: 400;
+  text-align: center;
+  color: #333;
+  background-color: #dcd6ce;
+  transition: 0.5s;
+}
+
+.camera .btn {
+  display: block;
+  margin: 0 auto;
+  border-radius: 1.5rem;
+  padding: 1rem;
+  width: 15%;
+  font-size: 1.3rem;
+  font-weight: 400;
+  text-align: center;
+  color: #333;
+  background-color: #dcd6ce;
+  transition: 0.5s;
+}
+
+
+#main .test {
+  /* position: relative; */
   height: 100vh;
-  background-color: #000;
-} */
+  background-color: #fff;
+}
