@@ -6,6 +6,7 @@ $(function () {
       containment: containElem,
       autoPlay: ap_tf,
       mute: true,
+      playOnlyIfVisible: true,
       ratio: '4/3',
       showControls: false,
       remember_last_time: false,
@@ -52,6 +53,13 @@ $(function () {
     $(YTPArr[c ? c : 0]).YTPPlay();
   })
 
+  $(window).on('scroll', function () {
+    // console.log($(this).scrollTop(), $('.sony_product').offset().top);
+    if ($(this).scrollTop() >= $('.sony_product').offset().top) {
+      $('.left_menu').removeClass('show_on');
+    }
+  });
+
   $('.main_visual').slick({
     arrows: false,
     dots: true,
@@ -80,8 +88,8 @@ $(function () {
     $('.event .event_slider').slick('slickNext');
   })
 
-  $('.academy .left .monthly .btn').on('click', function() {
+  $('.academy .left .monthly .btn').on('click', function () {
     var idx = $(this).parent().parent().index();
-    $('.academy .schedule .right').eq(idx).toggleClass('tab').siblings().removeClass('tab');
+    $('.academy .schedule .right').eq(idx).addClass('tab').siblings().removeClass('tab');
   })
 })
