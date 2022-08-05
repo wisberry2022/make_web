@@ -1033,7 +1033,6 @@ html {
 }
 
 .academy .schedule .left .monthly:nth-of-type(3) {
-  /* border-bottom: 0.1rem solid #ddd; */
   background-color: #ffffff;
 }
 
@@ -1042,7 +1041,6 @@ html {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  /* border-bottom: 0.1rem solid #ddd; */
   padding: 0 2.5rem;
 }
 
@@ -1066,8 +1064,9 @@ html {
 
 .academy .middle a {
   position: absolute;
-  top: 45%;
+  top: 50%;
   right: 5%;
+  transform: translateY(-50%);
   border-radius: 100%;
   width: 4rem;
   height: 4rem;
