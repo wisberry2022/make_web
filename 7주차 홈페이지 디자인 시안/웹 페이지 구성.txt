@@ -4,7 +4,6 @@ header - ( 제품 소개 - 웰니스북 -  관련 브랜드 소개 - 정관장 �
 
 
 폰트 후보
-	-> 조선일보명조체
 	-> IBM Plex Sans KR
 
 
@@ -20,3 +19,10 @@ wellness04
 
 
 <a target="_blank" href="https://icons8.com/icon/68542/원-오른쪽">원 오른쪽</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>
+
+호스팅 계정 얻기(dothome이 제일 좋음)
+- 계정 개설 후 ftp id, pw 선생님께 전달
+- 계정 개설 후 db id, pw 선생님께 전달(ftp id,pw와 동일하게)
+
+도메인 구매
+도메인 - 무제한 호스팅(free) 선택
