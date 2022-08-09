@@ -12,6 +12,14 @@ body {
   font-family: 'IBM Plex Sans KR', sans-serif;
 }
 
+.f_left {
+  float: left;
+}
+
+.f_right {
+  float: right;
+}
+
 .clearfix::after {
   content: '';
   display: block;
@@ -132,6 +140,13 @@ header .main_menu>li:nth-child(2) .sub_menu {
   left: -100%;
 }
 
+header .main_menu>li:first-child:hover .sub_menu,
+header .main_menu>li:nth-child(2):hover .sub_menu,
+header .main_menu>li:nth-child(3):hover .sub_menu,
+header .main_menu>li:nth-child(4):hover .sub_menu {
+  z-index: 999;
+}
+
 header .main_menu>li:nth-child(3) .sub_menu {
   left: -172%;
 }
@@ -140,7 +155,7 @@ header .main_menu>li:nth-child(4) .sub_menu {
   left: -209%;
 }
 
-header .main_menu>li:hover .sub_menu {
+header .main_menu>li:hover>.sub_menu {
   opacity: 1;
 }
 
@@ -511,6 +526,7 @@ main .wb_intro {
     bottom: -2.4rem;
     right: -1.2rem;
   }
+
   to {
     bottom: -1rem;
     right: 0;
@@ -545,10 +561,243 @@ main .wb_intro {
   0% {
     transform: translateY(0);
   }
+
   50% {
     transform: translateY(0.7rem);
   }
+
   100% {
     transform: translateY(0);
   }
+}
+
+/* WB SECTION CSS CODE */
+main .wb {
+  padding: 0;
+}
+
+.wb>div {
+  padding: 10rem 0;
+}
+
+.wb figure {
+  width: 66.7rem;
+  height: 46.4rem;
+}
+
+.wb .eco .itm01 {
+  background-image: url('../assets/image/section/wellness/wellness_02.png');
+}
+
+.wb .upcycle .itm02 {
+  background-image: url('../assets/image/section/wellness/wellness_03.jpg');
+}
+
+.wb .sustain .itm03 {
+  background-image: url('../assets/image/section/wellness/wellness_04.jpg');
+}
+
+.wb .desc {
+  padding: 7rem 0 7rem 14rem;
+  text-align: right;
+}
+
+.wb .upcycle .desc {
+  padding: 7rem 14rem 7rem 0;
+  text-align: left;
+}
+
+.wb .sustain {
+  background: linear-gradient(transparent 41%, #346c4f 41%);
+}
+
+.wb .desc span {
+  display: block;
+  margin-bottom: 0.3rem;
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+
+.wb .desc h4 {
+  margin-bottom: 7.3rem;
+  font-size: 2.3rem;
+  font-weight: 600;
+  line-height: 1.21;
+}
+
+.wb .desc strong {
+  display: block;
+  margin-bottom: 4rem;
+  font-size: 1.7rem;
+  font-weight: 300;
+}
+
+.wb .sustain .desc strong {
+  color: #fff;
+}
+
+.wb .desc em {
+  display: block;
+  margin-bottom: 2.8rem;
+  font-size: 1.9rem;
+  font-weight: 500;
+}
+
+.wb .sustain .desc em {
+  color: #fff;
+}
+
+.wb .desc p {
+  margin-bottom: 3.6rem;
+  font-size: 1.5rem;
+  font-weight: 400;
+  line-height: 1.533;
+}
+
+.wb .sustain .desc p {
+  color: #fff;
+}
+
+.wb .desc .btn {
+  display: block;
+  margin: 0 0 0 auto;
+  border: 0.1rem solid #000;
+  width: 12rem;
+  padding: 0.6rem 0;
+  font-size: 1.3rem;
+  font-weight: 400;
+  text-align: center;
+}
+
+.wb .upcycle .desc .btn {
+  margin: 0 auto 0 0;
+}
+
+.wb .sustain .desc .btn {
+  border: 0.1rem solid #fff;
+  color: #fff;
+}
+
+/* other brand css code */
+main .other_brand .container .brand_box {
+  display: grid;
+  grid-template-columns: repeat(5, 23.8rem);
+  grid-gap: 0.2rem;
+  position: relative;
+}
+
+.other_brand .brand_box .selection {
+  display: block;
+  height: 24rem;
+}
+
+.other_brand .brand_box .hwa_e_rak {
+  background-image: url('../assets/image/section/other_brand/brand_07.jpg');
+  grid-column: 1 / 3;
+  grid-row: 1 / 4;
+  height: 100%;
+}
+
+.other_brand .brand_box .hsj {
+  background-image: url('../assets/image/section/other_brand/brand_01.jpg');
+}
+
+.other_brand .brand_box .goodbase {
+  background-image: url('../assets/image/section/other_brand/brand_12.jpg');
+}
+
+.other_brand .brand_box .alpha {
+  background-image: url('../assets/image/section/other_brand/brand_11.jpg');
+}
+
+.other_brand .brand_box .general_hong {
+  background-image: url('../assets/image/section/other_brand/brand_09.jpg');
+}
+
+.other_brand .brand_box .ipass {
+  background-image: url('../assets/image/section/other_brand/brand_08.jpg');
+}
+
+.other_brand .brand_box .dan {
+  background-image: url('../assets/image/section/other_brand/brand_05.jpg');
+}
+
+.other_brand .brand_box .hst {
+  background-image: url('../assets/image/section/other_brand/brand_04.jpg');
+}
+
+.other_brand .brand_box .darim {
+  background-image: url('../assets/image/section/other_brand/brand_03.jpg');
+}
+
+.other_brand .brand_box .everytime {
+  background-image: url('../assets/image/section/other_brand/brand_02.jpg');
+}
+
+.other_brand .brand_box>.btn {
+  display: block;
+  position: absolute;
+  top: -2.7rem;
+  right: 0.2rem;
+  padding: 0.6rem 1.2rem;
+  font-size: 1.5rem;
+  font-weight: 400;
+  background-color: #d3d3d3;
+}
+
+.other_brand .each_brand {
+  display: none;
+}
+
+.other_brand .each_brand.on {
+  display: block;
+  position: absolute;
+  top: 0;
+  z-index: 999;
+  padding: 20%;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+.other_brand .each_brand .box>figure {
+  width: 20rem;
+  height: 30rem;
+}
+
+.other_brand .each_brand .itm01 {
+  background-image: url('../assets/image/section/other_brand/logo/brand_07.png');
+  background-size: contain;
+}
+
+.other_brand .each_brand .right {
+  margin-left: 8.3rem;
+}
+
+.other_brand .each_brand .right h4 {
+  margin-bottom: 3.5rem;
+  font-size: 3.5rem;
+  font-weight: 600;
+  line-height: 1.1428571;
+}
+
+.other_brand .each_brand .right p {
+  margin-bottom: 5.6rem;
+  font-size: 2.1rem;
+  font-weight: 300;
+  line-height: 1.1904;
+}
+
+.other_brand .each_brand .right .btn {
+  display: block;
+  font-size: 1.7rem;
+  font-weight: 400;
+  z-index: 999;
+}
+
+.other_brand .each_brand .right .btn .icon {
+  margin: 0 auto 0.5rem auto;
+  width: 6.4rem;
+  height: 6.4rem;
+  background-image: url('../assets/image/etc/right_icon.png');
 }
