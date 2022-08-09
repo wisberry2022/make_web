@@ -603,7 +603,7 @@ main .wb {
 }
 
 .wb .upcycle .desc {
-  padding: 7rem 14rem 7rem 0;
+  padding: 5rem 14rem 5rem 0;
   text-align: left;
 }
 
@@ -750,14 +750,48 @@ main .other_brand .container .brand_box {
 }
 
 .other_brand .each_brand.on {
-  display: block;
   position: absolute;
   top: 0;
   z-index: 999;
-  padding: 20%;
+  /* padding: 20% 18%; */
+  display: block;
   width: 100%;
   height: 100%;
   background-color: rgba(255, 255, 255, 0.8);
+  opacity: 1;
+  overflow: hidden;
+}
+
+.other_brand .each_brand .box {
+  position: absolute;
+  top: 50%;
+  left: 23%;
+  transform: translateY(-50%);
+  width: 100%;
+}
+
+.other_brand .each_brand:nth-of-type(2) .box {
+  left: 20%;
+}
+
+.other_brand .each_brand:nth-of-type(4) .box {
+  left: 18%;
+}
+
+.other_brand .each_brand:nth-of-type(5) .box {
+  left: 14%;
+}
+
+.other_brand .each_brand:nth-of-type(8) .box {
+  left: 16%;
+}
+
+.other_brand .each_brand:nth-of-type(9) .box {
+  left: 15%;
+}
+
+.other_brand .each_brand:nth-of-type(10) .box {
+  left: 16%;
 }
 
 .other_brand .each_brand .box>figure {
@@ -767,6 +801,51 @@ main .other_brand .container .brand_box {
 
 .other_brand .each_brand .itm01 {
   background-image: url('../assets/image/section/other_brand/logo/brand_07.png');
+  background-size: contain;
+}
+
+.other_brand .each_brand .itm02 {
+  background-image: url('../assets/image/section/other_brand/logo/brand_01.png');
+  background-size: contain;
+}
+
+.other_brand .each_brand .itm03 {
+  background-image: url('../assets/image/section/other_brand/logo/brand_15.png');
+  background-size: contain;
+}
+
+.other_brand .each_brand .itm04 {
+  background-image: url('../assets/image/section/other_brand/logo/brand_11.png');
+  background-size: contain;
+}
+
+.other_brand .each_brand .itm05 {
+  background-image: url('../assets/image/section/other_brand/logo/brand_09.png');
+  background-size: contain;
+}
+
+.other_brand .each_brand .itm06 {
+  background-image: url('../assets/image/section/other_brand/logo/brand_08.png');
+  background-size: contain;
+}
+
+.other_brand .each_brand .itm07 {
+  background-image: url('../assets/image/section/other_brand/logo/brand_05.png');
+  background-size: contain;
+}
+
+.other_brand .each_brand .itm08 {
+  background-image: url('../assets/image/section/other_brand/logo/brand_04.png');
+  background-size: contain;
+}
+
+.other_brand .each_brand .itm09 {
+  background-image: url('../assets/image/section/other_brand/logo/brand_03.png');
+  background-size: contain;
+}
+
+.other_brand .each_brand .itm10 {
+  background-image: url('../assets/image/section/other_brand/logo/brand_02.png');
   background-size: contain;
 }
 
