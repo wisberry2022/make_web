@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@100;200;300;400;500;600;700&display=swap');
 
 /* * {
-  outline: 0.1rem solid #000;
+  outline: 0.1rem solid #333;
 } */
 
 html {
@@ -98,11 +98,11 @@ header .gnb .main_menu {
   display: flex;
 }
 
-header .gnb .main_menu a {
+header .gnb .main_menu>li a {
   display: block;
   padding: 1rem 1.9rem;
-  font-size: 1.3rem;
-  font-weight: 400;
+  font-size: 1.7rem;
+  font-weight: 500;
   text-align: center;
 }
 
@@ -116,7 +116,7 @@ header .main_menu>li:first-child::after {
   top: 102%;
   left: -36rem;
   z-index: 990;
-  width: 100vw;
+  width: 102vw;
   height: 0;
   background-color: #f9f9f9;
   transition: 0.5s;
@@ -131,9 +131,14 @@ header .main_menu .sub_menu {
   width: 500%;
   z-index: 991;
   display: flex;
-  font-size: 0.9rem;
+  /* font-size: 0.9rem; */
   opacity: 0;
   transition: 0.6s;
+}
+
+header .main_menu .sub_menu>li a {
+  font-size: 1.4rem;
+  font-weight: 300;
 }
 
 header .main_menu>li:nth-child(2) .sub_menu {
@@ -148,11 +153,11 @@ header .main_menu>li:nth-child(4):hover .sub_menu {
 }
 
 header .main_menu>li:nth-child(3) .sub_menu {
-  left: -172%;
+  left: -168%;
 }
 
 header .main_menu>li:nth-child(4) .sub_menu {
-  left: -209%;
+  left: -199%;
 }
 
 header .main_menu>li:hover>.sub_menu {
@@ -172,12 +177,12 @@ header .side_menu a {
   display: block;
   margin-top: 40%;
   padding: 0 0.7rem;
-  font-size: 1.3rem;
+  font-size: 1.5rem;
 }
 
 header .gnb .side_menu form {
   position: relative;
-  margin-top: 7%;
+  margin-top: 9%;
   margin-right: 0.7rem;
 }
 
@@ -191,8 +196,8 @@ header .side_menu input[type="text"] {
 
 header .side_menu form button {
   position: absolute;
-  top: 45%;
-  right: 3%;
+  top: 55%;
+  right: 2%;
   transform: translatey(-50%);
   border: none;
   background-color: transparent;
@@ -200,7 +205,7 @@ header .side_menu form button {
 }
 
 header .side_menu form button i {
-  font-size: 1.1rem;
+  font-size: 1.5rem;
 }
 
 header .main_visual {
@@ -229,7 +234,7 @@ header .main_visual .desc_box {
   position: absolute;
   top: 0;
   left: 18.5%;
-  width: 18%;
+  width: 21%;
   height: 100%;
   z-index: 989;
   padding: 17.2rem 0 0 3.6rem;
@@ -354,6 +359,7 @@ main .product .title_box p {
 .product .prd_desc .sub_desc {
   display: flex;
   position: relative;
+  width: 70%;
   gap: 3.8rem;
   margin-bottom: 2.6rem;
 }
@@ -363,7 +369,8 @@ main .product .title_box p {
   position: absolute;
   top: 100%;
   margin-top: 0.4rem;
-  width: 18.5rem;
+  /* width: 18.5rem; */
+  width: 100%;
   height: 0.2rem;
   background-color: #d9d9d9;
 }
@@ -533,7 +540,7 @@ main .wb_intro {
   }
 }
 
-.wb_intro .container strong {
+.wb_intro .container .letter {
   display: none;
   position: absolute;
   font-size: 2.7rem;
@@ -542,17 +549,17 @@ main .wb_intro {
   animation: letter_over 1.5s 1s infinite;
 }
 
-.wb_intro .container strong:nth-of-type(1) {
+.wb_intro .container .letter:nth-of-type(1) {
   top: 44.8rem;
   left: 38.2rem;
 }
 
-.wb_intro .container strong:nth-of-type(2) {
+.wb_intro .container .letter:nth-of-type(2) {
   bottom: 35.8rem;
   right: 38.9rem;
 }
 
-.wb_intro .container strong:nth-of-type(3) {
+.wb_intro .container .letter:nth-of-type(3) {
   bottom: 17.5rem;
   left: 44.7rem;
 }
@@ -608,7 +615,7 @@ main .wb {
 }
 
 .wb .sustain {
-  background: linear-gradient(transparent 41%, #346c4f 41%);
+  background: linear-gradient(transparent 38%, #346c4f 38%);
 }
 
 .wb .desc span {
@@ -734,6 +741,10 @@ main .other_brand .container .brand_box {
   background-image: url('../assets/image/section/other_brand/brand_02.jpg');
 }
 
+.other_brand .brand_box a.on {
+  border: 0.5rem solid #f00;
+}
+
 .other_brand .brand_box>.btn {
   display: block;
   position: absolute;
@@ -753,7 +764,6 @@ main .other_brand .container .brand_box {
   position: absolute;
   top: 0;
   z-index: 999;
-  /* padding: 20% 18%; */
   display: block;
   width: 100%;
   height: 100%;
@@ -879,4 +889,243 @@ main .other_brand .container .brand_box {
   width: 6.4rem;
   height: 6.4rem;
   background-image: url('../assets/image/etc/right_icon.png');
+}
+
+/* MEDIA SECTION CSS CODE */
+main .media {
+  height: 55vh;
+  background-color: #f9f9f9;
+}
+
+.media .container .left {
+  padding-top: 0.6rem;
+  padding-right: 8rem;
+  text-align: left;
+}
+
+.media .container .left span {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-size: 1.5rem;
+  font-weight: 300;
+}
+
+.media .left h3 {
+  margin-bottom: 4rem;
+  font-size: 2.9rem;
+  font-weight: 600;
+}
+
+.media .left strong {
+  display: block;
+  position: relative;
+  margin-bottom: 4rem;
+  font-size: 1.7rem;
+  font-weight: 400;
+}
+
+.media .left strong::after {
+  content: '';
+  position: absolute;
+  top: 180%;
+  left: 0;
+  width: 34%;
+  height: 0.3rem;
+  background-color: #dddddd;
+}
+
+.media .left .media_tab {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  margin-bottom: 10.3rem;
+}
+
+.media .left .media_tab li a {
+  display: block;
+  font-size: 2.3rem;
+  font-weight: 400;
+  color: #a9a9a9;
+}
+
+.media .left .media_tab li.on a {
+  color: #333;
+}
+
+.media .left .btn {
+  display: block;
+  padding: 1rem 1.4rem;
+  width: 33%;
+  font-size: 1.3rem;
+  font-weight: 300;
+  background-color: #d9d9d9;
+  text-align: center;
+}
+
+.media .right {
+  display: none;
+}
+
+.media .right.on {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  width: 70%;
+}
+
+.media .top,
+.media .bottom {
+  display: flex;
+  gap: 2rem;
+  width: 100%;
+  height: 16rem;
+}
+
+.media .right figure {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.media .tvcf .itm01 {
+  background-image: url('../assets/image/section/media/media_08.jpg');
+}
+
+.media .tvcf .itm02 {
+  background-image: url('../assets/image/section/media/media_07.jpg');
+}
+
+.media .tvcf .itm03 {
+  background-image: url('../assets/image/section/media/media_06.jpg');
+}
+
+.media .tvcf .itm04 {
+  background-image: url('../assets/image/section/media/media_05.jpg');
+}
+
+.media .right .hover_box {
+  position: absolute;
+  padding: 12% 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  background-color: rgba(255, 255, 255, 0.6);
+}
+
+.media .right .hover_box p {
+  margin-bottom: 1.6rem;
+  font-size: 1.7rem;
+  font-weight: 500;
+  line-height: 1.11;
+  text-align: center;
+}
+
+.media .right .hover_box .btn {
+  display: block;
+  margin: 0 auto;
+  padding: 0.6rem 3.5rem;
+  width: 40%;
+  font-size: 1.7rem;
+  font-weight: 300;
+  background-color: #d9d9d9;
+  text-align: center;
+}
+
+.media .right figure:hover .hover_box {
+  opacity: 1;
+}
+
+.media .campaign .itm01 {
+  background-image: url('../assets/image/section/media/media_01.jpg');
+}
+
+.media .campaign .itm02 {
+  background-image: url('../assets/image/section/media/media_02.jpg');
+}
+
+.media .campaign .itm03 {
+  background-image: url('../assets/image/section/media/media_03.jpg');
+}
+
+.media .campaign .itm04 {
+  background-image: url('../assets/image/section/media/media_04.jpg');
+}
+
+/* FOOTER CSS CODE */
+footer {
+  padding: 5rem 0;
+  color: #ddd;
+  background-color: #111;
+}
+
+footer .top_footer {
+  margin-bottom: 2rem;
+  border-bottom: 0.1rem solid #333;
+  padding-bottom: 2rem;
+}
+
+footer .top_footer .container,
+footer .bottom_footer .container {
+  display: flex;
+  flex-direction: column;
+}
+
+footer .top_footer .site {
+  margin-bottom: 3.4rem;
+  border: none;
+  border-bottom: 0.1rem solid #ddd;
+  padding-bottom: 0.8rem;
+  width: 13rem;
+  font-size: 1.7rem;
+  font-weight: 400;
+  background: transparent;
+  color: #ddd;
+}
+
+footer .top_footer h3 {
+  width: 10%;
+}
+
+footer .top_footer .top,
+footer .bottom_footer .top {
+  display: flex;
+  justify-content: space-between;
+}
+
+footer .bottom_footer .top {
+  margin-bottom: 3.4rem;
+}
+
+footer .top_footer .bottom .footer_list,
+footer .bottom_footer .top .footer_list {
+  display: flex;
+  gap: 1.5rem;
+}
+
+footer .top_footer .bottom .footer_list li a,
+footer .bottom_footer .top .footer_list li a {
+  display: block;
+  font-size: 1.3rem;
+  font-weight: 400;
+}
+
+footer .bottom_footer .top .sns_box strong {
+  display: block;
+  margin-bottom: 1.3rem;
+  font-size: 1.3rem;
+  text-align: right;
+}
+
+footer .bottom_footer .top .sns_list {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1.5rem;
+  font-size: 1.9rem;
+  transform: translateX(5%);
+}
+
+footer .bottom_footer .bottom span {
+  display: block;
+  font-size: 1.1rem;
+  font-weight: 200;
 }
