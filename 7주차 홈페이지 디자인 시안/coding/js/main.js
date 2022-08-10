@@ -58,8 +58,15 @@ $(function () {
     var idx = $(this).index();
     $(this).addClass('on').siblings().removeClass('on');
     $('.media .right').eq(idx).addClass('on').siblings().removeClass('on');
-
-
   })
+
+  $('.mbtn').on('click', function() {
+    $('header .container .gnb').toggleClass('rpsv');
+  });
+
+  $('header .main_menu>li').on('click', function() {
+    var idx = $(this).index();
+    $('.main_menu>li').eq(idx).toggleClass('rpsv').siblings().removeClass('rpsv');
+  });
 
 })
