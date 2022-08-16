@@ -1,7 +1,7 @@
 @media screen and (max-width: 768px) {
   /* * {
-  outline: 0.1rem solid #333;
-} */
+    outline: 0.1rem solid #333;
+  } */
 
   html {
     font-size: 8px;
@@ -26,6 +26,11 @@
 
   .container {
     width: auto;
+  }
+
+  .hidden {
+    height: 100%;
+    overflow: hidden;
   }
 
   /* TOP_HEADER CSS CODE */
@@ -88,6 +93,7 @@
     position: static;
     width: auto;
     height: 0;
+    opacity: 1;
     transition: 0s;
   }
 
@@ -97,16 +103,8 @@
   }
 
   header .main_menu .sub_menu>li a {
-    font-size: 1.4rem;
-    font-weight: 300;
-  }
-
-  /* header .main_menu:hover>li:first-child::after {
-  display: none;
-} */
-
-  header .main_menu>li:hover>.sub_menu {
-    opacity: auto;
+    font-size: 1.9rem;
+    font-weight: 400;
   }
 
   header .gnb .side_menu {
@@ -116,7 +114,7 @@
   header .mbtn {
     position: fixed;
     top: 0.5rem;
-    right: 2rem;
+    right: 0.5rem;
     display: block;
     z-index: 999;
     border: none;
@@ -169,7 +167,7 @@
   /* PRODUCT SECTION CSS CODE */
   main .product {
     padding: 5.5rem 0;
-    height: 80vh;
+    /* height: 80vh; */
   }
 
   main .product .title_box {
@@ -240,6 +238,7 @@
   }
 
   .wb_intro .container .wellness_book {
+    margin-bottom: 5rem;
     height: 30rem;
   }
 
@@ -247,14 +246,20 @@
     display: none;
   }
 
-  .wb_intro .book_center figure {
-    width: 2.5rem;
-    height: 3.1rem;
-  }
-
   .wb_intro .container .letter {
     display: none;
   }
+
+  .wb_intro .sub_title {
+    display: block;
+    border-bottom: 0.1rem solid #ddd;
+    padding-bottom: 6.25rem;
+    font-size: 1.9rem;
+    font-weight: 500;
+    line-height: 1.3;
+    text-align: center;
+  }
+
 
   /* WB SECTION CSS CODE */
   .wb>div {
@@ -282,7 +287,7 @@
   }
 
   .wb .sustain {
-    background: linear-gradient(transparent 64%, #346c4f 64%);
+    background: linear-gradient(transparent 65%, #346c4f 65%);
   }
 
   .wb .desc span {
@@ -323,7 +328,7 @@
 
   /* other brand css code */
   main .other_brand {
-    height: 100vh;
+    height: 76vh;
   }
 
   main .other_brand .container .title_box {
@@ -354,391 +359,200 @@
   }
 
   .other_brand .brand_box a.on {
-    border: 0.5rem solid #f00;
+    border: 0.3rem solid #f00;
   }
 
   .other_brand .brand_box>.btn {
-    display: block;
-    position: absolute;
-    top: -2.7rem;
-    right: 0.2rem;
-    padding: 0.6rem 1.2rem;
-    font-size: 1.5rem;
-    font-weight: 400;
-    background-color: #d3d3d3;
-  }
-
-  .other_brand .each_brand {
-    display: none;
+    top: 110%;
+    left: 50%;
+    right: auto;
+    transform: translateX(-50%);
+    padding: 1.2rem 2.2rem;
+    font-size: 1.8rem;
+    font-weight: 500;
   }
 
   .other_brand .each_brand.on {
-    position: absolute;
-    top: 0;
-    z-index: 999;
     display: block;
-    width: 100%;
-    height: 100%;
     background-color: rgba(255, 255, 255, 0.8);
     opacity: 1;
     overflow: hidden;
   }
 
   .other_brand .each_brand .box {
-    position: absolute;
-    top: 50%;
-    left: 23%;
-    transform: translateY(-50%);
-    width: 100%;
+    left: auto;
+    transform: translateY(-55%);
   }
 
-  .other_brand .each_brand:nth-of-type(2) .box {
-    left: 20%;
-  }
-
-  .other_brand .each_brand:nth-of-type(4) .box {
-    left: 18%;
-  }
-
-  .other_brand .each_brand:nth-of-type(5) .box {
-    left: 14%;
-  }
-
-  .other_brand .each_brand:nth-of-type(8) .box {
-    left: 16%;
-  }
-
-  .other_brand .each_brand:nth-of-type(9) .box {
-    left: 15%;
-  }
-
+  .other_brand .each_brand:nth-of-type(2) .box,
+  .other_brand .each_brand:nth-of-type(4) .box,
+  .other_brand .each_brand:nth-of-type(5) .box,
+  .other_brand .each_brand:nth-of-type(8) .box,
+  .other_brand .each_brand:nth-of-type(9) .box,
   .other_brand .each_brand:nth-of-type(10) .box {
-    left: 16%;
+    left: 0;
+  }
+
+  .other_brand .f_left,
+  .other_brand .f_right {
+    float: none;
   }
 
   .other_brand .each_brand .box>figure {
-    width: 20rem;
-    height: 30rem;
-  }
-
-  .other_brand .each_brand .itm01 {
-    background-image: url('../assets/image/section/other_brand/logo/brand_07.png');
-    background-size: contain;
-  }
-
-  .other_brand .each_brand .itm02 {
-    background-image: url('../assets/image/section/other_brand/logo/brand_01.png');
-    background-size: contain;
-  }
-
-  .other_brand .each_brand .itm03 {
-    background-image: url('../assets/image/section/other_brand/logo/brand_15.png');
-    background-size: contain;
-  }
-
-  .other_brand .each_brand .itm04 {
-    background-image: url('../assets/image/section/other_brand/logo/brand_11.png');
-    background-size: contain;
-  }
-
-  .other_brand .each_brand .itm05 {
-    background-image: url('../assets/image/section/other_brand/logo/brand_09.png');
-    background-size: contain;
-  }
-
-  .other_brand .each_brand .itm06 {
-    background-image: url('../assets/image/section/other_brand/logo/brand_08.png');
-    background-size: contain;
-  }
-
-  .other_brand .each_brand .itm07 {
-    background-image: url('../assets/image/section/other_brand/logo/brand_05.png');
-    background-size: contain;
-  }
-
-  .other_brand .each_brand .itm08 {
-    background-image: url('../assets/image/section/other_brand/logo/brand_04.png');
-    background-size: contain;
-  }
-
-  .other_brand .each_brand .itm09 {
-    background-image: url('../assets/image/section/other_brand/logo/brand_03.png');
-    background-size: contain;
-  }
-
-  .other_brand .each_brand .itm10 {
-    background-image: url('../assets/image/section/other_brand/logo/brand_02.png');
-    background-size: contain;
+    transform: translateX(0);
+    margin: 0 auto 1rem auto;
+    width: 15rem;
+    height: 15rem;
   }
 
   .other_brand .each_brand .right {
-    margin-left: 8.3rem;
+    margin: 0;
   }
 
   .other_brand .each_brand .right h4 {
-    margin-bottom: 3.5rem;
-    font-size: 3.5rem;
+    font-size: 2.5rem;
     font-weight: 600;
-    line-height: 1.1428571;
+    text-align: center;
   }
 
   .other_brand .each_brand .right p {
-    margin-bottom: 5.6rem;
-    font-size: 2.1rem;
-    font-weight: 300;
-    line-height: 1.1904;
+    margin-bottom: 3rem;
+    font-size: 1.7rem;
+    line-height: 1.4;
+    text-align: center;
   }
 
   .other_brand .each_brand .right .btn {
-    display: block;
-    font-size: 1.7rem;
-    font-weight: 400;
-    z-index: 999;
+    font-size: 1.5rem;
+    font-weight: 500;
+    text-align: center;
   }
 
   .other_brand .each_brand .right .btn .icon {
     margin: 0 auto 0.5rem auto;
-    width: 6.4rem;
-    height: 6.4rem;
-    background-image: url('../assets/image/etc/right_icon.png');
+    width: 5rem;
+    height: 5rem;
   }
 
   /* MEDIA SECTION CSS CODE */
   main .media {
-    height: 55vh;
-    background-color: #f9f9f9;
+    height: 59vh;
+  }
+
+  .media .container {
+    padding: 0 2rem;
+  }
+
+  .media .f_left {
+    float: none;
   }
 
   .media .container .left {
-    padding-top: 0.6rem;
-    padding-right: 8rem;
-    text-align: left;
-  }
-
-  .media .container .left span {
-    display: block;
-    margin-bottom: 0.5rem;
-    font-size: 1.5rem;
-    font-weight: 300;
+    position: relative;
+    padding: 0 5rem;
+    text-align: center;
   }
 
   .media .left h3 {
-    margin-bottom: 4rem;
-    font-size: 2.9rem;
-    font-weight: 600;
+    margin-bottom: 3rem;
   }
 
   .media .left strong {
-    display: block;
     position: relative;
-    margin-bottom: 4rem;
-    font-size: 1.7rem;
-    font-weight: 400;
+    margin-bottom: 3.9rem;
   }
 
   .media .left strong::after {
-    content: '';
-    position: absolute;
-    top: 180%;
-    left: 0;
-    width: 34%;
-    height: 0.3rem;
-    background-color: #dddddd;
+    left: 50%;
+    transform: translatex(-50%);
+    width: 90%;
+    height: 0.2rem;
   }
 
   .media .left .media_tab {
     display: flex;
-    flex-direction: column;
-    gap: 0.6rem;
-    margin-bottom: 10.3rem;
+    flex-direction: row;
+    justify-content: center;
+    gap: 3rem;
+    margin: 0 auto 4.9rem auto;
   }
 
   .media .left .media_tab li a {
-    display: block;
-    font-size: 2.3rem;
-    font-weight: 400;
-    color: #a9a9a9;
-  }
-
-  .media .left .media_tab li.on a {
-    color: #333;
+    font-size: 2.1rem;
   }
 
   .media .left .btn {
-    display: block;
-    padding: 1rem 1.4rem;
-    width: 33%;
-    font-size: 1.3rem;
-    font-weight: 300;
-    background-color: #d9d9d9;
-    text-align: center;
-  }
-
-  .media .right {
-    display: none;
+    position: absolute;
+    top: 365%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 25%;
+    font-size: 1.7rem;
+    font-weight: 400;
   }
 
   .media .right.on {
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-    width: 70%;
-  }
-
-  .media .top,
-  .media .bottom {
-    display: flex;
-    gap: 2rem;
     width: 100%;
-    height: 16rem;
-  }
-
-  .media .right figure {
-    position: relative;
-    width: 100%;
-    height: 100%;
-  }
-
-  .media .tvcf .itm01 {
-    background-image: url('../assets/image/section/media/media_08.jpg');
-  }
-
-  .media .tvcf .itm02 {
-    background-image: url('../assets/image/section/media/media_07.jpg');
-  }
-
-  .media .tvcf .itm03 {
-    background-image: url('../assets/image/section/media/media_06.jpg');
-  }
-
-  .media .tvcf .itm04 {
-    background-image: url('../assets/image/section/media/media_05.jpg');
   }
 
   .media .right .hover_box {
-    position: absolute;
-    padding: 12% 0;
-    width: 100%;
-    height: 100%;
-    opacity: 0;
-    background-color: rgba(255, 255, 255, 0.6);
-  }
-
-  .media .right .hover_box p {
-    margin-bottom: 1.6rem;
-    font-size: 1.7rem;
-    font-weight: 500;
-    line-height: 1.11;
-    text-align: center;
-  }
-
-  .media .right .hover_box .btn {
-    display: block;
-    margin: 0 auto;
-    padding: 0.6rem 3.5rem;
-    width: 40%;
-    font-size: 1.7rem;
-    font-weight: 300;
-    background-color: #d9d9d9;
-    text-align: center;
-  }
-
-  .media .right figure:hover .hover_box {
-    opacity: 1;
-  }
-
-  .media .campaign .itm01 {
-    background-image: url('../assets/image/section/media/media_01.jpg');
-  }
-
-  .media .campaign .itm02 {
-    background-image: url('../assets/image/section/media/media_02.jpg');
-  }
-
-  .media .campaign .itm03 {
-    background-image: url('../assets/image/section/media/media_03.jpg');
-  }
-
-  .media .campaign .itm04 {
-    background-image: url('../assets/image/section/media/media_04.jpg');
+    display: none;
   }
 
   /* FOOTER CSS CODE */
-  footer {
-    padding: 5rem 0;
-    color: #ddd;
-    background-color: #111;
-  }
-
-  footer .top_footer {
-    margin-bottom: 2rem;
-    border-bottom: 0.1rem solid #333;
-    padding-bottom: 2rem;
-  }
-
   footer .top_footer .container,
   footer .bottom_footer .container {
-    display: flex;
-    flex-direction: column;
+    padding: 0 2rem;
+  }
+
+  footer .top_footer .top h3 {
+    margin: 0 auto 5.5rem auto;
   }
 
   footer .top_footer .site {
-    margin-bottom: 3.4rem;
-    border: none;
-    border-bottom: 0.1rem solid #ddd;
-    padding-bottom: 0.8rem;
-    width: 13rem;
-    font-size: 1.7rem;
-    font-weight: 400;
-    background: transparent;
-    color: #ddd;
+    display: none;
   }
 
   footer .top_footer h3 {
-    width: 10%;
+    width: 20%;
   }
 
-  footer .top_footer .top,
-  footer .bottom_footer .top {
+  footer .top_footer .top {
     display: flex;
     justify-content: space-between;
   }
 
-  footer .bottom_footer .top {
-    margin-bottom: 3.4rem;
-  }
-
-  footer .top_footer .bottom .footer_list,
-  footer .bottom_footer .top .footer_list {
+  footer .top_footer .bottom {
     display: flex;
-    gap: 1.5rem;
+    justify-content: center;
   }
 
-  footer .top_footer .bottom .footer_list li a,
-  footer .bottom_footer .top .footer_list li a {
-    display: block;
-    font-size: 1.3rem;
-    font-weight: 400;
+  footer .bottom_footer .top {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  footer .bottom_footer .top .footer_list {
+    margin-bottom: 3rem;
   }
 
   footer .bottom_footer .top .sns_box strong {
-    display: block;
-    margin-bottom: 1.3rem;
-    font-size: 1.3rem;
-    text-align: right;
+    margin-bottom: 1rem;
+    text-align: center;
   }
 
   footer .bottom_footer .top .sns_list {
     display: flex;
-    justify-content: flex-end;
-    gap: 1.5rem;
-    font-size: 1.9rem;
-    transform: translateX(5%);
+    justify-content: center;
+    gap: 1.2rem;
+    font-size: 1.7rem;
+    transform: translateX(0);
   }
 
   footer .bottom_footer .bottom span {
-    display: block;
-    font-size: 1.1rem;
-    font-weight: 200;
+    font-weight: 400;
+    letter-spacing: 0.025em;
+    text-align: center;
   }
 }
