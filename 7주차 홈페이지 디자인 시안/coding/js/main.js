@@ -5,16 +5,6 @@ $(function () {
     $('html, body').animate({ scrollTop: destination }, time);
   }
 
-  // 스크롤 금지 함수
-  function disableScroll(obj) {
-    $(obj).addClass('hidden');
-  }
-
-  // 스크롤 금지 해제 함수
-  function enableScroll(obj) {
-    $(obj).removeClass('hidden');
-  }
-
   $('header .main_slider').slick({
     arrows: false,
     dots: true,
