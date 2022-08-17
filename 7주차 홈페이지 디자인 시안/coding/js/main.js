@@ -18,7 +18,11 @@ $(function () {
     responsive: [
       {
         breakpoint: 768,
-        settings: { slidesToShow: 1 }
+        settings: {
+          arrows: true,
+          autoplay: false,
+          slidesToShow: 1,
+        }
       }
     ]
   });
