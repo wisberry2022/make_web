@@ -1,17 +1,28 @@
 민음사
 
-header - ( ) - footer
-
-신간 도서 검색
-책 소개 영상
-민음사 소셜미디어
-공모전 소개
-
-폰트 후보
-	-> IBM Plex Sans KR
+header - ( 신간 도서 검색 - Littor - 민음 북샵 - 민음사 소셜미디어 ) - footer
 
 민음사 멤버십
 http://minumsa.minumsa.com/bookclub/bookclub-home/
 
 민음사 북클럽
 https://minumsa.minumsa.com/bookclub/community/
+
+민음 북샵
+https://minumsa.minumsa.com/bookclub/bookclub-shop/
+
+릿터
+	* 릿터
+		- https://blog.naver.com/minumworld/222817313175
+
+민음사 소셜미디어
+	* 쿵쿵쿵! 형 저 민팁인데요! 
+	* (언박싱) 10년째 똑같은 마우스패드 쓰는 직원...
+	* 나는 나를 파괴할 권리가 있다!
+	* 프리랜서 주목!
+	* 실수하면 뭐 어때ㅑ용
+	* 이럴 거면 왜 불렀어?
+
+h3 - 600 - 23 - margin-bottom: 15px
+p - 400 - 17 - margin-bottom: 30px
+
