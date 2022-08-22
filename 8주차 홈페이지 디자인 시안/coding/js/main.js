@@ -1,4 +1,5 @@
 window.addEventListener('DOMContentLoaded', function () {
+  // HEADER JS CODE
   const newBookSwiper = new Swiper(".book_slider", {
     slidesPerView: 5,
     spaceBetween: 60,
@@ -48,7 +49,24 @@ window.addEventListener('DOMContentLoaded', function () {
 
       FV.style.backgroundImage = `url(${image_arr[afterIndex]})`;
     }
-
   })
 
+  // LITTOR SECTION JS CODE
+  const LITTOR_MENU = document.querySelector('.littor_menu');
+  const LITTOR_LIST = document.querySelector('.littor_list').children;
+
+  // LITTOR SECTION 탭 메뉴
+  console.log(LITTOR_LIST);
+  LITTOR_MENU.addEventListener('click', function(e) {
+    this.children.forEach((elm, idx) => {
+      elm.classList.remove('on');
+      if (e.target == elm) {
+        elm.classList.add('on');
+        LITTOR_LIST.forEach((el) => {
+          el.classList.remove('on');
+        });
+        LITTOR_LIST[idx].classList.add('on');
+      }
+    })
+  })
 });

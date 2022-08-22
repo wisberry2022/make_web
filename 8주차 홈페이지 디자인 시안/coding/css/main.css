@@ -289,3 +289,135 @@ main .new_book>.container {
 }
 
 /* LITTOR SECTION CSS CODE */
+main .littor .container .title_box .logo {
+  margin-bottom: 0.5rem;
+  width: 30%;
+  height: 11rem;
+  background-image: url('../assets/image/logo/littor_logo.jpg');
+}
+
+.littor .title_box p {
+  width: 45%;
+  font-size: 1.9rem;
+  font-weight: 300;
+}
+
+.littor .title_box p strong {
+  color: #999;
+}
+
+main .littor .littor_list {
+  margin-bottom: 4.4rem;
+}
+
+main .littor .littor_list li {
+  display: none;
+  margin-top: -5rem;
+}
+
+.littor .littor_list li.on {
+  display: block;
+}
+
+.littor .contents_box .left_box {
+  float: left;
+  /* margin-top: 13%; */
+  margin-top: 17.8rem;
+  padding-right: 3rem;
+  width: 50%;
+  height: 100%;
+  text-align: right;
+}
+
+.littor .left_box em {
+  position: relative;
+  display: block;
+  margin-bottom: 1.5rem;
+  font-size: 1.5rem;
+  font-weight: 300;
+}
+
+.littor .left_box em::after {
+  content: '';
+  position: absolute;
+  top: 130%;
+  left: 86.4%;
+  width: 7.9rem;
+  height: 0.2rem;
+  background-color: #000;
+}
+
+.littor .left_box h3 {
+  margin-bottom: 4.3rem;
+  font-size: 1.9rem;
+  font-weight: 500;
+  line-height: 1.3157;
+}
+
+.littor .left_box .citation {
+  margin-bottom: 7.4rem;
+  font-size: 1.5rem;
+  font-weight: 200;
+  line-height: 1.38;
+}
+
+.littor .littor_list li:first-child .citation {
+  margin-bottom: 5.3rem;
+}
+
+.littor .left_box .btn {
+  padding: 1.2rem 2rem;
+  margin: 0 0 0 auto;
+  width: 20%;
+  font-size: 1.3rem;
+  font-weight: 400;
+  text-align: center;
+  background-color: #d9d9d9;
+}
+
+.littor .contents_box .right_box {
+  float: left;
+  width: 50%;
+  height: 49.5rem;
+}
+
+.littor .contents_box .itm01 {
+  background-image: url('../assets/image/section/littor/littor_01.png');
+}
+
+.littor .contents_box .itm02 {
+  background-image: url('../assets/image/section/littor/littor_02_01.png');
+}
+
+.littor .contents_box .itm03 {
+  background-image: url('../assets/image/section/littor/littor_03.png');
+}
+
+.littor .contents_box .itm04 {
+  background-image: url('../assets/image/section/littor/littor_04.png');
+  background-size: contain;
+}
+
+.littor .littor_menu {
+  display: flex;
+}
+
+.littor .littor_menu li {
+  font-size: 1.5rem;
+  font-weight: 300;
+  color: #a9a9a9;
+  cursor: pointer;
+}
+
+.littor .littor_menu li~li::before {
+  content: '';
+  display: inline-block;
+  margin: 0 1rem;
+  width: 0.1rem;
+  height: 1.2rem;
+  background-color: #ddd;
+}
+
+.littor .littor_menu li.on {
+  color: #000;
+}
