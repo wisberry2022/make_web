@@ -58,4 +58,8 @@ section {
   .container {
     width: auto;
   }
+
+  section {
+    padding: 6.25rem 0;
+  }
 }

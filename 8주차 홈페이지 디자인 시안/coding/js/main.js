@@ -1,12 +1,19 @@
 window.addEventListener('DOMContentLoaded', function () {
   // HEADER JS CODE
   const newBookSwiper = new Swiper(".bookSlider", {
-    slidesPerView: 5,
-    spaceBetween: 60,
+    slidesPerView: 3,
+    spaceBetween: 30,
     loop: true,
     navigation: {
       nextEl: ".swiper-button-next",
       prevEl: ".swiper-button-prev",
+    },
+    breakpoints: {
+      1280: {
+        slidesPerView: 5,
+        spaceBetween: 60,
+        loop: true,
+      },
     },
   })
 
@@ -99,12 +106,14 @@ window.addEventListener('DOMContentLoaded', function () {
   const MAIN_UL = document.querySelector('.main_menu');
   const MBTN = document.querySelector('.mbtn');
 
+  // 반응형 메뉴 버튼 클릭 이벤트
   MBTN.addEventListener('click', function (e) {
     MAIN_UL.classList.toggle('on');
   })
 
+  // 반응형 메뉴 다단메뉴 이벤트
   MAIN_UL.addEventListener('click', function (e) {
-    MAIN_UL.children.forEach((elm, idx) => {
+    MAIN_UL.children.forEach((elm) => {
       elm.children[1].classList.remove('on');
     });
     e.target.parentNode.children[1].classList.add('on');
