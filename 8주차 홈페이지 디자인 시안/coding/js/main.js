@@ -1,6 +1,6 @@
 window.addEventListener('DOMContentLoaded', function () {
   // HEADER JS CODE
-  const newBookSwiper = new Swiper(".book_slider", {
+  const newBookSwiper = new Swiper(".bookSlider", {
     slidesPerView: 5,
     spaceBetween: 60,
     loop: true,
@@ -10,7 +10,34 @@ window.addEventListener('DOMContentLoaded', function () {
     },
   })
 
-  const image_arr = ['./assets/image/header/header_book_01.jpg', './assets/image/header/header_book_02.jpg', './assets/image/header/header_book_03.jpg', './assets/image/header/header_book_04.jpg']
+  const btmSwiper = new Swiper(".bottom_swiper", {
+    loop: true,
+    slidesPerView: 4,
+    spaceBetween: 20,
+    freeMode: true,
+    watchSlidesProgress: true,
+  });
+
+  const topSwiper = new Swiper(".top_swiper", {
+    loop: true,
+    slidesPerview: 1,
+    spaceBetween: 20,
+    thumbs: {
+      swiper: btmSwiper,
+    }
+  });
+
+  const media_swiper = new Swiper(".media_slider", {
+    loop: true,
+    slidesPerView: 3,
+    spaceBetween: -40,
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+  })
+
+  const image_arr = ['./assets/image/header/header_book_01.jpg', './assets/image/header/header_book_02.jpg', './assets/image/header/header_book_03.jpg', './assets/image/header/header_book_04.jpg'];
   const BOOK00 = document.querySelector('.firstVisual');
   const BOOK01 = document.querySelector('.book_img_set .itm01');
   const BOOK02 = document.querySelector('.book_img_set .itm02');
@@ -56,8 +83,7 @@ window.addEventListener('DOMContentLoaded', function () {
   const LITTOR_LIST = document.querySelector('.littor_list').children;
 
   // LITTOR SECTION 탭 메뉴
-  console.log(LITTOR_LIST);
-  LITTOR_MENU.addEventListener('click', function(e) {
+  LITTOR_MENU.addEventListener('click', function (e) {
     this.children.forEach((elm, idx) => {
       elm.classList.remove('on');
       if (e.target == elm) {
@@ -68,5 +94,20 @@ window.addEventListener('DOMContentLoaded', function () {
         LITTOR_LIST[idx].classList.add('on');
       }
     })
+  })
+
+  const MAIN_UL = document.querySelector('.main_menu');
+  const MBTN = document.querySelector('.mbtn');
+
+  MBTN.addEventListener('click', function (e) {
+    MAIN_UL.classList.toggle('on');
+  })
+
+  MAIN_UL.addEventListener('click', function (e) {
+    MAIN_UL.children.forEach((elm, idx) => {
+      elm.children[1].classList.remove('on');
+    });
+    e.target.parentNode.children[1].classList.add('on');
+
   })
 });
