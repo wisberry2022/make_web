@@ -393,4 +393,25 @@
     font-size: 1.4rem;
     font-weight: 200;
   }
+
+  /* FOOTER CSS CODE */
+  #footer {
+    padding: 0.65rem 0;
+  }
+
+  #footer .top_footer {
+    padding: 0 2rem 2rem 2rem;
+  }
+
+  #footer .top_footer .tf_list {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  #footer .top_footer .tf_list li a,
+  #footer .bottom_footer .bf_list li a {
+    font-size: 1.3rem;
+    font-weight: 400;
+  }
 }
