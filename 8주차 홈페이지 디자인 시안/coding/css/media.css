@@ -6,7 +6,7 @@
   /* HEADER CSS CODE */
   #header {
     position: relative;
-    height: 100vh;
+    height: 80vh;
   }
 
   #header .mbtn {
@@ -38,7 +38,7 @@
     width: 40rem;
     height: 100vh;
     background-color: #fff;
-    transition: 0.5s;
+    transition: 0.6s;
   }
 
   .gnb .main_menu.on {
@@ -89,12 +89,13 @@
     flex-direction: column;
     align-items: center;
     gap: 2rem;
-    margin-bottom: 3rem;
+    margin-bottom: 3.5rem;
     width: auto;
+    height: 60rem;
   }
 
   #header .firstVisual {
-    margin-right: 0;
+    margin: 0;
     width: 50%;
     height: 42rem;
     box-shadow: 0.6rem 0.6rem 0.7rem rgba(0, 0, 0, 0.25);
@@ -105,7 +106,7 @@
     gap: 2rem;
     justify-content: center;
     position: absolute;
-    bottom: 4%;
+    bottom: 5%;
     left: 50%;
     transform: translateX(-50%);
   }
@@ -184,7 +185,6 @@
   }
 
   .new_book .swiper {
-    /* outline: 1px solid #000; */
     padding: 1rem;
     width: 80%;
   }
@@ -205,21 +205,19 @@
   }
 
   /* LITTOR SECTION CSS CODE */
+  main .littor .container {
+    padding: 0 2rem;
+  }
+
   main .littor .container .title_box .logo {
-    margin-bottom: 0.5rem;
+    margin: 0 auto -1.5rem auto;
     width: 30%;
-    height: 11rem;
-    background-image: url('../assets/image/logo/littor_logo.jpg');
   }
 
   .littor .title_box p {
-    width: 45%;
-    font-size: 1.9rem;
-    font-weight: 300;
-  }
-
-  .littor .title_box p strong {
-    color: #999;
+    margin: 0 auto 8.5rem auto;
+    width: auto;
+    font-size: 1.7rem;
   }
 
   main .littor .littor_list {
@@ -227,7 +225,6 @@
   }
 
   main .littor .littor_list li {
-    display: none;
     margin-top: -5rem;
   }
 
@@ -235,225 +232,111 @@
     display: block;
   }
 
-  .littor .contents_box .left_box {
-    float: left;
-    /* margin-top: 13%; */
-    margin-top: 10.8rem;
-    padding-right: 3rem;
-    width: 50%;
-    height: 100%;
-    text-align: right;
+  .littor .littor_list .contents_box {
+    display: flex;
+    flex-direction: column-reverse;
   }
 
-  .littor .left_box em {
-    position: relative;
-    display: block;
-    margin-bottom: 1.5rem;
-    font-size: 1.5rem;
-    font-weight: 300;
+  .littor .contents_box .left_box {
+    float: none;
+    margin: 0 0 0 5%;
+    padding-right: 3rem;
+    width: auto;
+    text-align: center;
   }
 
   .littor .left_box em::after {
-    content: '';
-    position: absolute;
-    top: 130%;
-    left: 86.4%;
-    /* left: 0; */
-    width: 7.9rem;
-    height: 0.2rem;
-    background-color: #000;
+    left: 50%;
+    transform: translateX(-50%);
   }
 
-  .littor .left_box h3 {
+  .littor .littor_list li:first-child .citation {
     margin-bottom: 4.3rem;
-    font-size: 1.9rem;
-    font-weight: 500;
-    line-height: 1.3157;
   }
 
   .littor .left_box .citation {
-    margin-bottom: 7.4rem;
+    margin-bottom: 6.4rem;
     font-size: 1.5rem;
     font-weight: 200;
     line-height: 1.38;
   }
 
-  .littor .littor_list li:first-child .citation {
-    margin-bottom: 5.3rem;
-  }
-
   .littor .left_box .btn {
-    padding: 1.2rem 2rem;
-    margin: 0 0 0 auto;
-    /* margin: 0 auto 0 0; */
-    width: 20%;
-    font-size: 1.3rem;
-    font-weight: 400;
-    text-align: center;
-    background-color: #d9d9d9;
+    margin: 0 auto;
   }
 
   .littor .contents_box .right_box {
-    float: left;
-    width: 50%;
-    height: 49.5rem;
+    float: none;
+    margin-bottom: 4rem;
+    width: auto;
   }
 
-  .littor .contents_box .itm01 {
-    background-image: url('../assets/image/section/littor/littor_01.png');
-  }
-
-  .littor .contents_box .itm02 {
-    background-image: url('../assets/image/section/littor/littor_02.png');
-  }
-
-  .littor .contents_box .itm03 {
-    background-image: url('../assets/image/section/littor/littor_03.png');
-  }
-
-  .littor .contents_box .itm04 {
-    background-image: url('../assets/image/section/littor/littor_04.png');
-    background-size: contain;
+  .littor li:nth-child(2) .contents_box .right_box {
+    background-position-y: 90%;
   }
 
   .littor .littor_menu {
-    display: flex;
+    justify-content: center;
   }
 
   .littor .littor_menu li {
-    font-size: 1.5rem;
-    font-weight: 300;
-    color: #a9a9a9;
-    cursor: pointer;
+    font-size: 1.4rem;
   }
 
   .littor .littor_menu li~li::before {
-    content: '';
-    display: inline-block;
-    margin: 0 1rem;
-    width: 0.1rem;
-    height: 1.2rem;
-    background-color: #ddd;
-  }
-
-  .littor .littor_menu li.on {
-    color: #000;
+    height: 1.1rem;
   }
 
   /* BOOK_SHOP SECTION CSS CODE */
   main .book_shop {
-    background: #f9f9f9;
+    padding: 6.25rem 2rem;
   }
 
   .book_shop .container .top_swiper {
-    margin-bottom: 2rem;
+    margin-bottom: 5rem;
   }
 
   .book_shop .container .top_swiper figure {
-    width: 49rem;
-    height: 41rem;
+    margin-bottom: 3rem;
+    width: 30rem;
+    height: 30rem;
   }
 
-  .book_shop .container .top_swiper .itm01 {
-    background-image: url('../assets/image/section/book_shop/product_01.jpg');
-  }
-
-  .book_shop .container .top_swiper .itm02 {
-    background-image: url('../assets/image/section/book_shop/product_02.jpg');
-  }
-
-  .book_shop .container .top_swiper .itm03 {
-    background-image: url('../assets/image/section/book_shop/product_03.jpg');
-  }
-
-  .book_shop .container .top_swiper .itm04 {
-    background-image: url('../assets/image/section/book_shop/product_04.jpg');
+  .book_shop .top_swiper .swiper-slide {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 
   .book_shop .top_swiper .left_box {
-    float: left;
+    float: none;
     width: 50%;
   }
 
   .book_shop .top_swiper .right_box {
-    float: left;
-    margin: 4.5% 0 0 4.5%;
-    width: 50%;
-    text-align: center;
-  }
-
-  .book_shop .right_box em {
-    display: block;
-    margin-bottom: 0.5rem;
-    font-size: 1.5rem;
-    font-weight: 400;
-    text-transform: capitalize;
-  }
-
-  .book_shop .right_box h4 {
-    margin-bottom: 2.9rem;
-    font-size: 2.3rem;
-    font-weight: 500;
+    float: none;
+    margin: 0;
+    width: auto;
   }
 
   .book_shop .right_box p {
-    margin-bottom: 5.5rem;
+    margin-bottom: 4rem;
     font-size: 1.6rem;
     font-weight: 300;
     line-height: 1.4375;
   }
 
   .book_shop .right_box .goods_info {
-    display: flex;
-    justify-content: center;
-    gap: 7rem;
-    /* margin: 0 auto 3rem auto; */
-    margin-bottom: 3rem;
-    width: 100%;
-    text-transform: uppercase;
-  }
-
-  .book_shop .goods_info dt {
-    margin-bottom: 0.25rem;
-    font-size: 1.9rem;
-    font-weight: 500;
-  }
-
-  .book_shop .goods_info dd {
-    color: #66EF7F;
-    font-size: 1.7rem;
-    font-weight: 400;
+    display: none;
   }
 
   .book_shop .right_box .btn {
-    margin: 0 auto;
-    width: 20%;
-    padding: 1rem 2.3rem;
-    font-size: 1.4rem;
-    font-weight: 500;
-    color: #fff;
-    background-color: #66EF7F;
+    width: 30%;
   }
 
   .book_shop .container .bottom_swiper figure {
     width: 27rem;
     height: 15rem;
-  }
-
-  .book_shop .container .bottom_swiper .itm01 {
-    background-image: url('../assets/image/section/book_shop/product_01.jpg');
-  }
-
-  .book_shop .container .bottom_swiper .itm02 {
-    background-image: url('../assets/image/section/book_shop/product_02.jpg');
-  }
-
-  .book_shop .container .bottom_swiper .itm03 {
-    background-image: url('../assets/image/section/book_shop/product_03.jpg');
-  }
-
-  .book_shop .container .bottom_swiper .itm04 {
-    background-image: url('../assets/image/section/book_shop/product_04.jpg');
   }
 
   .book_shop .container .bottom_swiper .swiper-slide {
@@ -473,63 +356,32 @@
   }
 
   /* MEDIA CSS CODE */
-  main .media .container .swiper-slide .fig_link {
-    display: block;
-    margin-bottom: 1.5rem;
-  }
-
   main .media {
+    padding: 6.25em 2rem;
     position: relative;
   }
 
-  .media .container .swiper-button-prev,
-  .media .container .swiper-button-next {
-    position: absolute;
-    top: 50%;
+  main .media .container .swiper-slide .fig_link {
+    margin-bottom: 2rem;
   }
 
   .media .container .swiper-button-prev {
-    left: 15%;
+    left: 5%;
   }
 
   .media .container .swiper-button-next {
-    right: 15%;
+    right: 5%;
   }
 
   .media .swiper-slide figure {
-    width: 100%;
-    height: 13.2rem;
-    background-size: 80%;
-  }
-
-  .media .swiper-slide .itm01 {
-    background-image: url('../assets/image/section/social_media/media_01.jpg');
-  }
-
-  .media .swiper-slide .itm02 {
-    background-image: url('../assets/image/section/social_media/media_02.jpg');
-  }
-
-  .media .swiper-slide .itm03 {
-    background-image: url('../assets/image/section/social_media/media_03.jpg');
-  }
-
-  .media .swiper-slide .itm04 {
-    background-image: url('../assets/image/section/social_media/media_04.jpg');
-  }
-
-  .media .swiper-slide .itm05 {
-    background-image: url('../assets/image/section/social_media/media_05.jpg');
-  }
-
-  .media .swiper-slide .itm06 {
-    background-image: url('../assets/image/section/social_media/media_06.jpg');
+    margin: 0 auto;
+    width: 80%;
   }
 
   .media .swiper-slide .media_desc strong {
     display: block;
-    margin-bottom: 0.7rem;
-    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    font-size: 1.7rem;
     font-weight: 500;
   }
 
@@ -541,67 +393,7 @@
 
   .media .media_desc .sub_intro span {
     display: block;
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     font-weight: 200;
-  }
-
-  .media .media_desc .sub_intro .attach::after {
-    content: '';
-    display: inline-block;
-    margin: 0 0.8rem;
-    width: 0.1rem;
-    height: 1rem;
-    background-color: #ddd;
-  }
-
-  .media .media_desc .btn {
-    padding: 0.9rem 1.7rem;
-    margin: 0 auto;
-    width: 25%;
-    background-color: #d9d9d9;
-    font-size: 1.2rem;
-    font-weight: 400;
-  }
-
-  /* FOOTER CSS CODE */
-  #footer {
-    padding: 5rem 0;
-    color: #f9f9f9;
-    background-color: #222;
-    text-align: center;
-  }
-
-  #footer .top_footer {
-    margin-bottom: 2rem;
-    border-bottom: 0.1rem solid #ccc;
-    padding-bottom: 2rem;
-  }
-
-  #footer .top_footer .container .ft_logo {
-    margin-bottom: 3rem;
-  }
-
-  #footer .top_footer .tf_list {
-    display: flex;
-    justify-content: center;
-    gap: 2rem;
-  }
-
-  #footer .top_footer .tf_list li a,
-  #footer .bottom_footer .bf_list li a {
-    font-size: 1.3rem;
-    font-weight: 400;
-  }
-
-  #footer .bottom_footer .container .bf_list {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    margin-bottom: 4rem;
-  }
-
-  #footer .bottom_footer span {
-    font-size: 1.1rem;
-    font-weight: 400;
   }
 }

@@ -9,7 +9,7 @@ window.addEventListener('DOMContentLoaded', function () {
       prevEl: ".swiper-button-prev",
     },
     breakpoints: {
-      1280: {
+      768: {
         slidesPerView: 5,
         spaceBetween: 60,
         loop: true,
@@ -19,10 +19,16 @@ window.addEventListener('DOMContentLoaded', function () {
 
   const btmSwiper = new Swiper(".bottom_swiper", {
     loop: true,
-    slidesPerView: 4,
+    slidesPerView: 3,
     spaceBetween: 20,
     freeMode: true,
     watchSlidesProgress: true,
+    breakpoints: {
+      768: {
+        slidesPerView: 4,
+        spaceBetween: 20,
+      }
+    }
   });
 
   const topSwiper = new Swiper(".top_swiper", {
@@ -36,25 +42,20 @@ window.addEventListener('DOMContentLoaded', function () {
 
   const media_swiper = new Swiper(".media_slider", {
     loop: true,
-    slidesPerView: 3,
-    spaceBetween: -40,
+    slidesPerView: 1,
     navigation: {
       nextEl: ".swiper-button-next",
       prevEl: ".swiper-button-prev",
     },
+    breakpoints: {
+      768: {
+        slidesPerView: 3,
+        spaceBetween: -40,
+      }
+    }
   })
 
   const image_arr = ['./assets/image/header/header_book_01.jpg', './assets/image/header/header_book_02.jpg', './assets/image/header/header_book_03.jpg', './assets/image/header/header_book_04.jpg'];
-  const BOOK00 = document.querySelector('.firstVisual');
-  const BOOK01 = document.querySelector('.book_img_set .itm01');
-  const BOOK02 = document.querySelector('.book_img_set .itm02');
-  const BOOK03 = document.querySelector('.book_img_set .itm03');
-  const BOOK04 = document.querySelector('.book_img_set .itm04');
-  BOOK00.style.backgroundImage = `url(${image_arr[0]})`;
-  BOOK01.style.backgroundImage = `url(${image_arr[0]})`;
-  BOOK02.style.backgroundImage = `url(${image_arr[1]})`;
-  BOOK03.style.backgroundImage = `url(${image_arr[2]})`;
-  BOOK04.style.backgroundImage = `url(${image_arr[3]})`;
 
   const FIG = document.querySelector('.book_img_set').children;
   HTMLCollection.prototype.forEach = Array.prototype.forEach;
@@ -103,20 +104,24 @@ window.addEventListener('DOMContentLoaded', function () {
     })
   })
 
+  // 반응형 메뉴 버튼 클릭 이벤트
   const MAIN_UL = document.querySelector('.main_menu');
   const MBTN = document.querySelector('.mbtn');
 
-  // 반응형 메뉴 버튼 클릭 이벤트
   MBTN.addEventListener('click', function (e) {
     MAIN_UL.classList.toggle('on');
   })
 
   // 반응형 메뉴 다단메뉴 이벤트
   MAIN_UL.addEventListener('click', function (e) {
+    const CURRENT = e.target.parentNode.children[1];
+    // toggle 진행 시 두 번째 클릭 때에도 forEach메소드를 진행하고 난뒤라도 HTML 요소에 .on 이 붙어있어야 한다
     MAIN_UL.children.forEach((elm) => {
-      elm.children[1].classList.remove('on');
+      if (elm.children[1] != CURRENT) {
+        elm.children[1].classList.remove('on');
+      }
     });
-    e.target.parentNode.children[1].classList.add('on');
+    CURRENT.classList.toggle('on');
 
   })
 });
