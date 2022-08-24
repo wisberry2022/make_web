@@ -12,7 +12,13 @@
 }
 
 #header .gnb {
-  border-bottom: 0.1rem solid #aaa;
+  border-bottom: 0.1rem solid #d1d1d1;
+  transition: 0.5s;
+}
+
+#header .gnb:hover {
+  background-color: #fff;
+  border: transparent;
 }
 
 .gnb .container {
