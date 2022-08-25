@@ -1,14 +1,14 @@
 window.addEventListener('DOMContentLoaded', function () {
   function scrollDisable() {
-    document.querySelector('body').style.height = '100%'; 
-    document.querySelector('body').style.minHeight = '100%'; 
-    document.querySelector('body').style.overflow = 'hidden'; 
+    document.querySelector('body').style.height = '100%';
+    document.querySelector('body').style.minHeight = '100%';
+    document.querySelector('body').style.overflow = 'hidden';
   }
 
   function scrollEnable() {
-    document.querySelector('body').style.height = ''; 
-    document.querySelector('body').style.minHeight = ''; 
-    document.querySelector('body').style.overflow = ''; 
+    document.querySelector('body').style.height = '';
+    document.querySelector('body').style.minHeight = '';
+    document.querySelector('body').style.overflow = '';
   }
 
   const newBookSwiper = new Swiper(".bookSlider", {
@@ -69,6 +69,10 @@ window.addEventListener('DOMContentLoaded', function () {
     }
   })
 
+  // HTMLCollection(유사배열)에 forEach 메소드 사용할 수 있게 하는 코드
+  HTMLCollection.prototype.forEach = Array.prototype.forEach;
+
+
   // HEADER JS CODE
   // 반응형 메뉴 버튼 클릭 이벤트
   const MAIN_UL = document.querySelector('.main_menu');
@@ -99,8 +103,8 @@ window.addEventListener('DOMContentLoaded', function () {
     CURRENT.classList.toggle('on');
   })
 
-  // window size 변경 시 탭 메뉴에 붙어있던 .on 제거하는 이벤트
-  window.addEventListener('resize', function() {
+  // window size 변경 시 서브 메뉴에 붙어있던 .on 제거하는 이벤트
+  window.addEventListener('resize', function () {
     MAIN_UL.classList.remove('on');
     MAIN_UL.children.forEach(elm => {
       if (elm.children[1].classList.contains('on')) {
@@ -112,7 +116,6 @@ window.addEventListener('DOMContentLoaded', function () {
   const image_arr = ['./assets/image/header/header_book_01.jpg', './assets/image/header/header_book_02.jpg', './assets/image/header/header_book_03.jpg', './assets/image/header/header_book_04.jpg'];
 
   const FIG = document.querySelector('.book_img_set').children;
-  HTMLCollection.prototype.forEach = Array.prototype.forEach;
 
   const BOOK_IMG_LI = document.querySelector('.book_img_set');
   const BOOK_DESC_LI = document.querySelector('.book_desc');
