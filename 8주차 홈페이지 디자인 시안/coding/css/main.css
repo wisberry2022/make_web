@@ -62,7 +62,8 @@
 
 .gnb .main_menu .sub_menu li a {
   display: block;
-  border-bottom: 0.1rem solid #ddd;
+  /* border-bottom: 0.1rem solid #ddd; */
+  border-bottom: 0.1rem solid #f1f1f1;
   padding: 1rem 0;
   font-size: 1.3rem;
   font-weight: 400;
