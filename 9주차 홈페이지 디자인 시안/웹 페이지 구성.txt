@@ -1,16 +1,15 @@
-
-
-header - ( 요일별 방송 - 방영 프로그램 카테고리 - 뉴스 - 공지사항 및 소식  ) - footer
+header - ( 방영 프로그램 카테고리 - 뉴스 - 스포츠 - 공지사항 및 소식  ) - footer
 
 mbc 
 
-요일별 방송
 뉴스
 방영 프로그램 카테고리(예능/드라마/라디오/영화 ... )
 공지사항 및 소식
+스포츠
 
 방송 표지
 	https://program.imbc.com/theSecretHouse
 
 
-
+font
+	Pretendard - https://cactus.tistory.com/306?category=1007051
