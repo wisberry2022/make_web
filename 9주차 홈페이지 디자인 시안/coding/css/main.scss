@@ -1,0 +1,187 @@
+$bc: #212121;
+$fc: #ddd;
+$en_letter: 0.025em;
+
+// * {
+//   outline: 1px solid #fff;
+// }
+
+// HEADER CSS CODE
+#header {
+  height: 75vh;
+  background-image: linear-gradient(to bottom,
+      rgba(5, 18, 26, 0) 0,
+      rgba(33, 33, 33, 1) 100%,
+    ), url('../assets/image/header/header_bg_01.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+
+  >.container {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    padding-top: 1rem;
+    width: 120rem;
+
+    >* {
+      flex: 1px;
+    }
+
+    .gnb {
+      .main_menu {
+        display: flex;
+        margin-left: -1.5rem;
+
+        li a {
+          display: block;
+          padding: 0 1.5rem;
+          line-height: 5rem;
+          font-size: 1.7rem;
+        }
+      }
+    }
+
+    h1 {
+      text-align: center;
+      line-height: 5rem;
+    }
+
+    .side_menu {
+      $end_padding: 0.6rem;
+      display: flex;
+      justify-content: flex-end;
+      margin-right: -$end_padding;
+
+      li a {
+        display: block;
+        padding: 0 $end_padding;
+        line-height: 5rem;
+        font-size: 1.6rem;
+      }
+    }
+  }
+
+  .main_visual {
+
+    height: 100%;
+
+    .container {
+      position: relative;
+      height: 100%;
+
+      .program_desc {
+        display: none;
+        position: absolute;
+        top: 20%;
+
+        em {
+          display: block;
+          margin-bottom: 0.5rem;
+          font-size: 1.5rem;
+        }
+
+        h2 {
+          margin-bottom: 5rem;
+          font-size: 4.5rem;
+          font-weight: 600;
+        }
+
+        p {
+          margin-bottom: 2.5rem;
+          font-size: 2.2rem;
+          font-weight: 300;
+          line-height: 1.314;
+        }
+
+        .btn {
+          display: inline-block;
+          padding: 1rem 1.5rem;
+          font-size: 1.5rem;
+          background-color: #432;
+          text-align: center;
+        }
+      }
+
+      .program_desc.on {
+        display: block;
+      }
+    }
+
+  }
+}
+
+#category {
+  .container {
+
+    .title_box {
+      margin-bottom: 1.5rem;
+    }
+
+    .category_list {
+      display: flex;
+      justify-content: center;
+      border: 0.1rem solid $fc;
+      margin: 0 auto 2.5rem auto;
+      width: 50%;
+
+      >* {
+        flex: 1;
+      }
+
+      li {
+        &.on {
+          color: $bc;
+          background-color: $fc;
+        }
+
+        a {
+          display: block;
+          padding: 1rem 0;
+          font-size: 1.7rem;
+          font-weight: 400;
+          text-align: center;
+        }
+      }
+    }
+
+    @each $category in drama,
+    refine,
+    sports,
+    var {
+      @for $i from 1 through 5 {
+        .#{$category} .itm0#{$i} {
+          background-image: url('../assets/image/section/broadcast/#{$category}/#{$category}_0#{$i}.jpg');
+        }
+      }
+    }
+
+    .contens_box {
+      display: none;
+    }
+
+    .contents_box.on {
+      display: grid;
+      grid-template-columns: 30rem 55rem 30rem;
+      grid-template-rows: 40rem 40rem;
+      grid-gap: 2.5rem;
+
+      a {
+        display: block;
+        height: 40rem;
+      }
+
+      .box {
+        height: 40rem;
+
+        &:nth-child(2) {
+          height: 82.5rem;
+        }
+
+        &:nth-child(5) {
+          grid-column-start: 3;
+        }
+      }
+    }
+  }
+}
