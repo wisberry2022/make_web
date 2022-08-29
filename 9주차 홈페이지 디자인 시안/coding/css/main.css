@@ -85,12 +85,8 @@
 #category .container .category_list {
   display: flex;
   justify-content: center;
-  border: 0.1rem solid #ddd;
   margin: 0 auto 2.5rem auto;
   width: 50%;
-}
-#category .container .category_list > * {
-  flex: 1;
 }
 #category .container .category_list li.on {
   color: #212121;
@@ -98,7 +94,7 @@
 }
 #category .container .category_list li a {
   display: block;
-  padding: 1rem 0;
+  padding: 1rem 2.5rem;
   font-size: 1.7rem;
   font-weight: 400;
   text-align: center;
@@ -184,6 +180,80 @@
 }
 #category .container .contents_box.on .box:nth-child(5) {
   grid-column-start: 3;
+}
+
+.news {
+  background-color: #181818;
+}
+.news .news_box {
+  display: grid;
+  grid-template-columns: 27rem 27rem 27rem 27rem;
+  grid-template-rows: 33rem;
+  grid-auto-rows: 30rem;
+  grid-gap: 3rem;
+}
+.news .news_box .box:first-child ~ .box {
+  padding: 3.5rem 0;
+}
+.news .news_box .box {
+  position: relative;
+}
+.news .news_box .box:first-child {
+  grid-column: 1/3;
+}
+.news .news_box .box:first-child .title_pic {
+  margin-bottom: 2rem;
+  width: 100%;
+  height: 25rem;
+  background-image: url("../assets/image/section/news/news_01.jpg");
+  background-size: cover;
+}
+.news .news_box .box:first-child .news_desc {
+  margin: 0 auto;
+  width: 80%;
+  text-align: center;
+}
+.news .news_box .box:first-child .news_desc strong {
+  display: block;
+  margin-bottom: 1rem;
+  font-size: 1.9rem;
+  font-weight: 600;
+}
+.news .news_box .box:first-child .news_desc em {
+  display: block;
+  margin-bottom: 1.9rem;
+  font-size: 1.3rem;
+  font-weight: 400;
+}
+.news .news_box .box:first-child .news_desc .btn {
+  display: inline-block;
+  margin: 0 auto 0 0;
+  padding: 1rem 1.5rem;
+  font-size: 1.2rem;
+}
+.news .news_box .box dl dt {
+  position: relative;
+  margin-bottom: 5rem;
+  font-size: 2.1rem;
+  font-weight: 600;
+}
+.news .news_box .box dl dt::after {
+  content: "";
+  position: absolute;
+  top: 150%;
+  left: 0;
+  width: 26rem;
+  height: 0.1rem;
+  background-color: #fff;
+}
+.news .news_box .box dl dd {
+  margin-bottom: 1rem;
+  width: 100%;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  font-size: 1.5rem;
+  font-weight: 300;
 }
 
 /*# sourceMappingURL=main.css.map */

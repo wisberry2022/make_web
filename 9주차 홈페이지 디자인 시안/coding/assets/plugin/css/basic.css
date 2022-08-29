@@ -19,6 +19,7 @@ body {
 
 .btn {
   display: block;
+  background-color: #432;
 }
 
 .container {
@@ -33,6 +34,7 @@ body {
 }
 
 .title_box {
+  margin-bottom: 3rem;
   text-align: center;
 }
 
@@ -49,7 +51,7 @@ body {
 }
 
 section {
-  padding: 10rem 0;
+  padding: 5rem 0;
 }
 
 @media screen and (max-width:768px) {

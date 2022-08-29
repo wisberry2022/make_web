@@ -22,12 +22,11 @@ document.addEventListener('DOMContentLoaded', () => {
         if (index == idx) {
           elm.classList.add('on');
         }
-
       })
       HEADER.style.background = `linear-gradient(to bottom, rgba(5, 18, 26, 0) 0, rgba(33, 33, 33, 1) 90%), url(${url_set[idx]})`;
       idx < 2 ? idx++ : idx = 0;
 
-    }, 3000);
+    }, 7000);
   }
 
   backgroundSlide();
@@ -39,6 +38,7 @@ document.addEventListener('DOMContentLoaded', () => {
   console.log(CONTENTS_TAB);
 
   BROAD_TAB.addEventListener('click', (event) => {
+    let index = 0;
     if (event.target != event.currentTarget) {
       console.log(event.target);
       BROAD_LIST.forEach((elm) => {
@@ -47,8 +47,14 @@ document.addEventListener('DOMContentLoaded', () => {
           el.classList.remove('on');
         })
       })
-      // BROAD_LIST.forEach()
       event.target.parentNode.classList.add('on');
+      BROAD_LIST.forEach((elms, idx) => {
+        if (elms.classList.contains('on')) {
+          index = idx;
+          CONTENTS_TAB[index].classList.add('on');
+        }
+      })
+      console.log(index);
     }
   });
 
