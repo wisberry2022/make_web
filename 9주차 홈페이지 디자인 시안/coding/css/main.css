@@ -79,6 +79,9 @@
   display: block;
 }
 
+#category {
+  padding: 2.5rem 0 10rem 0;
+}
 #category .container .title_box {
   margin-bottom: 1.5rem;
 }
@@ -189,7 +192,7 @@
   display: grid;
   grid-template-columns: 27rem 27rem 27rem 27rem;
   grid-template-rows: 33rem;
-  grid-auto-rows: 30rem;
+  grid-auto-rows: 33rem;
   grid-gap: 3rem;
 }
 .news .news_box .box:first-child ~ .box {
@@ -197,43 +200,68 @@
 }
 .news .news_box .box {
   position: relative;
+  background-color: #212121;
 }
 .news .news_box .box:first-child {
   grid-column: 1/3;
+  padding: 1.5rem;
 }
-.news .news_box .box:first-child .title_pic {
+.news .news_box .box:first-child .title {
+  float: left;
+  padding: 0.5rem 0 0 1rem;
+  width: 45%;
+}
+.news .news_box .box:first-child .title h4 {
   margin-bottom: 2rem;
-  width: 100%;
+  font-size: 1.9rem;
+  font-weight: 700;
+}
+.news .news_box .box:first-child .title .title_pic {
+  margin-bottom: 2rem;
   height: 25rem;
   background-image: url("../assets/image/section/news/news_01.jpg");
   background-size: cover;
 }
 .news .news_box .box:first-child .news_desc {
-  margin: 0 auto;
-  width: 80%;
-  text-align: center;
+  float: left;
+  margin: 8.5% 0 0 6.5%;
+  width: 45%;
+  text-align: left;
 }
 .news .news_box .box:first-child .news_desc strong {
   display: block;
-  margin-bottom: 1rem;
-  font-size: 1.9rem;
+  margin-bottom: 0.5rem;
+  font-size: 1.6rem;
   font-weight: 600;
+  text-align: left;
+  line-height: 1.353;
 }
 .news .news_box .box:first-child .news_desc em {
   display: block;
-  margin-bottom: 1.9rem;
+  margin-bottom: 2.5rem;
   font-size: 1.3rem;
   font-weight: 400;
 }
-.news .news_box .box:first-child .news_desc .btn {
+.news .news_box .box:first-child .news_desc p {
+  margin-bottom: 7rem;
+  font-size: 1.3rem;
+  line-height: 1.45;
+}
+.news .news_box .box:first-child .news_desc .btn_box {
+  display: flex;
+  gap: 1rem;
+}
+.news .news_box .box:first-child .news_desc .btn_box .btn {
   display: inline-block;
-  margin: 0 auto 0 0;
   padding: 1rem 1.5rem;
   font-size: 1.2rem;
 }
+.news .news_box .box dl {
+  padding: 2rem;
+}
 .news .news_box .box dl dt {
   position: relative;
-  margin-bottom: 5rem;
+  margin-bottom: 4.5rem;
   font-size: 2.1rem;
   font-weight: 600;
 }
@@ -241,19 +269,111 @@
   content: "";
   position: absolute;
   top: 150%;
-  left: 0;
-  width: 26rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 24rem;
   height: 0.1rem;
-  background-color: #fff;
+  background-color: #a9a9a9;
 }
 .news .news_box .box dl dd {
   margin-bottom: 1rem;
+  border-bottom: 0.1rem solid #333;
+  padding: 0.5rem 0 0.5rem 0;
   width: 100%;
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
   font-size: 1.5rem;
   font-weight: 300;
+}
+.news .news_box .box .more {
+  position: absolute;
+  top: 18%;
+  right: 7%;
+  font-size: 1.9rem;
+}
+
+main > .sports {
+  height: 100vh;
+}
+main > .sports .sports_intro {
+  display: flex;
+  gap: 0.1rem;
+}
+main > .sports .sports_intro > figure {
+  flex: 1;
+  position: relative;
+  height: calc(100vh - 30rem);
+  cursor: pointer;
+}
+main > .sports .sports_intro > figure .sports_box {
+  display: none;
+}
+main > .sports .sports_intro > figure:hover .sports_box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 10rem;
+}
+main > .sports .sports_intro > figure:hover .sports_box figure {
+  margin: 0 auto 5rem auto;
+  width: 15rem;
+  height: 15rem;
+}
+main > .sports .sports_intro > figure:hover .sports_box .logo01 {
+  background-image: url("../assets/image/section/sports/logo_01.png");
+}
+main > .sports .sports_intro > figure:hover .sports_box .logo02 {
+  background-image: url("../assets/image/section/sports/logo_02.png");
+}
+main > .sports .sports_intro > figure:hover .sports_box .logo03 {
+  background-image: url("../assets/image/section/sports/logo_03.png");
+}
+main > .sports .sports_intro > figure:hover .sports_box .logo04 {
+  background-image: url("../assets/image/section/sports/logo_04.png");
+}
+main > .sports .sports_intro > figure:hover .sports_box strong {
+  display: block;
+  margin-bottom: 1.5rem;
+  font-size: 2.6rem;
+  font-weight: 500;
+}
+main > .sports .sports_intro > figure:hover .sports_box p {
+  margin-bottom: 4.5rem;
+  font-size: 1.5rem;
+}
+main > .sports .sports_intro > figure:hover .sports_box .btn_box {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+main > .sports .sports_intro > figure:hover .sports_box .btn_box .btn {
+  padding: 1rem;
+  font-size: 1.4rem;
+}
+main > .sports .sports_intro > figure:hover.itm01 {
+  background-image: linear-gradient(to bottom, rgba(5, 18, 26, 0.9) 90%, rgb(33, 33, 33) 100%), url("../assets/image/section/sports/sports_bg_01.jpg");
+}
+main > .sports .sports_intro > figure:hover.itm02 {
+  background-image: linear-gradient(to bottom, rgba(5, 18, 26, 0.9) 90%, rgb(33, 33, 33) 100%), url("../assets/image/section/sports/sports_bg_02.jpg");
+}
+main > .sports .sports_intro > figure:hover.itm03 {
+  background-image: linear-gradient(to bottom, rgba(5, 18, 26, 0.9) 90%, rgb(33, 33, 33) 100%), url("../assets/image/section/sports/sports_bg_03.jpg");
+}
+main > .sports .sports_intro > figure:hover.itm04 {
+  background-image: linear-gradient(to bottom, rgba(5, 18, 26, 0.9) 90%, rgb(33, 33, 33) 100%), url("../assets/image/section/sports/sports_bg_04.jpg");
+}
+main > .sports .sports_intro .itm01 {
+  background-image: linear-gradient(to bottom, rgba(5, 18, 26, 0) 10%, rgb(33, 33, 33) 100%), url("../assets/image/section/sports/sports_bg_01.jpg");
+}
+main > .sports .sports_intro .itm02 {
+  background-image: linear-gradient(to bottom, rgba(5, 18, 26, 0) 10%, rgb(33, 33, 33) 100%), url("../assets/image/section/sports/sports_bg_02.jpg");
+}
+main > .sports .sports_intro .itm03 {
+  background-image: linear-gradient(to bottom, rgba(5, 18, 26, 0) 10%, rgb(33, 33, 33) 100%), url("../assets/image/section/sports/sports_bg_03.jpg");
+}
+main > .sports .sports_intro .itm04 {
+  background-image: linear-gradient(to bottom, rgba(5, 18, 26, 0) 10%, rgb(33, 33, 33) 100%), url("../assets/image/section/sports/sports_bg_04.jpg");
 }
 
 /*# sourceMappingURL=main.css.map */
