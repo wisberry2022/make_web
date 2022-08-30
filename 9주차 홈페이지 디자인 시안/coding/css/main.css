@@ -1,3 +1,7 @@
+* {
+  outline: 1px solid #fff;
+}
+
 #header {
   height: 75vh;
   background-image: linear-gradient(to bottom, rgba(5, 18, 26, 0) 0, rgb(33, 33, 33) 100%), url("../assets/image/header/header_bg_01.jpg");
@@ -350,6 +354,7 @@ main > .sports .sports_intro > figure:hover .sports_box .btn_box {
 main > .sports .sports_intro > figure:hover .sports_box .btn_box .btn {
   padding: 1rem;
   font-size: 1.4rem;
+  text-align: center;
 }
 main > .sports .sports_intro > figure:hover.itm01 {
   background-image: linear-gradient(to bottom, rgba(5, 18, 26, 0.9) 90%, rgb(33, 33, 33) 100%), url("../assets/image/section/sports/sports_bg_01.jpg");
@@ -374,6 +379,61 @@ main > .sports .sports_intro .itm03 {
 }
 main > .sports .sports_intro .itm04 {
   background-image: linear-gradient(to bottom, rgba(5, 18, 26, 0) 10%, rgb(33, 33, 33) 100%), url("../assets/image/section/sports/sports_bg_04.jpg");
+}
+
+.notice .container .info {
+  float: left;
+  width: 58%;
+}
+.notice .container .info h4 {
+  margin-bottom: 2.5rem;
+  font-size: 2.5rem;
+  font-weight: 700;
+  letter-spacing: 0.025em;
+}
+.notice .container .info .lnb {
+  float: left;
+  width: 10%;
+}
+.notice .container .info .lnb li {
+  position: relative;
+}
+.notice .container .info .lnb li a {
+  display: block;
+  font-size: 1.7rem;
+  font-size: 400;
+  line-height: 9.5rem;
+  text-align: center;
+}
+.notice .container .info .lnb li ~ li:nth-child(-n+4)::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  border-radius: 100%;
+  width: 0.3rem;
+  height: 0.3rem;
+  background-color: #ddd;
+}
+.notice .container .info .tb_menu {
+  display: none;
+}
+.notice .container .info .tb_menu.on {
+  float: left;
+  margin: 5rem 0 0 5rem;
+  display: grid;
+  grid-template-columns: 25rem 25rem;
+  grid-template-rows: 30rem;
+}
+.notice .container .notice_box {
+  float: right;
+  width: 40%;
+}
+.notice .container .notice_box h4 {
+  margin-bottom: 2.5rem;
+  font-size: 2.5rem;
+  font-weight: 700;
+  letter-spacing: 0.025em;
 }
 
 /*# sourceMappingURL=main.css.map */
