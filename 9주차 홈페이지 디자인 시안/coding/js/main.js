@@ -33,30 +33,47 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const BROAD_TAB = document.querySelector('.category_list');
   const CONTENTS_TAB = document.querySelectorAll('.contents_box');
+
+
   let BROAD_LIST = [...BROAD_TAB.children];
 
-  console.log(CONTENTS_TAB);
-
-  BROAD_TAB.addEventListener('click', (event) => {
-    let index = 0;
-    if (event.target != event.currentTarget) {
-      console.log(event.target);
-      BROAD_LIST.forEach((elm) => {
-        elm.classList.remove('on');
-        CONTENTS_TAB.forEach((el) => {
-          el.classList.remove('on');
-        })
-      })
-      event.target.parentNode.classList.add('on');
-      BROAD_LIST.forEach((elms, idx) => {
-        if (elms.classList.contains('on')) {
-          index = idx;
-          CONTENTS_TAB[index].classList.add('on');
-        }
-      })
-      console.log(index);
+  BROAD_LIST.forEach((elm, idx) => {
+    if (elm.classList.contains('on') && CONTENTS_TAB[idx].classList.contains('on')) {
+      elm.classList.add('on');
+      CONTENTS_TAB[idx].classList.add('on');
     }
+    elm.addEventListener('click', function () {
+      CONTENTS_TAB.forEach((elem) => {
+        elem.classList.remove('on');
+      })
+      BROAD_LIST.forEach((el) => {
+        el.classList.remove('on');
+      })
+      CONTENTS_TAB[idx].classList.add('on');
+      elm.classList.add('on');
+    })
   });
 
-});
 
+  const NOTICE_MENU = document.querySelector('#notice .lnb');
+  const NOTICE_ML = [...NOTICE_MENU.children];
+
+  const LIFE_CONTENTS = document.querySelectorAll('.tb_menu');
+
+  NOTICE_ML.forEach((elm, idx) => {
+    if (elm.classList.contains('on') && LIFE_CONTENTS[idx].classList.contains('on')) {
+      elm.classList.add('on');
+      LIFE_CONTENTS[idx].classList.add('on');
+    }
+    elm.addEventListener('click', function () {
+      LIFE_CONTENTS.forEach((elem) => {
+        elem.classList.remove('on');
+      })
+      NOTICE_ML.forEach((el) => {
+        el.classList.remove('on');
+      })
+      LIFE_CONTENTS[idx].classList.add('on');
+      elm.classList.add('on');
+    })
+  });
+});

@@ -2,8 +2,14 @@ $bc: #212121;
 $fc: #ddd;
 $en_letter: 0.025em;
 
-* {
-  outline: 1px solid #fff;
+// * {
+//   outline: 1px solid #fff;
+// }
+
+@mixin text-shorten {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
 }
 
 // HEADER CSS CODE
@@ -33,11 +39,51 @@ $en_letter: 0.025em;
         display: flex;
         margin-left: -1.5rem;
 
-        li a {
-          display: block;
-          padding: 0 1.5rem;
-          line-height: 5rem;
-          font-size: 1.7rem;
+        >li {
+          position: relative;
+
+          &:hover {
+            .sub_menu {
+              opacity: 1;
+              visibility: visible;
+            }
+          }
+
+          >a {
+            display: block;
+            padding: 0 1.5rem;
+            line-height: 5rem;
+            font-size: 1.7rem;
+          }
+
+          .sub_menu {
+            position: absolute;
+            top: 90%;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 15rem;
+            z-index: 999;
+            opacity: 0;
+            visibility: hidden;
+            transition: 0.5s;
+            background-color: #181818;
+
+            li {
+              a {
+                display: block;
+                padding: 1rem 0;
+                border-bottom: 0.1rem solid $bc;
+                font-size: 1.5rem;
+                text-align: center;
+                color: #ddd;
+              }
+
+              &:last-child a {
+                border-bottom: none;
+              }
+
+            }
+          }
         }
       }
     }
@@ -89,7 +135,7 @@ $en_letter: 0.025em;
 
         p {
           margin-bottom: 2.5rem;
-          font-size: 2.2rem;
+          font-size: 2rem;
           font-weight: 300;
           line-height: 1.314;
         }
@@ -153,7 +199,7 @@ $en_letter: 0.025em;
       }
     }
 
-    .contens_box {
+    .contents_box {
       display: none;
     }
 
@@ -163,13 +209,56 @@ $en_letter: 0.025em;
       grid-template-rows: 40rem 40rem;
       grid-gap: 2.5rem;
 
-      a {
-        display: block;
-        height: 40rem;
-      }
-
       .box {
+        position: relative;
         height: 40rem;
+
+        .btn_box {
+          display: none;
+        }
+
+        &:hover {
+          & .btn_box {
+            display: block;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            display: flex;
+            gap: 1.2rem;
+
+            figure {
+              margin-bottom: 1.2rem;
+              width: 100%;
+              height: 5rem;
+              background-size: contain;
+
+              &.l_icon {
+                background-image: url('../assets/image/icon/l_icon.png');
+              }
+
+              &.r_icon {
+                background-image: url('../assets/image/icon/r_icon.png');
+              }
+            }
+
+            .btn {
+              padding: 1rem;
+              width: 13rem;
+              font-size: 1.5rem;
+              text-align: center;
+            }
+          }
+
+          &::before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 0;
+          }
+        }
 
         &:nth-child(2) {
           height: 82.5rem;
@@ -178,12 +267,13 @@ $en_letter: 0.025em;
         &:nth-child(5) {
           grid-column-start: 3;
         }
+
       }
     }
   }
 }
 
-.news {
+#news {
   background-color: #181818;
 
   .news_box {
@@ -208,7 +298,7 @@ $en_letter: 0.025em;
         .title {
           float: left;
           padding: 0.5rem 0 0 1rem;
-          width: 45%;
+          width: 48%;
 
           h4 {
             margin-bottom: 2rem;
@@ -226,28 +316,21 @@ $en_letter: 0.025em;
 
         .news_desc {
           float: left;
-          margin: 8.5% 0 0 6.5%;
+          margin: 12.5% 0 0 6.5%;
           width: 45%;
           text-align: left;
 
           strong {
             display: block;
-            margin-bottom: 0.5rem;
+            margin-bottom: 1.5rem;
             font-size: 1.6rem;
             font-weight: 600;
             text-align: left;
             line-height: 1.353;
           }
 
-          em {
-            display: block;
-            margin-bottom: 2.5rem;
-            font-size: 1.3rem;
-            font-weight: 400;
-          }
-
           p {
-            margin-bottom: 7rem;
+            margin-bottom: 4.5rem;
             font-size: 1.3rem;
             line-height: 1.45;
           }
@@ -291,9 +374,7 @@ $en_letter: 0.025em;
           border-bottom: 0.1rem solid #333;
           padding: 0.5rem 0 0.5rem 0;
           width: 100%;
-          text-overflow: ellipsis;
-          white-space: nowrap;
-          overflow: hidden;
+          @include text-shorten;
           font-size: 1.5rem;
           font-weight: 300;
         }
@@ -309,7 +390,7 @@ $en_letter: 0.025em;
   }
 }
 
-main>.sports {
+#sports {
   height: 100vh;
 
   .sports_intro {
@@ -394,50 +475,59 @@ main>.sports {
   }
 }
 
-.notice {
+#notice {
   @mixin title {
-      margin-bottom: 2.5rem;
-      font-size: 2.5rem;
-      font-weight: 700;
-      letter-spacing: $en_letter;
+    margin-bottom: 2.5rem;
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: $en_letter;
+    text-align: center;
   }
 
   .container {
     .info {
       float: left;
+      padding: 4rem 0;
       width: 58%;
+      background-color: #181818;
 
       h4 {
         @include title;
-      } 
+        margin-bottom: 1.5rem;
+      }
+
+      p {
+        margin-bottom: 2.5rem;
+        font-size: 1.5rem;
+        font-weight: 400;
+        text-align: center;
+      }
 
       .lnb {
-        float: left;
-        // margin-top: 5rem;
-        width: 10%;
-        
+        display: flex;
+        justify-content: center;
+        margin: 0 auto 3rem auto;
+        width: 50%;
+
         li {
           position: relative;
 
+          &.on {
+            background-color: #fff;
+            color: $bc;
+            font-weight: 500;
+          }
+
           a {
             display: block;
-            font-size: 1.7rem;
+            padding: 0 2rem;
+            font-size: 1.4rem;
             font-size: 400;
-            line-height: 9.5rem;
+            line-height: 2.5rem;
             text-align: center;
           }
         }
 
-        li~li:nth-child(-n+4)::before {
-          content: '';
-          position: absolute;
-          top: 0;
-          left: 50%;
-          border-radius: 100%;
-          width: 0.3rem;
-          height: 0.3rem;
-          background-color: #ddd;
-        }
       }
 
       .tb_menu {
@@ -445,20 +535,198 @@ main>.sports {
       }
 
       .tb_menu.on {
-        float: left;
-        margin: 5rem 0 0 5rem;
+        margin: 0 auto;
+        width: 48rem;
+
         display: grid;
-        grid-template-columns: 25rem 25rem;
-        grid-template-rows: 30rem;
+        grid-template-columns: 23rem 23rem;
+        grid-template-rows: 18rem;
+        grid-auto-rows: 18rem;
+        grid-gap: 2rem;
+
+        .box {
+          background-color: $bc;
+
+          figure {
+            margin: 0 auto 1.5rem auto;
+            height: 60%;
+          }
+
+          strong {
+            display: block;
+            margin: 0 auto;
+            width: 80%;
+            @include text-shorten;
+            font-size: 1.6rem;
+            font-weight: 300;
+            text-align: center;
+            line-height: 1.3;
+          }
+        }
+      }
+
+      @each $category in life,
+      food,
+      health,
+      house {
+        @for $i from 1 through 6 {
+          .#{$category} .itm0#{$i} {
+            background-image:url('../assets/image/section/notice/#{$category}/#{$category}_0#{$i}.jpg');
+          }
+        }
       }
     }
 
     .notice_box {
       float: right;
+      padding: 4rem;
       width: 40%;
+      height: 79.5rem;
+      background-color: #181818;
 
       h4 {
         @include title;
+      }
+
+      .btn {
+        display: inline-block;
+        margin-left: 30%;
+        padding: 2rem;
+        font-size: 1.5rem;
+        text-align: center;
+      }
+
+      .notice_table {
+        margin-bottom: 7rem;
+
+        thead {
+          visibility: hidden;
+        }
+
+        tbody {
+          tr {
+            border-bottom: 0.1rem solid $bc;
+
+            td {
+              padding: 5rem 0 1rem 0;
+            }
+
+            .contents {
+              font-size: 1.5rem;
+              font-weight: 500;
+            }
+
+            .date {
+              font-size: 1.3rem;
+              font-weight: 300;
+            }
+
+          }
+        }
+      }
+    }
+  }
+}
+
+#footer {
+  padding: 3rem 0;
+  border-top: 0.1rem solid #181818;
+  background-color: #181818;
+
+  .top_footer {
+    padding: 1.5rem 0;
+    border-bottom: 0.1rem solid $bc;
+
+    .container {
+      h2 {
+        margin-bottom: 2.5rem;
+      }
+
+      .semi_container {
+        display: flex;
+        justify-content: space-between;
+
+        .tf_list {
+          display: flex;
+          margin-bottom: 2.5rem;
+
+          li {
+            position: relative;
+
+            &:first-child~li a {
+              padding-left: 2rem;
+            }
+
+            &:first-child~li::before {
+              content: '';
+              position: absolute;
+              top: 50%;
+              left: 1rem;
+              transform: translateY(-50%);
+              width: 0.1rem;
+              height: 1rem;
+              background-color: #555;
+
+            }
+
+            a {
+              display: block;
+              font-size: 1.4rem;
+              font-weight: 400;
+            }
+          }
+        }
+
+        .sns_set {
+          display: flex;
+
+          li {
+            &:first-child~li:nth-child(-n+4) a {
+              padding-left: 2rem;
+            }
+
+            a {
+              display: block;
+              font-size: 2.1rem;
+            }
+          }
+        }
+      }
+
+    }
+  }
+
+  .bottom_footer {
+    padding: 3rem 0;
+
+    .container {
+      dl {
+        display: flex;
+        font-size: 1.4rem;
+
+        &.f_info {
+          margin-bottom: 0.5rem;
+        }
+
+        &.s_info {
+          margin-bottom: 3rem;
+        }
+
+        dt {
+          width: 20%;
+          font-weight: 500;
+        }
+
+        dd {
+          margin-right: 1.5rem;
+          font-weight: 300;
+        }
+      }
+
+      span {
+        font-size: 1.1rem;
+        font-weight: 300;
+        letter-spacing: $en_letter;
       }
     }
   }
