@@ -289,14 +289,14 @@
 }
 #news .news_box .box:first-child .news_desc {
   float: left;
-  margin: 12.5% 0 0 6.5%;
+  margin: 11% 0 0 6.5%;
   width: 45%;
   text-align: left;
 }
 #news .news_box .box:first-child .news_desc strong {
   display: block;
   margin-bottom: 1.5rem;
-  font-size: 1.6rem;
+  font-size: 2.3rem;
   font-weight: 600;
   text-align: left;
   line-height: 1.353;
