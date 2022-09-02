@@ -446,16 +446,16 @@
   text-align: center;
 }
 #sports .sports_intro > figure:hover.itm01 {
-  background-image: linear-gradient(to bottom, rgba(5, 18, 26, 0.9) 90%, rgb(33, 33, 33) 100%), url("../assets/image/section/sports/sports_bg_01.jpg");
+  background-image: linear-gradient(to bottom, rgba(5, 18, 26, 0.96) 90%, rgb(33, 33, 33) 100%), url("../assets/image/section/sports/sports_bg_01.jpg");
 }
 #sports .sports_intro > figure:hover.itm02 {
-  background-image: linear-gradient(to bottom, rgba(5, 18, 26, 0.9) 90%, rgb(33, 33, 33) 100%), url("../assets/image/section/sports/sports_bg_02.jpg");
+  background-image: linear-gradient(to bottom, rgba(5, 18, 26, 0.96) 90%, rgb(33, 33, 33) 100%), url("../assets/image/section/sports/sports_bg_02.jpg");
 }
 #sports .sports_intro > figure:hover.itm03 {
-  background-image: linear-gradient(to bottom, rgba(5, 18, 26, 0.9) 90%, rgb(33, 33, 33) 100%), url("../assets/image/section/sports/sports_bg_03.jpg");
+  background-image: linear-gradient(to bottom, rgba(5, 18, 26, 0.96) 90%, rgb(33, 33, 33) 100%), url("../assets/image/section/sports/sports_bg_03.jpg");
 }
 #sports .sports_intro > figure:hover.itm04 {
-  background-image: linear-gradient(to bottom, rgba(5, 18, 26, 0.9) 90%, rgb(33, 33, 33) 100%), url("../assets/image/section/sports/sports_bg_04.jpg");
+  background-image: linear-gradient(to bottom, rgba(5, 18, 26, 0.96) 90%, rgb(33, 33, 33) 100%), url("../assets/image/section/sports/sports_bg_04.jpg");
 }
 #sports .sports_intro .itm01 {
   background-image: linear-gradient(to bottom, rgba(5, 18, 26, 0) 10%, rgb(33, 33, 33) 100%), url("../assets/image/section/sports/sports_bg_01.jpg");
@@ -738,10 +738,10 @@
 @media screen and (max-width: 768px) {
   #header {
     height: 100vh;
-    background-image: linear-gradient(to bottom, rgba(5, 18, 26, 0) 0, rgb(33, 33, 33) 100%), url("../assets/image/header/header_bg_01.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position-x: -110rem;
+    background: url("../assets/image/section/broadcast/drama/drama_02.jpg") !important;
+    background-size: cover !important;
+    background-repeat: no-repeat !important;
+    background-position-x: -11rem !important;
   }
   #header > .container {
     width: auto;
@@ -816,9 +816,10 @@
   #header > .container .side_menu {
     position: fixed;
     top: 0;
+    right: 0;
     z-index: 998;
+    padding-right: 1.5rem;
     width: 100vw;
-    margin-right: 3.5rem;
     color: #fff !important;
     background-color: #000;
   }
@@ -850,17 +851,10 @@
     font-size: 1.7rem;
   }
   #header .main_visual .container .control_box {
-    left: 5%;
-  }
-  #header .main_visual .container .control_box button {
-    font-size: 3rem;
-    cursor: none;
-  }
-  #header .main_visual .container .control_box .slide_dots {
-    margin-top: 3.5%;
+    display: none;
   }
   #category {
-    padding: 6.25rem 3rem;
+    padding: 6.25rem 1.5rem;
   }
   #category .container .title_box {
     margin-bottom: 1.5rem;
@@ -874,10 +868,10 @@
   }
   #category .container .contents_box.on {
     display: grid;
-    grid-template-columns: 20rem 20rem;
-    grid-template-rows: 25rem 25rem;
+    grid-template-columns: 49% 49%;
+    grid-template-rows: 40rem 40rem;
     grid-gap: 1rem;
-    padding: 0 12%;
+    padding: 0;
   }
   #category .container .contents_box.on .box {
     position: relative;
@@ -896,16 +890,16 @@
     display: none;
   }
   #news {
-    padding: 6.25rem 3rem;
+    padding: 6.25rem 1.5rem;
     background-color: #181818;
   }
   #news .news_box {
     display: grid;
-    grid-template-columns: 20rem 20rem;
-    grid-template-rows: 25rem;
-    grid-auto-rows: 25rem;
+    grid-template-columns: 49% 49%;
+    grid-template-rows: 30rem;
+    grid-auto-rows: 30rem;
     grid-gap: 1rem;
-    padding: 0 12%;
+    padding: 0;
   }
   #news .news_box .box:first-child ~ .box {
     padding: 3.5rem 0;
@@ -923,16 +917,16 @@
     display: none;
   }
   #news .news_box .box:first-child .title h4 {
-    margin-bottom: 1.5rem;
+    margin-bottom: 2rem;
     font-size: 2.1rem;
     font-weight: 500;
   }
   #news .news_box .box:first-child .title .title_pic {
     margin-bottom: 0;
-    height: 18rem;
+    height: 22rem;
   }
   #news .news_box .box:first-child .news_desc {
-    margin: 10% 0 0 6.5%;
+    margin: 11.5% 0 0 6.5%;
   }
   #news .news_box .box:first-child .news_desc strong {
     margin-bottom: 3rem;
@@ -959,6 +953,7 @@
     display: none;
   }
   #news .news_box .box dl {
+    margin-top: 1rem;
     padding: 2rem;
   }
   #news .news_box .box dl dt {
@@ -969,17 +964,14 @@
   #news .news_box .box dl dt::after {
     width: 100%;
   }
-  #news .news_box .box dl dd:last-child {
-    display: none;
-  }
   #news .news_box .box .more {
     position: absolute;
-    top: 11.5%;
+    top: 13%;
     right: 10%;
     font-size: 1.5rem;
   }
   #sports {
-    height: 100vh;
+    height: 120vh;
   }
   #sports .sports_intro {
     display: block;
@@ -995,7 +987,7 @@
     top: 5%;
     left: 50%;
     transform: translateX(-50%);
-    z-index: 999;
+    z-index: 997;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -1024,7 +1016,7 @@
   #sports .sports_intro > figure .sports_box strong {
     display: block;
     margin-top: 3rem;
-    margin-bottom: 1.5rem;
+    margin-bottom: 2.5rem;
     font-size: 2.3rem;
     font-weight: 500;
   }
@@ -1046,7 +1038,7 @@
     top: 5%;
     left: 50%;
     transform: translateX(-50%);
-    z-index: 999;
+    z-index: 997;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -1075,7 +1067,7 @@
   #sports .sports_intro > figure:hover .sports_box strong {
     display: block;
     margin-top: 3rem;
-    margin-bottom: 1.5rem;
+    margin-bottom: 2.5rem;
     font-size: 2.3rem;
     font-weight: 500;
   }
@@ -1089,105 +1081,69 @@
   }
   #sports .sports_intro > figure:hover .sports_box .btn_box .btn {
     padding: 1rem;
-    font-size: 1.4rem;
+    font-size: 1.2rem;
     text-align: center;
   }
   #sports .sports_intro > figure:hover.itm01 {
-    background-image: linear-gradient(to bottom, rgba(5, 18, 26, 0.5) 100%, rgb(33, 33, 33) 100%), url("../assets/image/section/sports/sports_bg_01.jpg");
+    background-image: linear-gradient(to bottom, rgba(5, 18, 26, 0.95) 100%, rgb(33, 33, 33) 100%), url("../assets/image/section/sports/sports_bg_01.jpg");
   }
   #sports .sports_intro > figure:hover.itm02 {
-    background-image: linear-gradient(to bottom, rgba(5, 18, 26, 0.5) 100%, rgb(33, 33, 33) 100%), url("../assets/image/section/sports/sports_bg_02.jpg");
+    background-image: linear-gradient(to bottom, rgba(5, 18, 26, 0.95) 100%, rgb(33, 33, 33) 100%), url("../assets/image/section/sports/sports_bg_02.jpg");
   }
   #sports .sports_intro > figure:hover.itm03 {
-    background-image: linear-gradient(to bottom, rgba(5, 18, 26, 0.5) 100%, rgb(33, 33, 33) 100%), url("../assets/image/section/sports/sports_bg_03.jpg");
+    background-image: linear-gradient(to bottom, rgba(5, 18, 26, 0.95) 100%, rgb(33, 33, 33) 100%), url("../assets/image/section/sports/sports_bg_03.jpg");
   }
   #sports .sports_intro > figure:hover.itm04 {
-    background-image: linear-gradient(to bottom, rgba(5, 18, 26, 0.5) 100%, rgb(33, 33, 33) 100%), url("../assets/image/section/sports/sports_bg_04.jpg");
+    background-image: linear-gradient(to bottom, rgba(5, 18, 26, 0.95) 100%, rgb(33, 33, 33) 100%), url("../assets/image/section/sports/sports_bg_04.jpg");
   }
   #sports .sports_intro .itm01 {
-    background-image: linear-gradient(to bottom, rgba(5, 18, 26, 0.5) 100%, rgb(33, 33, 33) 100%), url("../assets/image/section/sports/sports_bg_01.jpg");
+    background-image: linear-gradient(to bottom, rgba(5, 18, 26, 0.95) 100%, rgb(33, 33, 33) 100%), url("../assets/image/section/sports/sports_bg_01.jpg");
   }
   #sports .sports_intro .itm02 {
-    background-image: linear-gradient(to bottom, rgba(5, 18, 26, 0.5) 100%, rgb(33, 33, 33) 100%), url("../assets/image/section/sports/sports_bg_02.jpg");
+    background-image: linear-gradient(to bottom, rgba(5, 18, 26, 0.95) 100%, rgb(33, 33, 33) 100%), url("../assets/image/section/sports/sports_bg_02.jpg");
   }
   #sports .sports_intro .itm03 {
-    background-image: linear-gradient(to bottom, rgba(5, 18, 26, 0.5) 100%, rgb(33, 33, 33) 100%), url("../assets/image/section/sports/sports_bg_03.jpg");
+    background-image: linear-gradient(to bottom, rgba(5, 18, 26, 0.95) 100%, rgb(33, 33, 33) 100%), url("../assets/image/section/sports/sports_bg_03.jpg");
   }
   #sports .sports_intro .itm04 {
-    background-image: linear-gradient(to bottom, rgba(5, 18, 26, 0.5) 100%, rgb(33, 33, 33) 100%), url("../assets/image/section/sports/sports_bg_04.jpg");
+    background-image: linear-gradient(to bottom, rgba(5, 18, 26, 0.95) 100%, rgb(33, 33, 33) 100%), url("../assets/image/section/sports/sports_bg_04.jpg");
+  }
+  #notice {
+    padding: 6.25rem 1.5rem;
   }
   #notice .container .info {
-    float: left;
-    padding: 4rem 0;
-    width: 58%;
-    background-color: #181818;
+    float: none;
+    margin-bottom: 1.5rem;
+    padding: 3rem 1rem;
+    width: auto;
   }
   #notice .container .info h4 {
-    margin-bottom: 2.5rem;
-    font-size: 2.5rem;
-    font-weight: 700;
-    letter-spacing: 0.025em;
-    text-align: center;
-    margin-bottom: 1.5rem;
+    margin-bottom: 2rem;
+    font-size: 2.4rem;
+    font-weight: 600;
+    margin-bottom: 1.2rem;
   }
   #notice .container .info p {
-    margin-bottom: 2.5rem;
-    font-size: 1.5rem;
+    font-size: 1.7rem;
     font-weight: 400;
-    text-align: center;
-  }
-  #notice .container .info .lnb {
-    display: flex;
-    justify-content: center;
-    margin: 0 auto 3rem auto;
-    width: 50%;
   }
   #notice .container .info .lnb li {
     position: relative;
   }
   #notice .container .info .lnb li.on {
-    background-color: #fff;
-    color: #212121;
-    font-weight: 500;
-  }
-  #notice .container .info .lnb li a {
-    display: block;
-    padding: 0 2rem;
-    font-size: 1.4rem;
-    font-size: 400;
-    line-height: 2.5rem;
-    text-align: center;
-  }
-  #notice .container .info .tb_menu {
-    display: none;
+    font-weight: 600;
   }
   #notice .container .info .tb_menu.on {
     margin: 0 auto;
     width: 48rem;
-    display: grid;
-    grid-template-columns: 23rem 23rem;
-    grid-template-rows: 18rem;
-    grid-auto-rows: 18rem;
-    grid-gap: 2rem;
-  }
-  #notice .container .info .tb_menu.on .box {
-    background-color: #212121;
+    grid-gap: 1rem;
   }
   #notice .container .info .tb_menu.on .box figure {
     margin: 0 auto 1.5rem auto;
     height: 60%;
   }
-  #notice .container .info .tb_menu.on .box strong {
-    display: block;
-    margin: 0 auto;
-    width: 80%;
-    text-overflow: ellipsis;
-    overflow: hidden;
-    white-space: nowrap;
-    font-size: 1.6rem;
-    font-weight: 300;
-    text-align: center;
-    line-height: 1.3;
+  #notice .container .info .tb_menu.on .box:nth-child(5), #notice .container .info .tb_menu.on .box:nth-child(6) {
+    display: none;
   }
   #notice .container .info .life .itm01 {
     background-image: url("../assets/image/section/notice/life/life_01.jpg");
@@ -1201,12 +1157,6 @@
   #notice .container .info .life .itm04 {
     background-image: url("../assets/image/section/notice/life/life_04.jpg");
   }
-  #notice .container .info .life .itm05 {
-    background-image: url("../assets/image/section/notice/life/life_05.jpg");
-  }
-  #notice .container .info .life .itm06 {
-    background-image: url("../assets/image/section/notice/life/life_06.jpg");
-  }
   #notice .container .info .food .itm01 {
     background-image: url("../assets/image/section/notice/food/food_01.jpg");
   }
@@ -1218,12 +1168,6 @@
   }
   #notice .container .info .food .itm04 {
     background-image: url("../assets/image/section/notice/food/food_04.jpg");
-  }
-  #notice .container .info .food .itm05 {
-    background-image: url("../assets/image/section/notice/food/food_05.jpg");
-  }
-  #notice .container .info .food .itm06 {
-    background-image: url("../assets/image/section/notice/food/food_06.jpg");
   }
   #notice .container .info .health .itm01 {
     background-image: url("../assets/image/section/notice/health/health_01.jpg");
@@ -1237,12 +1181,6 @@
   #notice .container .info .health .itm04 {
     background-image: url("../assets/image/section/notice/health/health_04.jpg");
   }
-  #notice .container .info .health .itm05 {
-    background-image: url("../assets/image/section/notice/health/health_05.jpg");
-  }
-  #notice .container .info .health .itm06 {
-    background-image: url("../assets/image/section/notice/health/health_06.jpg");
-  }
   #notice .container .info .house .itm01 {
     background-image: url("../assets/image/section/notice/house/house_01.jpg");
   }
@@ -1255,129 +1193,118 @@
   #notice .container .info .house .itm04 {
     background-image: url("../assets/image/section/notice/house/house_04.jpg");
   }
-  #notice .container .info .house .itm05 {
-    background-image: url("../assets/image/section/notice/house/house_05.jpg");
-  }
-  #notice .container .info .house .itm06 {
-    background-image: url("../assets/image/section/notice/house/house_06.jpg");
-  }
   #notice .container .notice_box {
-    float: right;
-    padding: 4rem;
-    width: 40%;
-    height: 79.5rem;
-    background-color: #181818;
+    float: none;
+    padding: 4.5rem;
+    width: auto;
+    height: auto;
   }
   #notice .container .notice_box h4 {
-    margin-bottom: 2.5rem;
-    font-size: 2.5rem;
-    font-weight: 700;
-    letter-spacing: 0.025em;
-    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 2.4rem;
+    font-weight: 600;
   }
   #notice .container .notice_box .btn {
-    display: inline-block;
-    margin-left: 30%;
-    padding: 2rem;
-    font-size: 1.5rem;
-    text-align: center;
+    margin-left: 35%;
+    padding: 1.5rem 2rem;
+    font-size: 1.4rem;
   }
   #notice .container .notice_box .notice_table {
-    margin-bottom: 7rem;
-  }
-  #notice .container .notice_box .notice_table thead {
-    visibility: hidden;
-  }
-  #notice .container .notice_box .notice_table tbody tr {
-    border-bottom: 0.1rem solid #212121;
+    margin-bottom: 4rem;
   }
   #notice .container .notice_box .notice_table tbody tr td {
-    padding: 5rem 0 1rem 0;
+    padding: 3rem 0 1rem 0;
   }
   #notice .container .notice_box .notice_table tbody tr .contents {
-    font-size: 1.5rem;
-    font-weight: 500;
+    font-size: 1.7rem;
+    font-weight: 400;
   }
   #notice .container .notice_box .notice_table tbody tr .date {
-    font-size: 1.3rem;
-    font-weight: 300;
+    font-size: 1.6rem;
+    font-weight: 200;
+  }
+  #notice .container .notice_box .notice_table tbody tr:nth-child(5), #notice .container .notice_box .notice_table tbody tr:nth-child(6), #notice .container .notice_box .notice_table tbody tr:nth-child(7) {
+    display: none;
   }
   #footer {
-    padding: 3rem 0;
-    border-top: 0.1rem solid #181818;
-    background-color: #181818;
+    padding: 3rem 1.5rem;
+    border-top: none;
+    display: flex;
   }
   #footer .top_footer {
-    padding: 1.5rem 0;
-    border-bottom: 0.1rem solid #212121;
+    border-right: 0.1rem solid #212121;
+    border-bottom: none;
+    padding: 0 1.5rem;
+    width: 35%;
   }
   #footer .top_footer .container h2 {
-    margin-bottom: 2.5rem;
+    margin-bottom: 4rem;
   }
   #footer .top_footer .container .semi_container {
-    display: flex;
-    justify-content: space-between;
+    flex-direction: column;
   }
   #footer .top_footer .container .semi_container .tf_list {
-    display: flex;
-    margin-bottom: 2.5rem;
+    flex-direction: column;
+    margin-bottom: 6rem;
   }
   #footer .top_footer .container .semi_container .tf_list li {
     position: relative;
+    padding-bottom: 2rem;
   }
   #footer .top_footer .container .semi_container .tf_list li:first-child ~ li a {
-    padding-left: 2rem;
+    padding-left: 0;
   }
   #footer .top_footer .container .semi_container .tf_list li:first-child ~ li::before {
-    content: "";
-    position: absolute;
-    top: 50%;
-    left: 1rem;
-    transform: translateY(-50%);
-    width: 0.1rem;
-    height: 1rem;
-    background-color: #555;
+    display: none;
   }
   #footer .top_footer .container .semi_container .tf_list li a {
-    display: block;
-    font-size: 1.4rem;
+    font-size: 1.5rem;
     font-weight: 400;
   }
-  #footer .top_footer .container .semi_container .sns_set {
-    display: flex;
-  }
   #footer .top_footer .container .semi_container .sns_set li:first-child ~ li:nth-child(-n+4) a {
-    padding-left: 2rem;
+    padding-left: 1rem;
   }
   #footer .top_footer .container .semi_container .sns_set li a {
-    display: block;
-    font-size: 2.1rem;
+    font-size: 1.9rem;
   }
   #footer .bottom_footer {
-    padding: 3rem 0;
+    padding: 3rem 1.5rem;
+    width: 90%;
+  }
+  #footer .bottom_footer .container {
+    display: flex;
+    margin-top: 14.5%;
+    flex-direction: column;
+    gap: 1.5rem;
   }
   #footer .bottom_footer .container dl {
-    display: flex;
+    flex-direction: column;
     font-size: 1.4rem;
+    text-align: right;
   }
   #footer .bottom_footer .container dl.f_info {
-    margin-bottom: 0.5rem;
+    margin-bottom: 3.5rem;
   }
   #footer .bottom_footer .container dl.s_info {
     margin-bottom: 3rem;
   }
   #footer .bottom_footer .container dl dt {
-    width: 20%;
+    margin-bottom: 1.5rem;
+    width: auto;
+    font-size: 1.6rem;
     font-weight: 500;
   }
   #footer .bottom_footer .container dl dd {
-    margin-right: 1.5rem;
+    margin-bottom: 0.5rem;
+    margin-right: 0;
+    font-size: 1.4rem;
     font-weight: 300;
   }
   #footer .bottom_footer .container span {
     font-size: 1.1rem;
     font-weight: 300;
     letter-spacing: 0.025em;
+    text-align: right;
   }
 }
 

@@ -38,6 +38,7 @@ document.addEventListener('DOMContentLoaded', () => {
     idx < 2 ? idx++ : idx = 0;
   }
 
+
   // slide-dots 클릭 시 슬라이드 이동
   dots_arr.forEach((elm, iidx) => {
     elm.addEventListener('click', function () {
@@ -62,7 +63,24 @@ document.addEventListener('DOMContentLoaded', () => {
     })
   })
 
-  let slide = setInterval(headerSlider, 5000);
+  if (this.outerWidth > 768) {
+    let slide = setInterval(headerSlider, 5000);
+    window.addEventListener('resize', function () {
+      let cidx = idx ? idx - 1 : 0;
+      if (this.outerWidth <= 768) {
+        this.clearInterval(slide);
+        DESC.forEach(el => el.classList.remove('on'));
+        DESC[0].classList.add('on');
+      } else {
+        LOGO.setAttribute('src', "./assets/image/logo/mbc-logo.png");
+        DESC.forEach(el => el.classList.remove('on'));
+        DESC[cidx].classList.add('on');
+        slide = setInterval(headerSlider, 5000);
+      }
+    })
+  }
+
+
 
   const SLIDESTART = document.querySelector('.xi-play-circle-o');
   const SLIDESTOP = document.querySelector('.xi-pause');
