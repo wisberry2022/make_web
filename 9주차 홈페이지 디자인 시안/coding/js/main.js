@@ -63,9 +63,12 @@ document.addEventListener('DOMContentLoaded', () => {
     })
   })
 
+
+
   if (this.outerWidth > 768) {
     let slide = setInterval(headerSlider, 5000);
     window.addEventListener('resize', function () {
+      LOGO.setAttribute('src', "./assets/image/logo/mbc-logo.png");
       let cidx = idx ? idx - 1 : 0;
       if (this.outerWidth <= 768) {
         this.clearInterval(slide);
@@ -79,8 +82,6 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     })
   }
-
-
 
   const SLIDESTART = document.querySelector('.xi-play-circle-o');
   const SLIDESTOP = document.querySelector('.xi-pause');
