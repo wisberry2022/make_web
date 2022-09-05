@@ -5,10 +5,10 @@ import { Link } from 'react-router-dom';
 const SubBox = () => {
   return (
     <ul className="list">
-      <Link to="/" className="box"><li>함께 일구는 정토회 <i className="xi-long-arrow-right"></i></li></Link>
-      <Link to="/" className="box"><li>환경활동<i className="xi-long-arrow-right"></i></li></Link>
-      <Link to="/" className="box"><li>복지활동<i className="xi-long-arrow-right"></i></li></Link>
-      <Link to="/" className="box"><li>통일 및 평화활동<i className="xi-long-arrow-right"></i></li></Link>
+      <Link to="/" className="box"><li><strong>함께 일구는 정토회</strong> <i className="xi-long-arrow-right"></i></li></Link>
+      <Link to="/" className="box"><li><strong>환경활동</strong><i className="xi-long-arrow-right"></i></li></Link>
+      <Link to="/" className="box"><li><strong>복지활동</strong><i className="xi-long-arrow-right"></i></li></Link>
+      <Link to="/" className="box"><li><strong>통일 및 평화활동</strong><i className="xi-long-arrow-right"></i></li></Link>
     </ul>
   )
 }
