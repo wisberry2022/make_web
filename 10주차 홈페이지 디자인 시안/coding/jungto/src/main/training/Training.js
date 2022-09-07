@@ -3,7 +3,7 @@ import { useState } from 'react';
 
 const Awakening = () => {
   return (
-    <div className = "train_desc">
+    <div className="train_desc">
       <h4>깨달음의 장</h4>
       <figure className="bg_set itm01"></figure>
       <strong>괴로움이 없는 사람, 자유로운 사람이 되는 길, 깨달음의 장을 통해 만나보세요</strong>
@@ -14,20 +14,19 @@ const Awakening = () => {
         <span>깨달음의 장</span>은 지금까지 한 번도 경험하지 못했을 새로운 삶의 세계로 당신을 안내합니다
       </p>
       <div className="btn_box">
-        <button className = "btn">
+        <button className="btn">
           활동 정보 및 일정
         </button>
-        <button className = "btn">
+        <button className="btn">
           신청하기
         </button>
-        <figure className = "bg_set icon_01"></figure>
       </div>
     </div>
   )
 }
 const Divide = () => {
   return (
-    <div className = "train_desc">
+    <div className="train_desc">
       <h4>나눔의 장</h4>
       <figure className="bg_set itm02"></figure>
       <strong>자신을 사랑하고, 자유롭고 평화로운 인간관계를 경험하고 그렇게 우리는 항상 행복하고자 합니다</strong>
@@ -37,20 +36,19 @@ const Divide = () => {
         <span>나눔의 장</span>은 자신을 사랑할 수 있고 인간관계가 평화로워지는 수련입니다
       </p>
       <div className="btn_box">
-        <button className = "btn">
+        <button className="btn">
           활동 정보 및 일정
         </button>
-        <button className = "btn">
+        <button className="btn">
           신청하기
         </button>
-        <figure className = "bg_set icon_02"></figure>
       </div>
     </div>
   )
 }
 const Mk = () => {
   return (
-    <div className = "train_desc">
+    <div className="train_desc">
       <h4>49살 문경살이</h4>
       <figure className="bg_set itm03"></figure>
       <strong>내 마음을 알아가는 시간, 자신과 사람에 대해 이해하는 시간</strong>
@@ -61,20 +59,19 @@ const Mk = () => {
         소심경, 예불문 등 학습을 하고 법사님과의 상담을 통해 내 마음을 알아차리고 가벼워지는 시간이 함께합니다
       </p>
       <div className="btn_box">
-        <button className = "btn">
+        <button className="btn">
           활동 정보 및 일정
         </button>
-        <button className = "btn">
+        <button className="btn">
           신청하기
         </button>
-        <figure className = "bg_set icon_03"></figure>
       </div>
     </div>
   )
 }
 const Wmk = () => {
   return (
-    <div className = "train_desc">
+    <div className="train_desc">
       <h4>주말 문경살이</h4>
       <figure className="bg_set itm04"></figure>
       <strong>일상에서 잠시 벗어나, 내 마음을 알아차리는 시간</strong>
@@ -86,20 +83,19 @@ const Wmk = () => {
         도반들과 땀 흘려 일하는 가운데 내 마음을 알아차리는 시간입니다
       </p>
       <div className="btn_box">
-        <button className = "btn">
+        <button className="btn">
           활동 정보 및 일정
         </button>
-        <button className = "btn">
+        <button className="btn">
           신청하기
         </button>
-        <figure className = "bg_set icon_04"></figure>
       </div>
     </div>
   )
 }
 const AwakeDays = () => {
   return (
-    <div className = "train_desc">
+    <div className="train_desc">
       <h4>일상에서 깨어있기</h4>
       <figure className="bg_set itm05"></figure>
       <strong>깨달음의 장 이후, 자기 자신을 돌아보는 시간</strong>
@@ -110,20 +106,19 @@ const AwakeDays = () => {
         <span>자기 모습도 돌아보고, 반가운 얼굴도 만나보세요</span>
       </p>
       <div className="btn_box">
-        <button className = "btn">
+        <button className="btn">
           활동 정보 및 일정
         </button>
-        <button className = "btn">
+        <button className="btn">
           신청하기
         </button>
-        <figure className = "bg_set icon_05"></figure>
       </div>
     </div>
   )
 }
 const Magazine = () => {
   return (
-    <div className = "train_desc">
+    <div className="train_desc">
       <h4>월간정토 소개</h4>
       <figure className="bg_set itm06"></figure>
       <strong>괴로움이 없는 사람, 자유로운 사람이 되는 길, 깨달음의 장을 통해 만나보세요</strong>
@@ -133,13 +128,12 @@ const Magazine = () => {
         <span>월간정토</span>는 정기구독 수익금으로 점자 도서관, 교도소, 군부대, 병원, 복지관 등에 무료로 배포하여 마음이 밝아지는 부처님 법을 전하고 있습니다
       </p>
       <div className="btn_box">
-        <button className = "btn">
+        <button className="btn">
           활동 정보 및 일정
         </button>
-        <button className = "btn">
+        <button className="btn">
           구독 신청
         </button>
-        <figure className = "bg_set icon_06"></figure>
       </div>
     </div>
   )
@@ -147,24 +141,24 @@ const Magazine = () => {
 
 
 const Training = () => {
-  const [num ,setNum] = useState(0);
+  const [num, setNum] = useState(0);
   const TabData = [
-    {id: 1, contents: 'awakening', component: <Awakening />},
-    {id: 2, contents: 'divide', component: <Divide />},
-    {id: 3, contents: 'mk', component: <Mk />},
-    {id: 4, contents: 'wmk', component: <Wmk />},
-    {id: 5, contents: 'awake_days', component: <AwakeDays />},
-    {id: 6, contents: 'magazine', component: <Magazine />},
-    
+    { id: 1, contents: 'awakening', component: <Awakening /> },
+    { id: 2, contents: 'divide', component: <Divide /> },
+    { id: 3, contents: 'mk', component: <Mk /> },
+    { id: 4, contents: 'wmk', component: <Wmk /> },
+    { id: 5, contents: 'awake_days', component: <AwakeDays /> },
+    { id: 6, contents: 'magazine', component: <Magazine /> },
+
   ];
 
   const list_map = [
-    {name: "awakening", text: '깨달음의 장' },
-    {name: "divide",text: '나눔의 장'},
-    {name: "mk",text: '49살 문경살이'},
-    {name: "wmk",text: '주말 문경살이'},
-    {name: "awake_days",text: '일상에서 깨어있기'},
-    {name: "magazine",text: '월간 정토'},
+    { name: "awakening", text: '깨달음의 장' },
+    { name: "divide", text: '나눔의 장' },
+    { name: "mk", text: '49살 문경살이' },
+    { name: "wmk", text: '주말 문경살이' },
+    { name: "awake_days", text: '일상에서 깨어있기' },
+    { name: "magazine", text: '월간 정토' },
   ]
 
   return (
@@ -177,13 +171,13 @@ const Training = () => {
         <div className="contents clearfix">
           <ul className="train_list">
             {list_map.map((elm, idx) => (
-                <li key = {idx} onClick = {
-                  () => (
-                    setNum(idx)
-                  )
-                }
-                className = {(num === idx)? `${elm.name} click`:`${elm.name}`}
-                >{elm.text}</li>
+              <li key={idx} onClick={
+                () => (
+                  setNum(idx)
+                )
+              }
+                className={(num === idx) ? `${elm.name} click` : `${elm.name}`}
+              >{elm.text}</li>
             ))}
           </ul>
           {TabData[num].component}
