@@ -1,0 +1,92 @@
+// * {
+//   outline: 1px solid #000;
+// }
+
+.profile {
+  padding: 0 0 10rem 0;
+
+  .d_title {
+    position: relative;
+    margin-bottom: 2.5rem;
+    font-size: 2.6rem;
+    font-weight: 500;
+
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: -30%;
+      left: 0;
+      background-color: #EE8545;
+      width: 3.8%;
+      height: 0.2rem;
+    }
+  }
+
+  .Active {
+    padding: 0 0 5rem 0;
+
+    .active_cm {
+      padding: 5rem 0;
+    }
+
+    h2 {
+      margin-bottom: 5rem;
+      padding: 5rem 0;
+      font-size: 3.2rem;
+      font-weight: 700;
+      text-align: center;
+      background-color: #f9f9f9;
+    }
+
+    li {
+      list-style-type: circle;
+      margin-left: 3rem;
+      font-size: 1.9rem;
+      font-weight: 500;
+      line-height: 5rem;
+    }
+
+    .current_active {
+      border-bottom: 0.1rem solid #ddd;
+
+      .container {
+        .intro {
+          .appoint {
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            height: 10rem;
+          }
+        }
+      }
+    }
+
+    .prize {
+      border-bottom: 0.1rem solid #ddd;
+
+      .container {
+        .awarding {
+          .prize_list {
+            span {
+              display: inline-block;
+
+              &.year {
+                margin-right: 3rem;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .main_active {
+      .container {
+        .d_title {
+          &::after {
+            width: 7.4%;
+          }
+        }
+      }
+    }
+  }
+}

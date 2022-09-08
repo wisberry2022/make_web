@@ -11,7 +11,7 @@ const TopFooter = () => {
       <div className="container">
         <ul className="top_list">
           {list_arr.map((el, idx) => (
-            <Link to="/" className="list"><li key={idx}><span>{el}</span><i className="xi-angle-right"></i></li></Link>
+            <Link to="/" className="list" key={idx}><li key={idx}><span>{el}</span><i className="xi-angle-right"></i></li></Link>
           ))}
         </ul>
       </div>
@@ -33,7 +33,7 @@ const BottomFooter = () => {
         </h1>
         <ul className="info">
           {mini_list.map((elm, idx) => (
-            <Link to="/" className="info_list"><li key={idx}>{elm}</li></Link>
+            <Link to="/" className="info_list" key={idx}><li key={idx}>{elm}</li></Link>
           ))}
         </ul>
         <div className="bottom_list">
@@ -43,7 +43,7 @@ const BottomFooter = () => {
           </p>
           <ul className="sns_set">
             {sns_list.map((el, idx) => (
-              <Link to="/" className="sns_icon"><li key={idx}><i className={el}></i></li></Link>
+              <Link to="/" className="sns_icon" key={idx}><li key={idx}><i className={el}></i></li></Link>
             ))}
           </ul>
         </div>
