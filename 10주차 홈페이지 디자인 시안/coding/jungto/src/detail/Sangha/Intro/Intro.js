@@ -29,7 +29,7 @@ const SanghaIntro = () => {
             법륜스님은 평화와 화해의 메세지를 전하는<br />
             평화운동가입니다
           </strong>
-          <p class="color">
+          <p className="color">
             제3세계를 지원하는 구호 활동가이며,<br />
             인류의 문명 전환을 실현해가는 사상가이자 깨어있는 선승으로,<br />
             보살의 삶을 서원한 수행공동체 '정토회'를 세웠습니다.
@@ -61,7 +61,7 @@ const Intro = () => {
   return (
     <section className="Intro">
       <div className="container">
-        <h2>법륜스님 소개</h2>
+        <h2 className="d_title">법륜스님 소개</h2>
         <SanghaIntro />
       </div>
     </section>

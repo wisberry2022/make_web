@@ -1,21 +1,9 @@
 .Intro {
 
   .container {
-    h2 {
-      position: relative;
-      margin-bottom: 3rem;
+    .d_title {
       font-size: 3.2rem;
       font-weight: 700;
-
-      &::after {
-        content: '';
-        position: absolute;
-        bottom: -30%;
-        left: 0;
-        width: 4.5rem;
-        height: 0.2rem;
-        background-color: #EE8545;
-      }
     }
 
     .intro_box {
