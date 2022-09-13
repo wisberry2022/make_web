@@ -1,5 +1,6 @@
 import './Header.scss'
-import { Link, Outlet } from 'react-router-dom';
+import { Link } from 'react-router-dom';
+import { useState } from 'react';
 
 const TopInfo = () => {
   return (
@@ -19,40 +20,31 @@ const TopInfo = () => {
 }
 
 const GNB = ({ menu }) => {
+  const [bool, setBool] = useState(false);
+
   return (
     <nav className="gnb">
       <div className="top_menu">
         <ul className="main_menu">
-          {console.log(menu)}
           {menu.map((el, idx) => {
             return (
               <Link to={el.link} key={idx} className="main_list">
-                <li>{el.menu}</li>
-                <ul className="sub_menu">
-                  {/* {el.sub_menu.map(
-                    (sul, id) => {
-                      return (
-                        <Link to="" key={id} className="sub_list">
-                          <li>{sul}</li>
-                        </Link>
-                      )
-                    }
-                  )} */}
-                  {el.sub_menu.length > 4 ?
-                    <div className="box">
+                <li className={bool ? "on" : ""}>{el.menu}</li>
+                <div className="main_box">
+                  <div className="sub_box">
+                    <strong>{el.menu}</strong>
+                    <ul className="sub_menu">
                       {el.sub_menu.map((sul, id) => {
                         return (
-                          <Link to="" key={id} className="sub_list"><li>{sul}</li></Link>
+                          <Link to="" className="sub_list" key={id}><li>{sul}</li></Link>
                         )
                       })}
-                    </div> :
-                    el.sub_menu.map((sul, id) => {
-                      return (
-                        <Link to="" key={id} className="sub_list"><li>{sul}</li></Link>
-                      )
-                    })
-                  }
-                </ul>
+                    </ul>
+                    <figure className={`bg_set itm0${idx + 1}`}></figure>
+                  </div>
+
+
+                </div>
               </Link>
             )
           })}
@@ -86,7 +78,6 @@ const Header = () => {
         </Link>
       </h1>
       <GNB menu={multi_menu} />
-      <Outlet />
     </header>
 
   )

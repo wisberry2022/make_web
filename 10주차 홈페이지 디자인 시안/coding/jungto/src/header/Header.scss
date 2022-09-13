@@ -39,10 +39,6 @@
       .main_menu {
         display: flex;
 
-        * {
-          outline: 1px solid #000;
-        }
-
         .main_list {
           >li {
             position: relative;
@@ -50,9 +46,17 @@
             padding: 2.5rem 4rem;
             font-size: 2rem;
             font-weight: 500;
+
+            &.on {
+              border-bottom: 0.1vrem solid #DE793A;
+            }
           }
 
-          .sub_menu {
+          // * {
+          //   outline: 1px solid #000;
+          // }
+
+          .main_box {
             position: absolute;
             left: 0;
             z-index: 999;
@@ -60,34 +64,61 @@
             height: 0;
             overflow: hidden;
 
-            .box {
+            .sub_box {
               display: flex;
-              flex-wrap: wrap;
-              width: 60rem;
+              margin-left: 18.5%;
+              padding: 3.5rem 0 0 0;
 
+              strong {
+                margin-right: 9rem;
+                width: 13rem;
+                font-size: 2.1rem;
+                font-weight: 500;
+              }
+
+              .sub_menu {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 1rem;
+                width: 60rem;
+
+                .sub_list {
+                  align-self: baseline;
+
+                  li {
+                    width: 15rem;
+                    font-size: 1.5rem;
+                    line-height: 1.4;
+                  }
+                }
+
+              }
+
+              @for $i from 1 through 5 {
+                .itm0#{$i} {
+                  background-image: url('./menu_img_0#{$i}.jpg');
+                }
+              }
+
+              figure {
+                position: absolute;
+                top: 0;
+                left: 60%;
+                width: 30rem;
+                height: 30rem;
+              }
             }
 
-            .sub_list {
-              display: flex;
-              width: 120rem;
-            }
 
           }
 
+
+
           &:hover {
-            .sub_menu {
+            .main_box {
+              border-top: 0.1rem solid #eee;
               height: 30rem;
               background-color: #fff;
-
-              .sub_list {
-                position: relative;
-
-                li {
-                  display: block;
-                  font-size: 1.9rem;
-                  line-height: 3.2;
-                }
-              }
             }
           }
         }
