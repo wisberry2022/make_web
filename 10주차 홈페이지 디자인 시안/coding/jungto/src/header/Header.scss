@@ -40,15 +40,17 @@
         display: flex;
 
         .main_list {
-          >li {
+          >a {
             position: relative;
+            display: block;
             margin-left: -4rem;
             padding: 2.5rem 4rem;
             font-size: 2rem;
             font-weight: 500;
 
-            &.on {
-              border-bottom: 0.1vrem solid #DE793A;
+            &.active {
+              border-bottom: 0.1rem solid #DE793A;
+              color: #DE793A;
             }
           }
 
@@ -85,13 +87,13 @@
                 .sub_list {
                   align-self: baseline;
 
-                  li {
+                  a {
+                    display: block;
                     width: 15rem;
                     font-size: 1.5rem;
                     line-height: 1.4;
                   }
                 }
-
               }
 
               @for $i from 1 through 5 {
@@ -108,23 +110,17 @@
                 height: 30rem;
               }
             }
-
-
           }
-
-
 
           &:hover {
             .main_box {
               border-top: 0.1rem solid #eee;
+              border-bottom: 0.1rem solid #eee;
               height: 30rem;
               background-color: #fff;
             }
           }
         }
-
-
-
       }
 
       .side_menu {

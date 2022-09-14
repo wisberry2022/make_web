@@ -14,7 +14,7 @@ const SubInfo = () => {
         <p>
           삶을 바꾸는 공부
         </p>
-        <Link to="/" class="btn">입학신청</Link>
+        <Link to="/" className="btn">입학신청</Link>
         <figure className="bg_set icon01"></figure>
       </li>
       <li className="jts">
@@ -24,7 +24,7 @@ const SubInfo = () => {
         <p>
           세상을 위한 작은 움직임
         </p>
-        <Link to="/" class="btn">봉사신청</Link>
+        <Link to="/" className="btn">봉사신청</Link>
         <figure className="bg_set icon02"></figure>
       </li>
       <li className="sns">
@@ -34,7 +34,7 @@ const SubInfo = () => {
         <p>
           행복을 찾는 질문
         </p>
-        <Link to="/" class="btn">청강신청</Link>
+        <Link to="/" className="btn">청강신청</Link>
         <figure className="bg_set icon03"></figure>
       </li>
     </ul>
@@ -57,7 +57,7 @@ const MainSlider = () => {
               법륜스님의 즉문즉설
             </h2>
             <p>내 안에 있는 행복을 찾을 수 있습니다</p>
-            <Link to="/" class="btn">더 보기</Link>
+            <Link to="/" className="btn">더 보기</Link>
           </div>
         </figure>
         <figure className="bg_set itm02">
@@ -66,7 +66,7 @@ const MainSlider = () => {
               법륜스님과 함께하는 하계 템플스테이
             </h2>
             <p>한 달 동안 사찰 생활을 체험할 수 있습니다</p>
-            <Link to="/" class="btn">더 보기</Link>
+            <Link to="/" className="btn">더 보기</Link>
           </div>
         </figure>
         <figure className="bg_set itm03">
@@ -75,7 +75,7 @@ const MainSlider = () => {
               온라인 한가위 명상
             </h2>
             <p>지금, 여기, 오직 나에게 오롯이 깨어있기</p>
-            <Link to="/" class="btn">더 보기</Link>
+            <Link to="/" className="btn">더 보기</Link>
           </div>
         </figure>
       </Slider>

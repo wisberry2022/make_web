@@ -8,15 +8,15 @@ const Subscribe = () => {
       <h4>후원하기</h4>
       <form action="#!" method="GET">
         <div className="name_ip">
-          <label for="name">이름</label>
+          <label htmlFor="name">이름</label>
           <input type="text" id="name" placeholder="성함을 입력하세요" />
         </div>
         <div className="email_ip">
-          <label for="email">이메일</label>
+          <label htmlFor="email">이메일</label>
           <input type="email" id="email" placeholder="이메일을 입력하세요" />
         </div>
         <div className="hp_ip">
-          <label for="phone">전화번호</label>
+          <label htmlFor="phone">전화번호</label>
           <input type="text" id="phone" placeholder="전화번호를 입력하세요" />
         </div>
         <div className="check_box">
@@ -35,15 +35,6 @@ const Subscribe = () => {
 };
 
 const RightSlide = () => {
-  var settings = {
-    arrows: false,
-    autoPlay: true,
-    // centerMode: true,
-    // centerPadding: '3rem',
-    dots: false,
-    infinite: true,
-    slidesToShow: 4
-  };
   return (
     <div className="donate_slider">
       <div className="donate_desc">

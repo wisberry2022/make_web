@@ -1,6 +1,5 @@
 import './Header.scss'
-import { Link } from 'react-router-dom';
-import { useState } from 'react';
+import { Link, NavLink } from 'react-router-dom';
 
 const TopInfo = () => {
   return (
@@ -20,7 +19,6 @@ const TopInfo = () => {
 }
 
 const GNB = ({ menu }) => {
-  const [bool, setBool] = useState(false);
 
   return (
     <nav className="gnb">
@@ -28,24 +26,24 @@ const GNB = ({ menu }) => {
         <ul className="main_menu">
           {menu.map((el, idx) => {
             return (
-              <Link to={el.link} key={idx} className="main_list">
-                <li className={bool ? "on" : ""}>{el.menu}</li>
+              <li key={idx} className="main_list">
+                <NavLink to={el.link} activeClassName="active">{el.menu}</NavLink>
                 <div className="main_box">
                   <div className="sub_box">
                     <strong>{el.menu}</strong>
                     <ul className="sub_menu">
                       {el.sub_menu.map((sul, id) => {
                         return (
-                          <Link to="" className="sub_list" key={id}><li>{sul}</li></Link>
+                          <li key={id} className="sub_list">
+                            <Link to="" className="sub_list">{sul}</Link>
+                          </li>
                         )
                       })}
                     </ul>
                     <figure className={`bg_set itm0${idx + 1}`}></figure>
                   </div>
-
-
                 </div>
-              </Link>
+              </li>
             )
           })}
 
