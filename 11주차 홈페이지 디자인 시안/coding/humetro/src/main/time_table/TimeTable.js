@@ -63,7 +63,7 @@ const BottomBox = ({ line, direction, station }) => {
           <option value="title">&nbsp; 역명</option>
           {station[wayLine].stationSet.map((it, idx) => {
             return (
-              <option value={it.code}>&nbsp; {it.name}</option>
+              <option value={it.code} key={idx}>&nbsp; {it.name}</option>
             )
           })}
         </select>

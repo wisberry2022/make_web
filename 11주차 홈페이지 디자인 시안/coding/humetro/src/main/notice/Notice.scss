@@ -10,9 +10,10 @@
 
     .notice_list {
       display: flex;
-      width: 100%;
       justify-content: center;
       background-color: #f9f9f9;
+      margin-bottom: 6rem;
+      width: 100%;
 
       >li {
         flex: 1;
@@ -32,5 +33,65 @@
       }
 
     }
+
+    table {
+      // border: 0.1rem solid #000;
+
+      thead {
+        border-top: 0.2rem solid #14A8F7;
+        border-bottom: 0.2rem solid #14A8F7;
+
+        tr {
+          th {
+            padding: 2rem 0;
+            font-size: 1.7rem;
+
+            &:first-child {
+              border-right: 0.1rem solid #ddd;
+              width: 10%;
+            }
+
+            &:nth-child(2) {
+              border-right: 0.1rem solid #ddd;
+              width: 50%;
+            }
+
+            &:nth-child(3) {
+              border-right: 0.1rem solid #ddd;
+              width: 9%;
+            }
+
+            &:last-child {
+              width: 12%;
+            }
+          }
+        }
+      }
+
+      tbody {
+        tr {
+          td {
+            padding: 2rem 0;
+            text-align: center;
+            font-size: 1.5rem;
+
+            &:first-child {
+              border-right: 0.1rem solid #ddd;
+            }
+
+            &:nth-child(2) {
+              border-right: 0.1rem solid #ddd;
+              padding-left: 5rem;
+              text-align: left;
+            }
+
+            &:nth-child(3) {
+              border-right: 0.1rem solid #ddd;
+            }
+          }
+        }
+      }
+    }
+
   }
 }
