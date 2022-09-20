@@ -1,0 +1,36 @@
+// * {
+//   outline: 1px solid #000;
+// }
+
+.notice {
+  .container {
+    .title_box {
+      margin-bottom: 5rem;
+    }
+
+    .notice_list {
+      display: flex;
+      width: 100%;
+      justify-content: center;
+      background-color: #f9f9f9;
+
+      >li {
+        flex: 1;
+
+        &.on {
+          color: #fff;
+          background-color: #14A8F7;
+        }
+
+        a {
+          display: block;
+          padding: 2rem 0;
+          font-size: 1.7rem;
+          font-weight: 500;
+          text-align: center;
+        }
+      }
+
+    }
+  }
+}

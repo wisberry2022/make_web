@@ -19,7 +19,7 @@ body {
 .btn {
   display: inline-block;
   color: #f9f9f9;
-  background-color: #EE8545;
+  /* background-color: #EE8545; */
 }
 
 .container {
@@ -53,8 +53,6 @@ body {
 section {
   padding: 10rem 0;
 }
-
-
 
 @media screen and (max-width:768px) {
   html {

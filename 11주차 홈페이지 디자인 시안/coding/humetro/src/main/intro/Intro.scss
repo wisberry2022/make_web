@@ -1,0 +1,68 @@
+// * {
+//   outline: 1px solid #000;
+// }
+
+.company_intro {
+  .container {
+    .title_box {
+      margin-bottom: 5rem;
+    }
+
+    .card_box {
+      display: flex;
+      gap: 2rem;
+
+      .card {
+        flex: 1;
+        text-align: center;
+        padding: 5rem;
+        color: #fff;
+
+        &:first-child {
+          background-color: #108CCF;
+        }
+
+        &:nth-child(2) {
+          background-color: #14A8F7;
+        }
+
+        &:last-child {
+          background-color: #5EC3F9;
+        }
+
+        h4 {
+          margin-bottom: 1rem;
+          font-size: 2.3rem;
+          font-weight: 500;
+        }
+
+        @for $i from 1 through 3 {
+          .itm0#{$i} {
+            background-image: url('../../../public/intro_icons_0#{$i}.png');
+            background-size: contain;
+          }
+        }
+
+        figure {
+          margin: 0 auto 3rem auto;
+          // margin-bottom: 3rem;s
+          width: 45%;
+          height: 20rem;
+        }
+
+        strong {
+          display: block;
+          margin-bottom: 2rem;
+          font-size: 1.9rem;
+          font-weight: 400;
+        }
+
+        p {
+          font-size: 1.3rem;
+          line-height: 1.82;
+        }
+      }
+
+    }
+  }
+}
