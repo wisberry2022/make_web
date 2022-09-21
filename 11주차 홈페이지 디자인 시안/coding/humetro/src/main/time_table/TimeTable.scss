@@ -52,6 +52,7 @@
 
         .bottom_box {
           display: flex;
+          margin-bottom: 3rem;
           border: 0.2rem solid #14A8F7;
 
           >* {
@@ -62,6 +63,88 @@
           select:nth-child(-n+2) {
             border-right: 0.1rem solid #14A8F7;
           }
+        }
+
+        .btn {
+          float: right;
+          border: none;
+          padding: 1rem 2rem;
+          background-color: #14A8F7;
+          font-size: 1.6rem;
+          cursor: pointer;
+        }
+      }
+
+      .right {
+        width: 60%;
+
+        // * {
+        //   outline: 1px solid #000;
+        // }
+
+        h4 {
+          margin-bottom: 3rem;
+          font-size: 2rem;
+          font-weight: 400;
+          text-align: right;
+        }
+
+        strong {
+          display: block;
+          margin-bottom: 5rem;
+          font-size: 3.5rem;
+          font-weight: 600;
+          text-align: right;
+        }
+
+        table {
+          thead {
+            th {
+              border-top: 0.2rem solid #14A8F7;
+              border-bottom: 0.2rem solid #14A8F7;
+              padding: 1rem 0;
+              text-align: center;
+              font-size: 1.7rem;
+              font-weight: 500;
+
+              &:first-child {
+                width: 15%;
+              }
+
+              // &:nth-child(2) {
+              //   width: 20%;
+              // }
+
+              &:nth-child(2) {
+                width: 15%;
+              }
+
+              &:nth-child(3) {
+                width: 25%;
+              }
+
+              &:last-child {
+                width: 25%;
+              }
+            }
+          }
+
+          tbody {
+            tr {
+              th {
+                padding: 2rem 0;
+                text-align: center;
+                font-size: 1.5rem;
+                font-weight: 400;
+              }
+
+              &:nth-child(even) {
+                background-color: #fff;
+              }
+
+            }
+          }
+
         }
       }
     }

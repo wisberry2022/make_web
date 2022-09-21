@@ -1,29 +1,31 @@
 import './TimeTable.scss'
 import Table from './Table';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
+import axios from 'axios';
 
-const TopBox = ({ date }) => {
+
+const TopBox = ({ date, setDay, setHour, setMin }) => {
   return (
     <>
       <strong>시간 및 요일 설정</strong>
       <div className="top_box">
-        <select name="date_type" id="date" className="date_type">
+        <select name="date_type" id="date" className="date_type" onChange={(e) => (setDay(Number(e.target.value)))}>
           {date.map((el, idx) => {
             return (
-              <option value={el.id} key={idx}>&nbsp; {el.title}</option>
+              <option value={el.id} key={idx} >&nbsp; {el.title}</option>
             )
           })}
         </select>
-        <select name="hour_type" id="hour_data" className="hour_type">
+        <select name="hour_type" id="hour_data" className="hour_type" onChange={(e) => (setHour(Number(e.target.value)))}>
           <option value="hour">&nbsp; 시간</option>
-          {Array.from(Array(12).keys()).map((it, idx) => {
+          {Array.from(Array(20).keys(), (v, i) => v += 4).map((it, idx) => {
             return (
               it += 1,
-              <option value={idx + 1} key={idx}>&nbsp; {it}</option>
+              <option value={it} key={idx}>&nbsp; {it}</option>
             )
           })}
         </select>
-        <select name="minute_type" id="miunte_data" className="minute_type">
+        <select name="minute_type" id="miunte_data" className="minute_type" onChange={(e) => (setMin(Number(e.target.value)))} >
           <option value="minute">&nbsp; 분</option>
           {Array.from(Array(60).keys()).map((it, idx) => {
             return (
@@ -36,7 +38,7 @@ const TopBox = ({ date }) => {
   )
 }
 
-const BottomBox = ({ line, direction, station }) => {
+const BottomBox = ({ line, direction, station, setDirect, setCode }) => {
   const [wayLine, setLine] = useState(1);
 
   return (
@@ -52,14 +54,14 @@ const BottomBox = ({ line, direction, station }) => {
             )
           })}
         </select>
-        <select name="direction_type" id="direction_data" className="direction_type">
+        <select name="direction_type" id="direction_data" className="direction_type" onChange={(e) => (setDirect(Number(e.target.value)))}>
           {direction[wayLine].directionSet.map((it, idx) => {
             return (
               <option value={it.id} key={idx}>&nbsp; {it.title}</option>
             )
           })}
         </select>
-        <select name="station_type" id="station_data" className="station_type">
+        <select name="station_type" id="station_data" className="station_type" onChange={(e) => (setCode(Number(e.target.value)))}>
           <option value="title">&nbsp; 역명</option>
           {station[wayLine].stationSet.map((it, idx) => {
             return (
@@ -73,14 +75,37 @@ const BottomBox = ({ line, direction, station }) => {
 }
 
 const SearchForm = ({ date, direction, line, station }) => {
+  const [day, setDay] = useState(0);
+  const [hour, setHour] = useState(13);
+  const [min, setMin] = useState(1);
+  const [direct, setDirect] = useState(0);
+  const [scode, setCode] = useState(101);
+  const [check, setCheck] = useState(false);
+  const [data, setData] = useState([]);
+
+  useEffect(() => {
+    axios.get('/test', {
+      params: {
+        day: day,
+        hour: hour,
+        min: min,
+        direct: direct,
+        scode: scode
+      }
+    })
+      .then((res) => (setData(res.data.response.body.item)))
+  }, [check])
+
   return (
     <div className="search_box">
-      <div className="left">
-        <TopBox date={date} />
-        <BottomBox line={line} direction={direction} station={station} />
+      <div className="left clearfix">
+        {console.log(data)}
+        <TopBox date={date} setDay={setDay} setHour={setHour} setMin={setMin} />
+        <BottomBox line={line} direction={direction} station={station} setDirect={setDirect} setCode={setCode} />
+        <button className="btn" onClick={() => (setCheck(!check))}>시간표 조회하기</button>
       </div>
       <div className="right">
-        <Table />
+        <Table data={data} station={station} />
       </div>
     </div>
   )
@@ -100,7 +125,6 @@ const TimeTable = ({ station }) => {
     { id: 2, directionSet: [{ id: 2, title: '운행방향' }, { id: 0, title: '양산 방면' }, { id: 1, title: '장산 방면' }] },
     { id: 3, directionSet: [{ id: 2, title: '운행방향' }, { id: 0, title: '대저 방면' }, { id: 1, title: '수영 방면' }] },
     { id: 4, directionSet: [{ id: 2, title: '운행방향' }, { id: 0, title: '안평 방면' }, { id: 1, title: '미남 방면' }] },
-
   ];
 
   const lineData = [
@@ -111,8 +135,6 @@ const TimeTable = ({ station }) => {
     { id: 4, title: '4호선' }
   ]
 
-
-
   return (
     <section className="time_table">
       <div className="container">
@@ -121,7 +143,7 @@ const TimeTable = ({ station }) => {
             열차시각표 조회
           </h3>
           <p>
-            부산도시철도의 모든 노선도의 시각표를 조회할 수 있습니다
+            부산도시철도의 모든 노선의 시각표를 조회할 수 있습니다
           </p>
         </div>
         <SearchForm date={dateData} direction={directionData} line={lineData} station={station} />

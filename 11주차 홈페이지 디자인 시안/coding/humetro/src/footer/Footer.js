@@ -57,7 +57,7 @@ const BottomFooter = () => {
           <select name="related" id="related_site" className="related">
             {relatedSite.map((it, idx) => {
               return (
-                <option value="test">{it.site}</option>
+                <option value="test" key={idx}>{it.site}</option>
               )
             })}
           </select>
