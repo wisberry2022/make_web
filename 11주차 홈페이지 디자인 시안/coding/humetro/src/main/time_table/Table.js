@@ -1,5 +1,5 @@
-const Table = ({ data, station }) => {
-  const theadData = ['요일구분', '시간', '차량번호', '상/하행 구분'];
+const Table = ({ data, station, code }) => {
+  const theadData = ['요일구분', '역이름', '시간', '차량번호', '상/하행 구분'];
   let nData = station.map((it, idx) => {
     return it.stationSet.map((its, id) => ({
       [its.code]: its.name
@@ -33,9 +33,8 @@ const Table = ({ data, station }) => {
   nData = Object.assign(...new Array().concat(...nData))
   return (
     <>
-      {console.log(nData)}
       <h4>역사 및 시간표</h4>
-      <strong>역이름</strong>
+      <strong>{nData[code]}</strong>
       <table>
         <thead>
           <tr>
@@ -52,6 +51,7 @@ const Table = ({ data, station }) => {
             return (
               <tr key={idx}>
                 <th>{dData[Number(it.day)][Number(it.day)]}</th>
+                <th>{nData[Number(it.scode)]}</th>
                 <th>{it.hour + ' : ' + it.time}</th>
                 <th>{it.trainno}</th>
                 <th>{ndData[Number(it.line)][Number(it.updown) + 1][Number(it.updown)]}</th>
@@ -59,14 +59,6 @@ const Table = ({ data, station }) => {
             )
 
           })}
-          {/* <tr>
-            <th>평일</th>
-            <th>구서</th>
-            <th>13:52</th>
-            <th>1230</th>
-            <th>노포동방면</th>
-          </tr> */}
-
         </tbody>
       </table>
     </>

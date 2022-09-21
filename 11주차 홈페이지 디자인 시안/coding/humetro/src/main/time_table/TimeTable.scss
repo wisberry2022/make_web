@@ -3,6 +3,7 @@
 // }
 
 .time_table {
+  height: 80vh;
   background-color: #f9f9f9;
 
   .container {
@@ -83,10 +84,21 @@
         // }
 
         h4 {
-          margin-bottom: 3rem;
+          position: relative;
+          margin-bottom: 2.5rem;
           font-size: 2rem;
           font-weight: 400;
           text-align: right;
+
+          &::after {
+            content: '';
+            position: absolute;
+            top: 130%;
+            right: 0;
+            width: 17%;
+            height: 0.2rem;
+            background-color: #14A8F7;
+          }
         }
 
         strong {
@@ -111,15 +123,15 @@
                 width: 15%;
               }
 
-              // &:nth-child(2) {
-              //   width: 20%;
-              // }
-
               &:nth-child(2) {
-                width: 15%;
+                width: 20%;
               }
 
               &:nth-child(3) {
+                width: 15%;
+              }
+
+              &:nth-child(4) {
                 width: 25%;
               }
 

@@ -21,7 +21,7 @@ const TopBox = ({ date, setDay, setHour, setMin }) => {
           {Array.from(Array(20).keys(), (v, i) => v += 4).map((it, idx) => {
             return (
               it += 1,
-              <option value={it} key={idx}>&nbsp; {it}</option>
+              <option value={it} key={idx}>&nbsp; {it}시</option>
             )
           })}
         </select>
@@ -29,7 +29,7 @@ const TopBox = ({ date, setDay, setHour, setMin }) => {
           <option value="minute">&nbsp; 분</option>
           {Array.from(Array(60).keys()).map((it, idx) => {
             return (
-              <option value={idx} key={idx}>&nbsp; {it}</option>
+              <option value={idx} key={idx}>&nbsp; {it}분</option>
             )
           })}
         </select>
@@ -105,7 +105,7 @@ const SearchForm = ({ date, direction, line, station }) => {
         <button className="btn" onClick={() => (setCheck(!check))}>시간표 조회하기</button>
       </div>
       <div className="right">
-        <Table data={data} station={station} />
+        <Table data={data} station={station} code={scode} />
       </div>
     </div>
   )
