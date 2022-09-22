@@ -1,0 +1,177 @@
+// * {
+//   outline: 1px solid #000;
+// }
+
+.event {
+  background-color: #f9f9f9;
+
+  .container {
+    .title_box {
+      margin-bottom: 3rem;
+    }
+
+    .event_box {
+      position: relative;
+      padding: 5rem;
+      background-color: #fff;
+
+      .l_angle {
+        position: absolute;
+        top: 50%;
+        left: -10%;
+        transform: translateY(-50%);
+        font-size: 5rem;
+        color: #1075D2;
+        cursor: pointer;
+      }
+
+      .r_angle {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: -10%;
+        font-size: 5rem;
+        color: #1075D2;
+        cursor: pointer;
+      }
+
+      .num_set {
+        position: absolute;
+        top: -5%;
+        right: 1%;
+        width: 4.5rem;
+        font-size: 2.1rem;
+
+        &::after {
+          content: '';
+          position: absolute;
+          top: 80%;
+          left: -130%;
+          width: 5rem;
+          height: 0.2rem;
+          background-color: #1075D2;
+        }
+
+        .end_num {
+          font-weight: 700;
+        }
+      }
+
+      .swiper_box {
+        // outline: 1px solid #000;
+
+        @for $i from 1 through 3 {
+          .itm0#{$i} {
+            background-image: url('../../../public/event_0#{$i}.jpg');
+          }
+        }
+
+        .swiper-pagination {
+          bottom: 0;
+        }
+
+        .swiper_slide {
+          display: flex;
+          gap: 3rem;
+
+          .left {
+            position: relative;
+            width: 50%;
+            height: 60rem;
+
+            &::after {
+              content: '';
+              position: absolute;
+              top: 27%;
+              right: -150%;
+              width: 110%;
+              height: 0.1rem;
+              background-color: #1075D2;
+            }
+          }
+
+          .right {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-end;
+            padding-top: 3rem;
+            width: 60%;
+
+            .info_title_box {
+              margin-bottom: 8rem;
+              text-align: right;
+
+              h4 {
+                margin-bottom: 1rem;
+                font-size: 3.5rem;
+                font-weight: 500;
+              }
+
+              strong {
+                margin-bottom: 5rem;
+                display: block;
+                font-size: 2.1rem;
+              }
+
+              p {
+                font-size: 1.8rem;
+                font-weight: 400;
+              }
+            }
+
+            .info_bottom_box {
+              table {
+                margin: 0 0 5.5rem auto;
+                width: 80%;
+                font-size: 1.6rem;
+
+                thead {
+                  display: none;
+                }
+
+                tbody {
+                  td {
+                    line-height: 2.3rem;
+
+                    &.title {
+                      font-weight: 500;
+                    }
+
+                    &.content {
+                      font-weight: 400;
+                      text-align: right;
+                    }
+                  }
+                }
+              }
+
+              .btn {
+                display: block;
+                margin: 0 0 2rem auto;
+                padding: 1rem 2rem;
+                width: 40%;
+                font-size: 1.9rem;
+                background-color: #2966A3;
+              }
+
+              .check_list {
+                margin: 0 0 0 auto;
+
+                >li {
+                  margin-bottom: 0.5rem;
+                  text-align: right;
+                  font-size: 1.3rem;
+                  line-height: 1.1;
+                  font-weight: 300;
+
+                }
+              }
+            }
+          }
+        }
+
+      }
+    }
+  }
+}

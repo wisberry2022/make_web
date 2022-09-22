@@ -105,7 +105,7 @@ const SearchForm = ({ date, direction, line, station }) => {
         <button className="btn" onClick={() => (setCheck(!check))}>시간표 조회하기</button>
       </div>
       <div className="right">
-        <Table data={data} station={station} code={scode} />
+        <Table data={data} station={station} code={scode} direction={direction} date={date} />
       </div>
     </div>
   )

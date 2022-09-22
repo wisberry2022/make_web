@@ -1,4 +1,4 @@
-const Table = ({ data, station, code }) => {
+const Table = ({ data, station, code, direction, date }) => {
   const theadData = ['요일구분', '역이름', '시간', '차량번호', '상/하행 구분'];
   let nData = station.map((it, idx) => {
     return it.stationSet.map((its, id) => ({
@@ -6,27 +6,11 @@ const Table = ({ data, station, code }) => {
     }))
   })
 
-
-  const dateData = [
-    { id: 0, title: '요일구분' },
-    { id: 1, title: '평일' },
-    { id: 2, title: '토요일' },
-    { id: 3, title: '일요일' }
-  ];
-
-  const directionData = [
-    { id: 0, directionSet: [] },
-    { id: 1, directionSet: [{ id: 2, title: '운행방향' }, { id: 0, title: '노포동 방면' }, { id: 1, title: '다대포해수욕장 방면' }] },
-    { id: 2, directionSet: [{ id: 2, title: '운행방향' }, { id: 0, title: '양산 방면' }, { id: 1, title: '장산 방면' }] },
-    { id: 3, directionSet: [{ id: 2, title: '운행방향' }, { id: 0, title: '대저 방면' }, { id: 1, title: '수영 방면' }] },
-    { id: 4, directionSet: [{ id: 2, title: '운행방향' }, { id: 0, title: '안평 방면' }, { id: 1, title: '미남 방면' }] },
-  ];
-
-  const dData = dateData.map((it, idx) => {
+  const dData = date.map(it => {
     return { [it.id]: it.title }
   })
 
-  const ndData = directionData.map((it, idx) => {
+  const ndData = direction.map(it => {
     return it.directionSet.map(its => ({ [its.id]: its.title }))
   })
 
@@ -46,7 +30,6 @@ const Table = ({ data, station, code }) => {
           </tr>
         </thead>
         <tbody>
-          {/* {console.log(data.map((it, idx) => (n)} */}
           {data.map((it, idx) => {
             return (
               <tr key={idx}>

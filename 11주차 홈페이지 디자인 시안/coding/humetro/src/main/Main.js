@@ -1,6 +1,7 @@
 import Intro from './intro/Intro';
 import TimeTable from './time_table/TimeTable';
 import Notice from './notice/Notice';
+import Event from './event/Event';
 
 const Main = () => {
   const stationData = [
@@ -142,6 +143,7 @@ const Main = () => {
       <Intro />
       <TimeTable station={stationData} />
       <Notice />
+      <Event />
     </main>
   )
 }

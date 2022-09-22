@@ -29,9 +29,10 @@
 }
 
 .header {
+  position: relative;
+
   >.container {
     border-bottom: 0.1rem solid #ddd;
-    padding: 1.5rem 0;
     width: 100%;
 
     .gnb {
@@ -42,23 +43,94 @@
 
       h1 {
         width: 20%;
+
+        img {
+          transform: translateY(40%);
+        }
       }
 
       .main_menu {
         display: flex;
         margin-right: -2.5rem;
 
-        >li>a {
-          display: block;
-          padding: 0.7rem 2.5rem;
-          font-size: 2rem;
-          font-weight: 600;
-          line-height: 100%;
+        >li {
+          >a {
+            display: block;
+            padding: 0 2.5rem;
+            font-size: 2rem;
+            font-weight: 600;
+            line-height: 6rem;
+          }
+
+          .sub_wrapper {
+            position: absolute;
+            left: 0;
+            z-index: 999;
+            width: 100vw;
+            height: 0;
+            background-color: #fff;
+            // overflow: hidden;
+
+
+            .container {
+              display: none;
+
+              .sub_left {
+                position: relative;
+                width: 43%;
+                height: auto;
+                text-align: right;
+                background-color: #B1D8F2;
+
+                strong {
+                  position: absolute;
+                  top: 1.5rem;
+                  right: 1.5rem;
+                  font-size: 2.5rem;
+                  font-weight: 500;
+                }
+              }
+
+              .sub_right {
+                dl {
+                  display: flex;
+                  gap: 2rem;
+                  border-bottom: 0.1rem solid #eee;
+                  width: 150%;
+                  font-size: 1.3rem;
+
+                  dt {
+                    padding: 1.5rem 0 1.5rem 2rem;
+                    width: 20rem;
+                    font-weight: 700;
+                    color: #314778;
+                    background-color: #f9f9f9;
+                  }
+
+                  dd {
+                    padding: 1.5rem 0 1.5rem 0;
+                    font-weight: 500;
+                  }
+                }
+              }
+            }
+          }
         }
+
+        >li:hover {
+          .sub_wrapper {
+            border-top: 0.1rem solid #ddd;
+            height: auto;
+
+            .container {
+              display: flex;
+              width: 100vw;
+            }
+          }
+        }
+
       }
     }
-
-
   }
 
 }
