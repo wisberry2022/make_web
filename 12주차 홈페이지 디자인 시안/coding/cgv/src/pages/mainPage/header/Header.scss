@@ -1,0 +1,47 @@
+.header {
+  position: absolute;
+  z-index: 999;
+  border-bottom: 0.1rem solid #333;
+  width: 100vw;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 5rem;
+  color: #fff;
+
+  h1 {
+    img {
+      max-width: 50%;
+      transform: translateY(45%);
+    }
+  }
+
+  .gnb {
+    display: flex;
+    gap: 2rem;
+
+    .main_menu {
+      display: flex;
+      border-right: 0.1rem solid #333;
+
+      >li {
+        >a {
+          display: block;
+          padding: 2rem 3rem;
+          line-height: 7rem;
+          font-size: 1.9rem;
+        }
+      }
+    }
+
+    .side_menu {
+      display: flex;
+
+      >li {
+        padding: 2rem 1.5rem;
+        font-size: 1.9rem;
+        line-height: 7rem;
+        cursor: pointer;
+      }
+    }
+  }
+}

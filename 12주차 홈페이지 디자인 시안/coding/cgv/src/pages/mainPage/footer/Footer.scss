@@ -1,0 +1,38 @@
+.footer {
+
+  // * {
+  //   outline: 1px solid #000;
+  // }
+
+  .tf {
+    padding: 5rem 5rem 1.5rem 5rem;
+    border-bottom: 0.1rem solid #ddd;
+
+    .tf_list {
+      display: flex;
+      justify-content: space-between;
+
+      li {
+        >a {
+          display: block;
+          padding: 0 1.5rem;
+          font-size: 1.5rem;
+        }
+      }
+    }
+  }
+
+  .bf {
+    display: flex;
+    padding: 1.5rem 5rem 5rem 5rem;
+
+    .bf_list {
+      li {
+        line-height: 1.9rem;
+        font-size: 1.3rem;
+        font-weight: 400;
+      }
+    }
+
+  }
+}
