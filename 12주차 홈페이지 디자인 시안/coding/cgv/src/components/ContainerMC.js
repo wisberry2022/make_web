@@ -6,7 +6,7 @@ import { useEffect } from 'react';
 
 const ContainerMC = () => {
   const key = '30272d24c992f238a595ec8a2f5064b2';
-  const url = 'http://www.kobis.or.kr/kobisopenapi/webservice/rest/boxoffice/searchWeeklyBoxOfficeList.json';
+  const url = 'https://www.kobis.or.kr/kobisopenapi/webservice/rest/boxoffice/searchWeeklyBoxOfficeList.json';
   const date = new Date();
   const Year = date.getFullYear();
   const Month = date.getMonth() + 1;

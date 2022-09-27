@@ -13,9 +13,11 @@ export default function movieSearchReducer(state = initialState, action) {
         {
           id: idx,
           title: it.title.replace(/<[^>]*>?/g, ''),
-          director: it.director,
+          director: it.director.split('|')[0],
+          actor: it.actor.split('|'),
           pubDate: it.pubDate,
           rating: it.userRating,
+          image: it.image,
         }
       ))
     default:

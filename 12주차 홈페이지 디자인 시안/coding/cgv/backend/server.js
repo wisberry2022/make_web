@@ -9,7 +9,7 @@ app.get('/setImage', rootRouter);
 app.get('/search', rootRouter);
 
 const port = 5080;
-app.listen(port, () => { console.log(`listening on ${port}`) });
+app.listen(process.env.PORT || port, () => { console.log(`listening on ${port}`) });
 
 app.get('*', (req, res) => {
   res.sendFile(path.join(__dirname, '/build/index.html'));

@@ -1,4 +1,4 @@
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { updateData, initializeData } from '../../../../store/modules/moviesearch';
 import axios from 'axios';
@@ -7,10 +7,12 @@ import './MovieSearch.scss';
 
 const SearchBox = () => {
   const dispatch = useDispatch();
+  const [movieName, keepName] = useState(0);
 
   useEffect(() => {
     return () => (dispatch(initializeData()))
   }, [])
+
   const searchTarget = useRef();
   const storeData = useSelector(state => state.movieSearchReducer);
 
@@ -33,10 +35,11 @@ const SearchBox = () => {
       <div className="search_box">
         <form className="form_box" onSubmit={(e) => (submitHandling(e))}>
           <input type="text" placeholder="영화 이름을 검색하세요!" ref={searchTarget} />
-          <button type="submit"><i className="xi-search"></i></button>
+          <button type="submit" onClick={() => (keepName(searchTarget.current.value))}><i className="xi-search"></i></button>
         </form>
       </div>
-      <Result resultData={storeData} />
+      {/* {console.log(`storeData:`, storeData)} */}
+      {movieName !== 0 ? <Result resultData={storeData} searchTarget={movieName} /> : ''}
     </>
   )
 }
