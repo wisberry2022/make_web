@@ -1,0 +1,172 @@
+.reservation {
+
+  .unclick {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 55rem;
+    font-size: 2rem;
+  }
+
+  .container {
+    .title_box {
+      margin-bottom: 3rem;
+    }
+
+    .reserve_box {
+
+      display: grid;
+      grid-template-columns: 40rem 40rem 40rem;
+
+      border: 0.1rem solid #ddd;
+
+      .box_title {
+        grid-column: 1/6;
+
+        h4 {
+          padding: 2rem 0;
+          font-size: 2.1rem;
+          text-align: center;
+          color: #fff;
+          background-color: #343132;
+        }
+      }
+
+      .common {
+        h4 {
+          // border-bottom: 0.1rem solid #ddd;
+          padding: 2.5rem 0;
+          text-align: center;
+          font-size: 1.7rem;
+          font-weight: 600;
+        }
+      }
+
+      .date_box {
+        grid-column: 1/6;
+        text-align: center;
+
+        h4 {
+          border-bottom: 0.2rem solid #ddd;
+          padding: 1.5rem 0;
+        }
+
+        .date_list {
+          display: flex;
+          border-bottom: 0.1rem solid #ddd;
+          height: 5rem;
+        }
+      }
+
+      .movie_box {
+        h4 {
+          border-bottom: 0.1rem solid #ddd;
+        }
+
+        .movie_list {
+          padding: 2rem 0 2rem 5rem;
+          height: 60rem;
+          overflow-y: scroll;
+
+          li {
+            font-size: 1.5rem;
+            font-weight: 500;
+            line-height: 5rem;
+            cursor: pointer;
+          }
+        }
+      }
+
+      .region_box {
+        position: relative;
+
+        h4 {
+          border-bottom: 0.1rem solid #ddd;
+          background-color: #fff;
+        }
+
+        .region_select {
+          display: flex;
+          justify-content: space-between;
+          padding: 2rem;
+          height: 60rem;
+          overflow-y: scroll;
+
+          .main_region {
+            position: sticky;
+            top: 0;
+            padding: 3rem;
+            height: 50rem;
+            background-color: #f9f9f9;
+
+            li {
+              padding: 1.5rem 0;
+              font-size: 1.7rem;
+              cursor: pointer;
+            }
+          }
+
+          .sub_region {
+            margin: 0 auto 0 5rem;
+            padding: 2rem 0 0 0;
+
+            li {
+              padding: .7rem 0;
+              font-size: 1.3rem;
+              text-align: left;
+              width: 10rem;
+              overflow: hidden;
+              text-overflow: ellipsis;
+              white-space: nowrap;
+              cursor: pointer;
+            }
+          }
+        }
+      }
+
+      .time_box {
+        h4 {
+          border-bottom: 0.1rem solid #ddd;
+        }
+
+        .time_list {
+          padding: 2rem;
+          height: 60rem;
+          overflow-y: scroll;
+
+          >li {
+            border-bottom: 0.1rem solid #ddd;
+            padding: 3rem 0;
+            font-size: 1.5rem;
+            font-weight: 500;
+
+            strong {
+              display: block;
+              margin-bottom: 1.5rem;
+            }
+          }
+
+          .minute_list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+
+            >li {
+              border-radius: 1.5rem;
+              padding: .5rem 0;
+              width: 6rem;
+              text-align: center;
+              color: #333;
+              background-color: #ddd;
+              cursor: pointer;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  // * {
+  //   outline: 1px solid #000;
+  // }
+}

@@ -4,8 +4,8 @@ import './Header.scss';
 const Header = () => {
   const menuList = [
     { id: 1, title: '영화', link: '/movie' },
-    { id: 2, title: '극장', link: '/' },
-    { id: 3, title: '예매', link: '/' },
+    { id: 2, title: '극장', link: '/theater' },
+    { id: 3, title: '예매', link: '/ticketing' },
     { id: 4, title: '스토어', link: '/' },
     { id: 5, title: '이벤트', link: '/' },
     { id: 6, title: '혜택', link: '/' },

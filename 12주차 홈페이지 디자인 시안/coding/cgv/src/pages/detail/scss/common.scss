@@ -1,0 +1,13 @@
+@mixin detailPageDefaultSet {
+  .header {
+    position: static;
+    border-bottom: 0.1rem solid #ddd;
+    color: #333;
+
+    .gnb {
+      .main_menu {
+        border-right: 0.1rem solid #ddd;
+      }
+    }
+  }
+}

@@ -1,0 +1,56 @@
+.region_theater {
+  .container {
+    .title_box {
+      margin-bottom: 9rem;
+    }
+
+    .theater_location {
+      // * {
+      //   outline: 1px solid #000;
+      // }
+
+
+      .main_category {
+        display: flex;
+        justify-content: center;
+        gap: 4.5rem;
+        border-bottom: 0.1rem solid #777;
+        color: #ddd;
+        background-color: #343132;
+
+        li {
+          a {
+            display: block;
+            padding: 3rem 0;
+            font-size: 1.9rem;
+            font-weight: 500;
+          }
+        }
+      }
+
+      .sub_category {
+        padding: 3rem 4rem 4rem 4rem;
+        height: 45rem;
+        background-color: #343132;
+
+        .sub_list {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: flex-start;
+          margin-left: 10rem;
+          color: #ddd;
+
+          li {
+            width: 25rem;
+
+            a {
+              display: block;
+              padding: .7rem 2rem;
+              font-size: 1.4rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}
