@@ -1,7 +1,8 @@
 import './Reservation.scss';
 import { useSelector } from "react-redux/es/exports";
 import { useState } from 'react';
-
+import "slick-carousel/slick/slick.css";
+import Slider from 'react-slick';
 
 const UnClickMonitor = () => {
   return (
@@ -11,20 +12,69 @@ const UnClickMonitor = () => {
   )
 }
 
+const DateBox = ({ boolSet, setBool }) => {
+  const [cnt, setCnt] = useState();
+  const dateInfo = new Date();
+  const [cdate, setCdate] = useState(dateInfo.getMonth());
+  const daysList = ['일', '월', '화', '수', '목', '금', '토'];
+  const dateList = Array.from({ length: 12 }, (v, k) => ({
+    month: k + 1,
+    days: Array.from({ length: new Date(dateInfo.getFullYear(), k + 1, 0).getDate() }, (v, k) => k + 1)
+  }))
+  const settings = {
+    arrows: true,
+    dots: false,
+    slidesToShow: 1,
+    initialSlide: cdate,
+    infinite: false,
+    afterChange: () => (setCnt(undefined), setBool([false, false, false]))
+  }
+  return (
+    <div className="date_box common">
+      {console.log(dateList)}
+      <h4>날짜</h4>
+      <div className="date_list">
+        <Slider  {...settings}>
+          {dateList.map((it, idx) => {
+            return (
+              <div className="month_box" key={it.month}>
+                <strong className="month">{it.month}월</strong>
+                <div className="days_box">
+                  {it.days.map((its, id) => {
+                    return (
+                      <div key={its} className={id === cnt ? `slot on` : `slot`} onClick={() => (setCnt(id), setBool([true, false, false]))}>
+                        <strong className="days">{daysList[new Date(dateInfo.getFullYear(), it.month - 1, its).getDay()]}</strong>
+                        <span>{its}</span>
+                      </div>
+                    )
+                  })}
+                </div>
+              </div>
+            )
+          })}
+        </Slider>
+      </div>
+    </div>
+  )
+}
+
 const MovieBox = ({ boolSet, setBool }) => {
   const data = useSelector(state => state.boxofficeReducer);
   return (
     <div className="movie_box common">
       <h4>영화</h4>
-      <ul className="movie_list">
-        {data.map((it, idx) => {
-          return (
-            <li key={idx} onClick={() => (setBool([true, false]))}>
-              {it}
-            </li>
-          )
-        })}
-      </ul>
+      {boolSet[0] ?
+        <ul className="movie_list">
+          {data.map((it, idx) => {
+            return (
+              <li key={idx} onClick={() => (setBool([true, true, false]))}>
+                {it}
+              </li>
+            )
+          })}
+        </ul>
+        : <UnClickMonitor />}
+
     </div>
   )
 }
@@ -37,7 +87,7 @@ const RegionBox = ({ boolSet, setBool }) => {
   return (
     <div className="region_box common">
       <h4>지역</h4>
-      {boolSet[0] ?
+      {boolSet[1] ?
         <div className="region_select">
           <ul className="main_region">
             {mainRegionList.map((it, idx) => {
@@ -49,7 +99,7 @@ const RegionBox = ({ boolSet, setBool }) => {
           <ul className="sub_region">
             {subRegionList[num].title.map((its, id) => {
               return (
-                <li key={id} onClick={() => (setBool([true, true]))}>{its}</li>
+                <li key={id} onClick={() => (setBool([true, true, true]))}>{its}</li>
               )
             })}
           </ul>
@@ -70,9 +120,8 @@ const TimeBox = ({ boolSet, setBool }) => {
 
   return (
     <div className="time_box common">
-      {console.log(minuteList)}
       <h4>시간</h4>
-      {boolSet[1] ?
+      {boolSet[2] ?
         <ul className="time_list">
           {hourList.map((it, idx) => {
             return (
@@ -96,8 +145,9 @@ const TimeBox = ({ boolSet, setBool }) => {
   )
 }
 
+
 const Reservation = () => {
-  const [boolSet, setBool] = useState([false, false]);
+  const [boolSet, setBool] = useState([false, false, false]);
 
   return (
     <section className="reservation">
@@ -110,10 +160,7 @@ const Reservation = () => {
           <div className="box_title">
             <h4>Ticketing Box</h4>
           </div>
-          <div className="date_box common">
-            <h4>날짜</h4>
-            <ul className="date_list"></ul>
-          </div>
+          <DateBox boolSet={boolSet} setBool={setBool} />
           <MovieBox boolSet={boolSet} setBool={setBool} />
           <RegionBox boolSet={boolSet} setBool={setBool} />
           <TimeBox boolSet={boolSet} setBool={setBool} />

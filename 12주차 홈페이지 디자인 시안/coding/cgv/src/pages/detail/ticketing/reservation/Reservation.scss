@@ -35,7 +35,7 @@
       .common {
         h4 {
           // border-bottom: 0.1rem solid #ddd;
-          padding: 2.5rem 0;
+          padding: 1.5rem 0;
           text-align: center;
           font-size: 1.7rem;
           font-weight: 600;
@@ -45,6 +45,7 @@
       .date_box {
         grid-column: 1/6;
         text-align: center;
+        width: 120rem;
 
         h4 {
           border-bottom: 0.2rem solid #ddd;
@@ -52,20 +53,106 @@
         }
 
         .date_list {
-          display: flex;
+          position: relative;
           border-bottom: 0.1rem solid #ddd;
-          height: 5rem;
+          padding: 2.5rem 0;
+          height: 14rem;
+
+
+          .slick-arrow {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-1.5rem);
+            color: #000;
+            border: none;
+            background-color: transparent;
+            cursor: pointer;
+
+            &.slick-prev {
+              left: 1%;
+              font-size: 0;
+
+              &::after {
+                content: '\e93b';
+                font-family: 'xeicon';
+                position: absolute;
+                left: 1rem;
+                font-size: 4rem;
+                color: #000;
+              }
+            }
+
+            &.slick-next {
+              right: 1%;
+              font-size: 0;
+
+              &::after {
+                content: '\e93e';
+                font-family: 'xeicon';
+                position: absolute;
+                right: 1rem;
+                font-size: 4rem;
+                color: #000;
+              }
+            }
+          }
+
+          .month_box {
+            // padding: .5rem 0;
+
+            .month {
+              display: block;
+              margin-bottom: 1.5rem;
+              font-size: 2rem;
+              color: #ED3124;
+            }
+
+            .days_box {
+              display: flex;
+              justify-content: center;
+
+              .slot {
+                display: flex;
+                flex-direction: column;
+                padding: .5rem;
+                cursor: pointer;
+
+                &.on {
+                  background-color: #ED3124;
+                  color: #fff;
+                }
+
+                .days {
+                  display: block;
+                  margin-bottom: 1.2rem;
+                  font-size: 1.9rem;
+                }
+
+                span {
+                  display: inline-block;
+                  padding: 0 .3rem;
+                  font-size: 1.9rem;
+                  cursor: pointer;
+                }
+              }
+
+
+            }
+          }
+
+
         }
       }
 
       .movie_box {
         h4 {
           border-bottom: 0.1rem solid #ddd;
+          border-right: 0.1rem solid #ddd;
         }
 
         .movie_list {
           padding: 2rem 0 2rem 5rem;
-          height: 60rem;
+          height: 50rem;
           overflow-y: scroll;
 
           li {
@@ -82,6 +169,7 @@
 
         h4 {
           border-bottom: 0.1rem solid #ddd;
+          border-right: 0.1rem solid #ddd;
           background-color: #fff;
         }
 
@@ -89,14 +177,14 @@
           display: flex;
           justify-content: space-between;
           padding: 2rem;
-          height: 60rem;
+          height: 50rem;
           overflow-y: scroll;
 
           .main_region {
             position: sticky;
             top: 0;
-            padding: 3rem;
-            height: 50rem;
+            padding: 2rem 3rem;
+            height: 45rem;
             background-color: #f9f9f9;
 
             li {
@@ -131,7 +219,7 @@
 
         .time_list {
           padding: 2rem;
-          height: 60rem;
+          height: 50rem;
           overflow-y: scroll;
 
           >li {
