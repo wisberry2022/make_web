@@ -1,0 +1,119 @@
+@mixin pseudoLine {
+  content: '';
+  position: absolute;
+  top: 50%;
+  width: 50rem;
+  height: 0.1rem;
+  background-color: #ED3124;
+}
+
+.main_store {
+  .container {
+    .title_box {
+      margin-bottom: 5rem;
+    }
+
+    .hot_deal {
+      >figure {
+        margin-bottom: 10rem;
+        width: 100%;
+        height: 40rem;
+
+        &.store_bg {
+          background-image: url('../../../../../public/store_background.jpg');
+        }
+      }
+
+      h4 {
+        position: relative;
+        margin-bottom: 1.5rem;
+        font-size: 2.6rem;
+        font-weight: 600;
+        color: #ED3124;
+        text-align: center;
+
+        &::before {
+          @include pseudoLine;
+          left: 0;
+        }
+
+        &::after {
+          @include pseudoLine;
+          right: 0;
+        }
+      }
+
+      >strong {
+        display: block;
+        margin-bottom: 4rem;
+        font-size: 1.9rem;
+        font-weight: 500;
+        color: #ED3124;
+        text-align: center;
+      }
+
+      .promotion_box {
+        display: flex;
+        justify-content: center;
+        gap: 2.5rem;
+
+        @for $i from 1 through 3 {
+          .promotion .itm0#{$i} {
+            background-image: url('../../../../../public/store_hot_0#{$i}.jpg');
+          }
+        }
+
+        .promotion {
+          border: 0.1rem solid #ddd;
+          padding: 1.5rem;
+
+
+          >figure {
+            width: 30rem;
+            height: 30rem;
+          }
+
+          .name {
+            display: block;
+            margin-bottom: 1.5rem;
+            font-size: 1.7rem;
+            font-weight: 500;
+            text-align: center;
+          }
+
+          .price {
+            display: block;
+            margin-bottom: 2.5rem;
+            font-size: 1.5rem;
+            text-align: center;
+          }
+
+          .icon_box {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+
+            @for $i from 1 through 3 {
+              .icon0#{$i} {
+                background-image: url('../../../../../public/icons_0#{$i}.png');
+                background-size: 50%;
+              }
+            }
+
+            >figure {
+              border-radius: 100%;
+              border: 0.1rem solid #ddd;
+              width: 5rem;
+              height: 5rem;
+              cursor: pointer;
+
+              &:hover {
+                background-color: #ddd;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

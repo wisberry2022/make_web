@@ -2,10 +2,24 @@
 
   .unclick {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 55rem;
     font-size: 2rem;
+    text-align: center;
+    line-height: 1.2;
+
+    figure {
+      margin: 0 auto 1.5rem auto;
+      width: 15rem;
+      height: 10rem;
+
+      &.sub_logo {
+        background-image: url('../../../../../public/cgv_logo.png');
+        background-size: contain;
+      }
+    }
   }
 
   .container {
@@ -189,7 +203,7 @@
 
             li {
               padding: 1.5rem 0;
-              font-size: 1.7rem;
+              font-size: 1.5rem;
               cursor: pointer;
             }
           }
@@ -213,6 +227,7 @@
       }
 
       .time_box {
+
         h4 {
           border-bottom: 0.1rem solid #ddd;
         }

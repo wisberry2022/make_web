@@ -1,0 +1,130 @@
+.container {
+  width: 120rem;
+
+  // * {
+  //   outline: 1px solid #000;
+  // }
+
+  @mixin putBg($cnt, $target) {
+    @for $j from 1 through $cnt {
+      .#{$target} .prm0#{$j} {
+        background-image: url('../../../../../public/store_#{$target}_0#{$j}.jpg');
+      }
+
+    }
+  }
+
+  $types: (
+    'ticket',
+    'gift_card',
+    'combo',
+    'drink',
+    'popcorn',
+    'snack'
+  );
+
+@each $type in $types {
+  @if ($type =='ticket') {
+    @include putBg(5, $type);
+  }
+
+  @else if($type =='gift_card') {
+    @include putBg(8, $type);
+  }
+
+  @else if($type =='combo') {
+    @include putBg(4, $type);
+  }
+
+  @else if($type =='drink') {
+    @include putBg(4, $type);
+  }
+
+  @else if($type =='popcorn') {
+    @include putBg(8, $type);
+  }
+
+  @else if($type =='snack') {
+    @include putBg(5, $type);
+  }
+}
+
+.promotion_list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2.5rem;
+  margin-left: 4.5%;
+
+  >li {
+    .promotion_box {
+      border: 0.1rem solid #ddd;
+      width: 35rem;
+      padding: 4rem;
+
+      >figure {
+        margin: 0 auto;
+        width: 25rem;
+        height: 25rem;
+      }
+
+      .name {
+        margin-bottom: 1.5rem;
+        text-align: center;
+        font-size: 1.9rem;
+        font-weight: 600;
+      }
+
+      .desc {
+        display: block;
+        margin-bottom: 3rem;
+        text-align: center;
+        font-size: 1.5rem;
+        font-weight: 500;
+      }
+    }
+  }
+
+  .purchase_box {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+
+    .price {
+      display: block;
+      border: 0.1rem solid #ddd;
+      padding: 1rem 2rem;
+      line-height: 1.4;
+      font-size: 1.4rem;
+      font-weight: 400;
+      color: 333;
+      text-align: center;
+    }
+
+    .icon_box {
+      display: flex;
+      gap: .5rem;
+
+      @for $i from 1 through 3 {
+        .icon0#{$i} {
+          background-image: url('../../../../../public/icons_0#{$i}.png');
+          background-size: 50%;
+        }
+      }
+
+      >figure {
+        border: 0.1rem solid #ddd;
+        border-radius: 100%;
+        width: 4rem;
+        height: 4rem;
+
+        &:hover {
+          background-color: #ddd;
+        }
+      }
+    }
+
+  }
+
+
+}
+}

@@ -7,7 +7,8 @@ import Slider from 'react-slick';
 const UnClickMonitor = () => {
   return (
     <div className="unclick">
-      <p>영화 혹은 지역을 먼저 선택해주세요!</p>
+      <figure className="bg_set sub_logo"></figure>
+      <p>날짜 및 영화<br /> 혹은 지역을 먼저 선택해주세요!</p>
     </div>
   )
 }

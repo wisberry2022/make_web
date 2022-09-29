@@ -1,0 +1,112 @@
+.current_event {
+  .intro_box {
+    position: relative;
+    margin-bottom: 1.5rem;
+    border-bottom: 0.1rem solid #ddd;
+    padding: 2rem 0;
+
+    h4 {
+      font-size: 2.1rem;
+      font-weight: 600;
+    }
+
+    .btn {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      padding: .5rem 2rem;
+      font-size: 1.5rem;
+      background-color: #ED3124;
+    }
+  }
+
+  .event_list {
+    padding: 2rem;
+
+    @for $i from 1 through 9 {
+      .event_box .event0#{$i} {
+        background-image: url('../../../../../public/current_event_0#{$i}.jpg');
+      }
+    }
+
+    // * {
+    //   outline: 1px solid #000;
+    // }
+
+    .event_box {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 3rem;
+      border: 0.1rem solid #ddd;
+      padding: 3rem;
+
+      >figure {
+        outline: 1px solid #000;
+        width: 35rem;
+        height: 20rem;
+      }
+
+      .event_desc {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        padding: 1.5rem 0;
+
+        h5 {
+          margin-bottom: 6rem;
+          font-size: 2.2rem;
+          font-weight: 500;
+          text-align: right;
+        }
+
+        table {
+          // * {
+          //   outline: 1px solid #000;
+          // }
+
+          width: 70rem;
+
+          thead {
+            display: none;
+          }
+
+          tbody {
+            display: flex;
+            flex-wrap: wrap;
+
+            tr {
+              //35rem
+              width: 50%;
+
+              .title {
+                padding: .4rem 0;
+                width: 15rem;
+                font-size: 1.3rem;
+                font-weight: 500;
+                text-align: right;
+              }
+
+              .contents {
+                width: 70%;
+                padding-left: 3rem;
+                font-size: 1.3rem;
+                text-align: left;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .more {
+    display: block;
+    border: none;
+    padding: 1.5rem 0;
+    font-size: 1.8rem;
+    font-weight: 500;
+    width: 100%;
+    cursor: pointer;
+
+  }
+}
