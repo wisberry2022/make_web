@@ -1,0 +1,9 @@
+.last_event {
+  .event_list {
+    @for $i from 1 through 8 {
+      .event_box .event0#{$i} {
+        background-image: url('../../../../../../public/last_event_0#{$i}.jpg');
+      }
+    }
+  }
+}

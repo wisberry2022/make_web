@@ -18,15 +18,19 @@ const DateBox = ({ boolSet, setBool }) => {
   const dateInfo = new Date();
   const [cdate, setCdate] = useState(dateInfo.getMonth());
   const daysList = ['일', '월', '화', '수', '목', '금', '토'];
-  const dateList = Array.from({ length: 12 }, (v, k) => ({
-    month: k + 1,
-    days: Array.from({ length: new Date(dateInfo.getFullYear(), k + 1, 0).getDate() }, (v, k) => k + 1)
-  }))
+  // const dateList = Array.from({ length: 12 }, (v, k) => ({
+  //   month: k + 1,
+  //   days: Array.from({ length: new Date(dateInfo.getFullYear(), k + 1, 0).getDate() }, (v, k) => k + 1)
+  // }))
+  const dateList = Array(12 - dateInfo.getMonth()).fill().map((it, idx) => ({
+    month: dateInfo.getMonth() + (1 + idx),
+    days: Array.from({ length: new Date(dateInfo.getFullYear(), dateInfo.getMonth() + (1 + idx), 0).getDate() }, (v, k) => k + 1)
+  }));
   const settings = {
     arrows: true,
     dots: false,
     slidesToShow: 1,
-    initialSlide: cdate,
+    // initialSlide: cdate,
     infinite: false,
     afterChange: () => (setCnt(undefined), setBool([false, false, false]))
   }

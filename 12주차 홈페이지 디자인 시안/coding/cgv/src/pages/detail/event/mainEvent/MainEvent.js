@@ -1,5 +1,6 @@
 import './MainEvent.scss';
-import CurrentEvent from './CurrentEvent';
+import CurrentEvent from './currentEvent/CurrentEvent';
+import LastEvent from './lastEvent/LastEvent';
 
 const MainEvent = () => {
   return (
@@ -10,6 +11,7 @@ const MainEvent = () => {
           <p>다양한 이벤트에 참여하여 CGV를 더욱 풍성하게 이용하세요!</p>
         </div>
         <CurrentEvent />
+        <LastEvent />
       </div>
     </section>
   )
