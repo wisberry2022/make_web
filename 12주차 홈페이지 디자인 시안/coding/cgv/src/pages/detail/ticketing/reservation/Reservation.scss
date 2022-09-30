@@ -73,44 +73,6 @@
           height: 14rem;
 
 
-          .slick-arrow {
-            position: absolute;
-            top: 50%;
-            transform: translateY(-1.5rem);
-            color: #000;
-            border: none;
-            background-color: transparent;
-            cursor: pointer;
-
-            &.slick-prev {
-              left: 1%;
-              font-size: 0;
-
-              &::after {
-                content: '\e93b';
-                font-family: 'xeicon';
-                position: absolute;
-                left: 1rem;
-                font-size: 4rem;
-                color: #000;
-              }
-            }
-
-            &.slick-next {
-              right: 1%;
-              font-size: 0;
-
-              &::after {
-                content: '\e93e';
-                font-family: 'xeicon';
-                position: absolute;
-                right: 1rem;
-                font-size: 4rem;
-                color: #000;
-              }
-            }
-          }
-
           .month_box {
             // padding: .5rem 0;
 
@@ -154,6 +116,23 @@
             }
           }
 
+          .arrow_set {
+            i {
+              position: absolute;
+              top: 50%;
+              font-size: 4.5rem;
+              color: #343132;
+              cursor: pointer;
+
+              &:first-child {
+                left: 2%;
+              }
+
+              &:last-child {
+                right: 2%;
+              }
+            }
+          }
 
         }
       }

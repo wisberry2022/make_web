@@ -1,6 +1,6 @@
 import './Reservation.scss';
 import { useSelector } from "react-redux/es/exports";
-import { useState } from 'react';
+import { useRef, useState } from 'react';
 import "slick-carousel/slick/slick.css";
 import Slider from 'react-slick';
 
@@ -16,30 +16,25 @@ const UnClickMonitor = () => {
 const DateBox = ({ boolSet, setBool }) => {
   const [cnt, setCnt] = useState();
   const dateInfo = new Date();
+  const slideRef = useRef();
   const [cdate, setCdate] = useState(dateInfo.getMonth());
   const daysList = ['일', '월', '화', '수', '목', '금', '토'];
-  // const dateList = Array.from({ length: 12 }, (v, k) => ({
-  //   month: k + 1,
-  //   days: Array.from({ length: new Date(dateInfo.getFullYear(), k + 1, 0).getDate() }, (v, k) => k + 1)
-  // }))
   const dateList = Array(12 - dateInfo.getMonth()).fill().map((it, idx) => ({
     month: dateInfo.getMonth() + (1 + idx),
     days: Array.from({ length: new Date(dateInfo.getFullYear(), dateInfo.getMonth() + (1 + idx), 0).getDate() }, (v, k) => k + 1)
   }));
   const settings = {
-    arrows: true,
+    arrows: false,
     dots: false,
     slidesToShow: 1,
-    // initialSlide: cdate,
     infinite: false,
     afterChange: () => (setCnt(undefined), setBool([false, false, false]))
   }
   return (
     <div className="date_box common">
-      {console.log(dateList)}
       <h4>날짜</h4>
       <div className="date_list">
-        <Slider  {...settings}>
+        <Slider  {...settings} ref={slideRef}>
           {dateList.map((it, idx) => {
             return (
               <div className="month_box" key={it.month}>
@@ -58,11 +53,19 @@ const DateBox = ({ boolSet, setBool }) => {
             )
           })}
         </Slider>
+        <div className="arrow_set">
+          <i className="xi-angle-left" onClick={() => (slideRef.current.slickPrev())}></i>
+          <i className="xi-angle-right" onClick={() => (slideRef.current.slickNext())}></i>
+        </div>
       </div>
     </div>
   )
 }
 
+/**
+ * @param boolSet - 불리언값으로 이루어진 길이 3 배열
+ * @param setBool - 슬롯 선택 시 다음 창을 선택할 수 있게 하는 setter 함수
+ */
 const MovieBox = ({ boolSet, setBool }) => {
   const data = useSelector(state => state.boxofficeReducer);
   return (

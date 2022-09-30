@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import './Template.scss';
 
+
 const PromotionTemplate = ({ storeData }) => {
   const [num, setNum] = useState();
   return (

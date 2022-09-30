@@ -227,7 +227,7 @@ const initialState = [
         id: 5,
         name: '오징어(완제품)',
         desc: '오징어(완제품)',
-        price: '3,5900원'
+        price: '3,500원'
       },
     ]
   }
