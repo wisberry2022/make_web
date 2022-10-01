@@ -8,7 +8,6 @@ const Header = () => {
     { id: 3, title: '예매', link: '/ticketing' },
     { id: 4, title: '스토어', link: '/store' },
     { id: 5, title: '이벤트', link: '/event' },
-    { id: 6, title: '혜택', link: '/' },
   ]
 
   const sideList = [
