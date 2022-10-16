@@ -9,25 +9,30 @@
 
     .movie_set {
       display: flex;
-      gap: 4rem;
+      gap: 2.5rem;
 
       .movie {
         display: flex;
         flex-direction: column;
+        width: 12rem;
 
         .img_box {
           display: block;
           margin-bottom: 2rem;
 
           img {
-            width: 15rem;
+            max-width: 100%;
           }
         }
 
         strong {
           display: block;
           margin-bottom: .9rem;
-          font-size: 1.6rem;
+          width: 12rem;
+          text-overflow: ellipse;
+          white-space: nowrap;
+          overflow: hidden;
+          font-size: 1.3rem;
           font-weight: 600;
           text-align: center;
         }
@@ -35,8 +40,8 @@
         .btn {
           margin: 0 auto;
           padding: .6rem 1.5rem;
-          width: 60%;
-          font-size: 1.4rem;
+          width: 100%;
+          font-size: 1.3rem;
           font-weight: 400;
           text-align: center;
           background-color: #ED3124;
