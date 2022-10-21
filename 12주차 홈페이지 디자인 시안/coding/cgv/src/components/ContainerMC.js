@@ -8,27 +8,20 @@ const ContainerMC = () => {
   const key = '30272d24c992f238a595ec8a2f5064b2';
   const url = 'https://www.kobis.or.kr/kobisopenapi/webservice/rest/boxoffice/searchWeeklyBoxOfficeList.json';
   const date = new Date();
-  const Year = date.getFullYear();
-  const Month = date.getMonth() + 1;
-  const Day = date.getDate() - 7;
   const movieData = useSelector(state => state.movieReducer);
 
-  const dayToFormat = (Year, Month, Day) => {
-    let sMonth = Month.toString();
-    let sDay = Day.toString();
-    if (sMonth.length < 2) {
-      let result = Array.from(sMonth);
-      result.unshift('0');
-      sMonth = result.join('');
-    } else if (sDay.length < 2) {
-      let result = Array.from(sDay);
-      result.unshift('0');
-      sDay = result.join('');
-    }
-    return Year + sMonth + sDay;
+  const dayToFormat = (source) => {
+    const Year = source.getFullYear();
+    const Month = String(source.getMonth() + 1).padStart(2, '0');
+    const Date = String(source.getDate()).padStart(2, '0');
+
+    return [Year, Month, Date].join('');
   }
 
-  const targetDt = dayToFormat(Year, Month, Day);
+  const targetDt = dayToFormat(new Date(date.getFullYear(), date.getMonth(), date.getDate() - 7));
+
+  console.log('daytoFormat', targetDt)
+
   const dispatch = useDispatch();
   const deletePatch = () => (dispatch(deleteData()))
 
