@@ -19,24 +19,6 @@ const GuideBox = ({ data }) => {
   )
 }
 
-const SearchStation = () => {
-  return (
-    <div className="search_station">
-      <div className="search_box">
-        <h3>사이버 스테이션</h3>
-        <strong>도착역까지 정보를 확인해보세요!</strong>
-      </div>
-      <form action="/" method="GET" className="form_box">
-        <div className="input_sets">
-          <input type="text" placeholder="출발역" className="starts" required />
-          <input type="text" placeholder="도착역" className="destine" required />
-        </div>
-        <button type="submit">정보확인</button>
-      </form>
-    </div>
-  )
-}
-
 const MainVisual = () => {
   const gridData = [
     { id: 1, title: '고객의 소리', link: '/' },
@@ -47,9 +29,7 @@ const MainVisual = () => {
     { id: 6, title: '운임안내', link: '/' },
     { id: 7, title: '체험학습', link: '/' },
     { id: 8, title: '청소년 자원봉사활동', link: '/' },
-
   ];
-
 
   return (
     <div className="main_visual bg_set">
@@ -63,7 +43,6 @@ const MainVisual = () => {
         </div>
         <div className="guide_box">
           <GuideBox data={gridData} />
-          <SearchStation />
         </div>
       </div>
     </div>

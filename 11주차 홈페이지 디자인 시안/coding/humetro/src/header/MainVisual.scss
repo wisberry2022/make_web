@@ -15,7 +15,6 @@
       margin-bottom: 5rem;
       padding-top: 13%;
 
-
       h2 {
         margin-bottom: 2.5rem;
         font-size: 4.5rem;
@@ -23,7 +22,7 @@
       }
 
       p {
-        font-size: 1.5rem;
+        font-size: 1.9rem;
         font-weight: 500;
         line-height: 1.214;
       }
@@ -105,72 +104,6 @@
         }
       }
 
-      .search_station {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        margin-left: -3rem;
-        border-radius: 5%;
-        padding: 5rem 2.5rem;
-        height: 80%;
-        background-color: #2F68C2;
-        align-self: baseline;
-
-        .search_box {
-          margin-bottom: 3rem;
-          text-align: center;
-
-          h3 {
-            margin-bottom: 1.5rem;
-            font-size: 2.1rem;
-            font-weight: 600;
-          }
-
-          strong {
-            font-size: 1.5rem;
-            font-weight: 400;
-          }
-        }
-
-        .form_box {
-          display: flex;
-          gap: 2rem;
-
-          .input_sets {
-            display: flex;
-            flex-direction: column;
-            gap: 5.5rem;
-            position: relative;
-            margin-bottom: 3rem;
-            width: 30rem;
-
-            input {
-              position: relative;
-              padding: 1rem 2rem;
-            }
-          }
-
-          .input_sets::after {
-            content: '\e90a';
-            font-family: 'xeicon';
-            position: absolute;
-            top: 40%;
-            left: 50%;
-            transform: translateX(-50%);
-            font-size: 2.5rem;
-          }
-
-          button {
-            border: none;
-            height: 12.7rem;
-            font-size: 1.5rem;
-            font-weight: 600;
-            background-color: #2966A3;
-            color: #fff;
-          }
-
-        }
-      }
     }
   }
 }
